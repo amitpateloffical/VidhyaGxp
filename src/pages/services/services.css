@@ -1,0 +1,189 @@
+/* FILEPATH: /C:/Users/HP/Documents/GitHub/LifeLinkDigital/src/pages/services/services.css */
+
+/* Top Container */
+.top_container {
+  padding: 5%;
+  padding-top: 2%;
+  background-size: cover;
+  background-position: center;
+}
+
+.top_container p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 22px;
+}
+
+.top_container h1, .heading {
+  color: cornflowerblue;
+  font-size: 4rem;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.top_paragraphs {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.why_line {
+  color: bisque;
+  color: blueviolet;
+}
+
+.top_container ul li {
+  font-size: 1.1rem;
+  margin-top: 2%;
+}
+
+.top_container h5, .top_container h6 {
+  margin-top: 22px;
+}
+
+li b {
+  color: blanchedalmond;
+  color: blueviolet;
+  font-size: 1.22rem;
+}
+
+/* Bottom Line */
+.bottom_line {
+  color: burlywood;
+  color: blueviolet;
+  font-size: xx-large;
+  font-family: cursive;
+  padding-top: 2%;
+  text-align: center;
+}
+
+/* Middle Line */
+.middle_line {
+  color: bisque;
+  color: blueviolet;
+}
+
+/* Paragraphs */
+.ps_paragraph_container {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ps_paragraph {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+.ps_paragraph b {
+  color: #009688;
+}
+
+/* Content Container */
+.content_container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #3498db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Lists */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul > li {
+  margin-bottom: 20px;
+}
+
+ul ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+ul ul li {
+  margin-bottom: 10px;
+}
+
+b {
+  color: #3498db;
+}
+
+li {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Service Heading */
+.service_heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.heading {
+  font-size: 36px;
+  color: #333;
+  text-transform: capitalize;
+  margin: 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Bottom Line Container */
+.bottom_line_container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.bottom_line {
+  font-size: 24px;
+  color: #27ae60;
+  margin: 0;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph Container */
+.paragraph_container {
+  margin-bottom: 30px;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.paragraph::first-letter {
+  font-size: 24px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+/* Middle Line Container */
+.middle_line_container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #3498db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  margin-top: 2%;
+}
+
+.middle_line {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+.middle_line b {
+  color: #3498db;
+}

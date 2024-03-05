@@ -1,0 +1,26 @@
+/* .swiper {
+    width: 600px;
+    height: 300px;
+} */
+
+
+/* .swiper .swiper-button-prev {
+    background-image: url("./angle-left_.png") !important;
+    background-repeat: no-repeat !important;
+    height: 50px;
+} */
+
+
+
+
+/* .swiper .swiper-button-next {
+} */
+
+.software .dynamicCard .animatedSidecard {
+
+    transform: translate(150%,0);
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.service-item{
+    box-shadow: inset -5px -5px 9px rgba(226, 226, 226, 0.45), inset 5px 5px 9px rgba(170, 183, 203, 0.3);
+}
