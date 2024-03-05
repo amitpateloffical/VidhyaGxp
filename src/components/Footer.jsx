@@ -13,7 +13,7 @@ function Footer() {
             <div className="col-md-6 col-lg-3 wow fadeIn " data-wow-delay="0.1s">
               <a href="index.html" className="d-inline-block mb-3">
                 <h1 className="text-white">
-                  LifeLink<span className="text-primary"></span>Digital
+                  Vidhyagxp<span className="text-primary"></span>
                 </h1>
               </a>
               <p className="mb-0 style={{ fontSize: '14px' }}>">
@@ -55,7 +55,7 @@ function Footer() {
               </p>
               <p>
                 <FontAwesomeIcon icon={faEnvelopeOpenText} className="me-3" />
-                info@lifelinkdigital.com
+                info@VidhyaGxP.com
               </p>
               
             </div> */}
@@ -122,7 +122,7 @@ function Footer() {
               </p>
               <p>
                 <FontAwesomeIcon icon={faEnvelopeOpenText} className="me-3" />
-                info@lifelinkdigital.com
+                info@VidhyaGxP.com
               </p>
               
             </div>
@@ -133,7 +133,7 @@ function Footer() {
           <div className="copyright">
             <div className="row">
               <div className="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                &copy; Life Link Digital, All Right Reserved.
+                &copy; VidhyaGxP, All Right Reserved.
               </div>
               <div className="col-md-6 text-center text-md-end">
                 <div className="footer-menu">

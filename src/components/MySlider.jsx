@@ -47,7 +47,7 @@ const MySlider = () => {
           <div className="row g-5 pt-5">
             <div className="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
               <div className="btn btn-sm border rounded-pill text-dark px-3 mb-3 animated slideInRight">
-                Life Link Digital
+                VidhyaGxP
               </div>
               <h1 className="display-4 text-dark mb-4 animated slideInRight">
                 Artificial Intelligence for Your Business
@@ -77,7 +77,7 @@ const MySlider = () => {
           <div className="row g-5 pt-5">
             <div className="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
               <div className="btn btn-sm border rounded-pill text-dark px-3 mb-3 animated slideInRight">
-                Life Link Digital
+                VidhyaGxP
               </div>
               <h1 className="display-4 text-dark mb-4 animated slideInRight">
                 Artificial Intelligence for Your Business

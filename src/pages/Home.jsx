@@ -49,7 +49,7 @@ function Home() {
                 We Make Your Business Smarter with Artificial Intelligence
               </h1>
               <p className="mb-2">
-                Transforming Possibilities into Reality: At Life Link Digital,
+                Transforming Possibilities into Reality: At VidhyaGxP,
                 we specialize in making your business smarter through
                 cutting-edge Artificial Intelligence.{" "}
               </p>
@@ -145,7 +145,7 @@ function Home() {
                         <h5 className="mb-3">Robotic Automation</h5>
                         <p>
                           Revolutionize Efficiency with Robotic Automation at
-                          Life Link Digital. Streamlined processes for enhanced
+                          VidhyaGxP. Streamlined processes for enhanced
                           productivity and a future-focused approach to work.
                         </p>
                         <a className="btn px-3 mt-auto mx-auto" href="">
@@ -498,7 +498,7 @@ export default Home;
               <div className="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Team</div>
               <h1 className="mb-4">Meet Our Experienced Team Members</h1>
               <p className="mb-4">
-                Explore the expertise of our seasoned team members at Life Link Digital. Each individual brings diverse
+                Explore the expertise of our seasoned team members at VidhyaGxP. Each individual brings diverse
                 skills, commitment, and innovation to drive our collective success.
               </p>
               <a className="btn btn-primary rounded-pill px-4" href="">
@@ -716,7 +716,7 @@ export default Home;
           <div className="row g-5 pt-5">
             <div className="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
               <div className="btn btn-sm border rounded-pill text-dark px-3 mb-3 animated slideInRight">
-                Life Link Digital
+                VidhyaGxP
               </div>
               <h1 className="display-4 text-dark mb-4 animated slideInRight">
                 Artificial Intelligence for Your Business
@@ -758,7 +758,7 @@ export default Home;
               <div className="btn btn-sm border rounded-pill text-white px-3 mb-3">About Us</div>
               <h1 className="mb-4">We Make Your Business Smarter with Artificial Intelligence</h1>
               <p className="mb-2">
-                Transforming Possibilities into Reality: At Life Link Digital, we specialize in making your business
+                Transforming Possibilities into Reality: At VidhyaGxP, we specialize in making your business
                 smarter through cutting-edge Artificial Intelligence.{" "}
               </p>
               <p className="mb-4">
