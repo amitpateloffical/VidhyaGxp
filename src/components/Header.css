@@ -34,3 +34,7 @@
 .dropdown-content ul li:hover {
   color: rgb(222, 65, 65);
 }
+.header-section{
+  background-color: blue;
+  height: 38px;
+}

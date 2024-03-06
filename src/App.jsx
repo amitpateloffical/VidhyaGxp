@@ -17,7 +17,7 @@ import EDMS from "./pages/services/EDMS";
 import EQMS from "./pages/services/EQMS";
 import QMS from "./pages/services/QRM";
 import RootcauseAnalysis from "./pages/services/RootcauseAnalysis";
-import PharmaAudit from "./pages/services/pharmaAudit";
+// import PharmaAudit from "./pages/services/pharmaAudit";
 import WarehouseMS from "./pages/services/WarehouseMS";
 import PaperlessM from "./pages/services/PaperlessM";
 import UsfdaW from "./pages/services/UsfdaW";
@@ -30,6 +30,7 @@ import GxpTrainig from "./pages/services/GxpTraining";
 import Rpa from "./pages/services/Rpa";
 import Industries from "./pages/Industries";
 import { useEffect } from "react";
+import PharmaAudit from "../src/pages/services/PharmaAudit";
 
 function App() {
       useEffect(() => {
@@ -75,6 +76,7 @@ function App() {
           <Route path="/gxp-training" element={<GxpTrainig />} />
           <Route path="/rpa" element={<Rpa />} />
           <Route path='/industries' element={<Industries />} />
+          <Route path='/parma-audit' element={<PharmaAudit />} />
         </Routes>
         <Footer />
       </BrowserRouter>

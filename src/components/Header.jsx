@@ -1,6 +1,9 @@
 import "./Header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faAngleRight, faEnvelopeOpenText, faPhone, faSignsPost } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const navigate = useNavigate();
@@ -30,6 +33,27 @@ function Header() {
   return (
     <>
       {/* <!-- Navbar Start --> */}
+      <div className="header-section">
+        <div className="container-fluid">
+      <div className="container">
+        <div className="row">
+            <div className="top-nav">
+<div className="d-flex flex-row-reverse pt-2">
+<div >
+                <FontAwesomeIcon icon={faEnvelopeOpenText} className="me-3 text-white " />
+               <span className="text-white fw-bolder">info@VidhyaGxP.com</span> 
+              </div> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+              <div >
+                <FontAwesomeIcon icon={faPhone} className="me-3 text-white" />
+               <span className="text-white fw-bolder">+91-8821836528</span> 
+              </div>
+
+</div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="container-fluid">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-dark p-0 py-5">
