@@ -56,7 +56,7 @@ export default function UsfdaW() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
-                <img className="img-fluid" src="/IMG12.jpg" />
+                <img className="img-fluid" src="https://cdn.pixabay.com/photo/2017/12/03/12/38/medicine-2994788_1280.jpg" />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
