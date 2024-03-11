@@ -130,12 +130,12 @@ h6,
 }
 
 /*** Hero Header ***/
-.hero-header {
+/* .hero-header {
   background-color: burlywood;
   margin-top: -75px;
   background-size: cover;
   background: url(../bg-hero.png) center center no-repeat;
-}
+} */
 
 .hero-header .breadcrumb-item + .breadcrumb-item::before {
   color: var(--light);
@@ -214,7 +214,7 @@ h6,
 }
 
 .service-item:hover {
-  background: var(--themeColor);
+  background: rgb(236, 167, 63);
 }
 
 .service-item .service-icon {
