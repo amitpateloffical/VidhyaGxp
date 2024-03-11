@@ -54,11 +54,11 @@ function About() {
           <div className="row g-2 align-items-center">
             <div className="col-lg-12 wow fadeIn" data-wow-delay="0.5s">
               <h3 className=" text-center fs-2 pt-3">
-                Lifelink Digital: Streamlining GxP Compliance for Global Pharma
+                VidhyaGxP: Streamlining GxP Compliance for Global Pharma
               </h3>
               <div className="paragraph_container ">
                 <p className="paragraph fs-5 pt-2">
-                  Lifelink Digital is a leading global provider of GxP software
+                  VidhyaGxP is a leading global provider of GxP software
                   solutions, empowering pharmaceutical and life sciences
                   companies to achieve and maintain compliance efficiently. With
                   a deep understanding of GxP regulations and industry best
@@ -140,7 +140,7 @@ function About() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
               <h3 className="mb-4" data-aos="fade-right">
-                By partnering with Lifelink Digital, you can:
+                By partnering with VidhyaGxP, you can:
               </h3>
               <div className="content_container">
                 <ul
@@ -176,7 +176,7 @@ function About() {
                 data-aos="fade-right"
               >
                 <h5 className="ps_paragraph">
-                  Contact Lifelink Digital today to discover how our GxP
+                  Contact VidhyaGxP today to discover how our GxP
                   software solutions can help you achieve your compliance and
                   quality goals
                 </h5>
@@ -216,7 +216,7 @@ function About() {
               </h4>
               <div className="paragraph_container" data-aos="fade-left">
                 <p className="paragraph">
-                  Lifelink Digital is committed to providing the highest quality
+                  VidhyaGxP is committed to providing the highest quality
                   GxP software and services to the global pharmaceutical
                   industry. We are dedicated to exceeding our customers'
                   expectations and ensuring that our products and services
@@ -225,7 +225,7 @@ function About() {
               </div>
               {" "}
               <h3 className="mb-4" data-aos="fade-left">
-                By partnering with Lifelink Digital, you can:
+                By partnering with VidhyaGxP, you can:
               </h3>
               <div className="content_container">
                 <ul
@@ -354,7 +354,7 @@ function About() {
               </h4>
               <div className="paragraph_container" data-aos="fade-left">
                 <p className="paragraph">
-                  At Lifelink Digital, we empower the global pharmaceutical
+                  At VidhyaGxP, we empower the global pharmaceutical
                   industry to achieve GxP compliance and accelerate life-saving
                   innovations with intuitive, secure, and scalable software
                   solutions.
@@ -475,7 +475,7 @@ function About() {
             >
               <div className="paragraph_container">
                 <p className="paragraph">
-                  Ultimately, at Lifelink Digital, we believe in the power of
+                  Ultimately, at VidhyaGxP, we believe in the power of
                   technology to transform the pharmaceutical industry and
                   improve the lives of patients everywhere.
                 </p>
