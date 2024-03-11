@@ -58,7 +58,7 @@ function Header() {
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-dark p-0 py-5">
             <Link to="/" className="navbar-brand">
-              <img style={{ height: "50px", width: "150px" }} src="new-logo.png" alt="VidhyaGxP" />
+              <img style={{ height:"250px" }} src="vidhyaGxp.png" alt="VidhyaGxP" />
             </Link>
             <button
               type="button"
