@@ -56,7 +56,7 @@ export default function MES() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
-                <img className="img-fluid" src="/IMG3.jpg" />
+                <img className="img-fluid" src="https://cdn.pixabay.com/photo/2013/11/24/11/10/lab-217043_1280.jpg" />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">

@@ -56,7 +56,7 @@ export default function QMS() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
-                <img className="img-fluid" src="/IMG7.jpg" />
+                <img className="img-fluid" src="https://images.unsplash.com/photo-1639772823849-6efbd173043c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">

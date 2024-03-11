@@ -55,7 +55,7 @@ export default function IntelligentPharma() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
-                <img className="img-fluid" src="/IMG17.jpg" />
+                <img className="img-fluid" src="https://tse4.mm.bing.net/th/id/OIG3.ljZyG5ouEWagYeIaGszZ?pid=ImgGn  " />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">

@@ -54,7 +54,7 @@ export default function EDMS() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
-                <img className="img-fluid" src="/IMG4.jpg" />
+                <img className="img-fluid" src="https://plus.unsplash.com/premium_photo-1670793333157-1be832bb9788?q=80&w=1454&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -147,7 +147,7 @@ export default function EDMS() {
             </div>
             <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-left">
-                <img className="img-fluid" src="/IMG6.jpg" />
+                <img className="img-fluid" src="https://images.unsplash.com/photo-1604145942179-63cd583fcf64?q=80&w=1541&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
               </div>
             </div>
           </div>

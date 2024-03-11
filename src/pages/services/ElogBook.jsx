@@ -56,7 +56,7 @@ export default function ElogBook() {
             <div className="row g-5 align-items-center">
               <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                 <div className="abouts" data-aos="fade-right">
-                  <img className="img-fluid" src="/IMG1.jpg" />
+                  <img className="img-fluid" src="https://cdn.pixabay.com/photo/2017/05/15/23/47/stethoscope-icon-2316460_1280.png" />
                 </div>
               </div>
               <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">

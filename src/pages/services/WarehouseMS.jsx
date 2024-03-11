@@ -56,7 +56,7 @@ export default function WarehouseMS() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
-                <img className="img-fluid" src="/IMG10.jpg" />
+                <img className="img-fluid" src="https://img.freepik.com/free-photo/warehouse-pharmacy_1161-231.jpg?t=st=1710138426~exp=1710142026~hmac=5632054354ecff5d9ec2eb934e32a13b4a485f15f5545e9a8bd3b16a6392bd43&w=740" />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">

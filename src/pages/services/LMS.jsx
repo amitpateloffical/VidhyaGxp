@@ -55,7 +55,7 @@ export default function LMS() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
-                <img className="img-fluid" src="/IMG2.jpg" />
+                <img className="img-fluid" src="https://cdn.pixabay.com/photo/2016/08/29/14/25/medications-1628372_1280.jpg" />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
