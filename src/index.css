@@ -581,7 +581,7 @@ h6,
  
 }
 .section2 {
-  background: linear-gradient(#80ffdb, #5390d9);
+  background: linear-gradient(rgb(238, 196, 133), rgb(253, 152, 10));
 }
 #contact-form-border {
   border-bottom: 2px solid;
