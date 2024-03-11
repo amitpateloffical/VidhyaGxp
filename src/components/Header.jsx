@@ -168,10 +168,10 @@ function Header() {
     <>
       <div className="header-section">
         <div className="container-fluid">
-          <div className="container">
+          {/* <div className="container"> */}
             <div className="row">
               <div className="top-nav">
-                <div className="d-flex flex-row-reverse pt-2">
+                <div className="d-flex flex-row-reverse justify-end pt-2">
                   <div >
                     <FontAwesomeIcon icon={faEnvelopeOpenText} className="me-3 text-white "  />
                     <span className="text-white fw-bolder">info@VidhyaGxP.com</span>
@@ -182,7 +182,7 @@ function Header() {
                   </div>
 
                 </div>
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>
@@ -204,14 +204,14 @@ function Header() {
           </div>
         )}
       </div>
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="header-item-flex">
           <div>
             <Link className="navbar-brand" to="/">
               <img src="vidhyaGxp.png" height="250px" className="d-inline-block align-top" alt="" />
             </Link>
           </div>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse pt-3 " id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
                 <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
