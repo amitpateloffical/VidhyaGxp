@@ -29,7 +29,7 @@ function Home() {
       <div className="slider-container">
         <MySlider />
       </div>
-      <div className="container-fluid pt-5 section2 hero-header mb-5 mt-4">
+      <div className="container-fluid pt-5 section2  mb-1 mt-4">
         <div className="container">
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s" data-aos="fade-right">
@@ -229,7 +229,7 @@ function Home() {
       {/* <!-- Service End --> */}
 
       {/* <!-- Feature Start --> */}
-      <div className="container-fluid bg-themeColor feature pt-5">
+      <div className="container-fluid bg-themeColor  pt-5">
         <div className="container pt-5">
           <div className="row g-5">
             <div
