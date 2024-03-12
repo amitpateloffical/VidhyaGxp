@@ -43,7 +43,7 @@ export default function EBMR1() {
       </div>
       <div className="paragraph_container">
         <p className="paragraph" data-aos="fade-down">
-          At VidhyaGxP, we're redefining the landscape of manufacturing intelligence with our pioneering e-BMR
+          At VidyaGxP, we're redefining the landscape of manufacturing intelligence with our pioneering e-BMR
           solutions. Stepping into the future, we offer more than just software; we provide a gateway to excellence in
           manufacturing processes. Our e-BMR service is at the heart of this transformation, designed to elevate your
           operations to new heights of efficiency, compliance, and quality.
@@ -59,7 +59,7 @@ export default function EBMR1() {
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-              <h4 className="why_line" data-aos="fade-left">Why Choose VidhyaGxP’s e-BMR?</h4>
+              <h4 className="why_line" data-aos="fade-left">Why Choose VidyaGxP’s e-BMR?</h4>
               <div className="content_container">
                 <ul>
                   <li data-aos="fade-left">
@@ -70,7 +70,7 @@ export default function EBMR1() {
                   </li>
                   <li data-aos="fade-left">
                     <b>Unmatched Efficiency:-</b>
-                    Eliminate manual errors and reduce processing times with our automated, AI-driven platform. VidhyaGxP
+                    Eliminate manual errors and reduce processing times with our automated, AI-driven platform. VidyaGxP
                     turns your data into actionable insights, streamlining workflows and boosting productivity.
                   </li>
                   <li data-aos="fade-left">
@@ -86,7 +86,7 @@ export default function EBMR1() {
                   </li>
                   <li data-aos="fade-left">
                     <b>Scalable Solutions:-</b>
-                    Whether you're a start-up or an established enterprise, VidhyaGxP grows with you. Our flexible, scalable
+                    Whether you're a start-up or an established enterprise, VidyaGxP grows with you. Our flexible, scalable
                     solutions can be tailored to fit your unique needs, ensuring you're always ahead of the curve.
                   </li>
                 </ul>
@@ -97,11 +97,11 @@ export default function EBMR1() {
       </div>
 
       <div className="middle_line_container" data-aos="zoom-in">
-        <h4 className="middle_line">Join the VidhyaGxP Revolution</h4>
+        <h4 className="middle_line">Join the VidhaGxP Revolution</h4>
         <p>
-          Embrace the future with VidhyaGxP and transform your electronic batch manufacturing records into a
+          Embrace the future with VidyaGxP and transform your electronic batch manufacturing records into a
           powerhouse of efficiency and compliance. Let's pave the way for manufacturing excellence together – because when
-          you partner with VidhyaGxP, you're not just optimizing your operations; you're setting a new standard for
+          you partner with VidyaGxP, you're not just optimizing your operations; you're setting a new standard for
           the industry.
         </p>
       </div>

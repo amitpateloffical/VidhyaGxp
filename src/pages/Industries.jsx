@@ -48,9 +48,9 @@ function Industries() {
                             </div>
                         </div>
                         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                            <h3 className="mb-4" data-aos="fade-left">Industry Expertise at VidhyaGxP</h3>
+                            <h3 className="mb-4" data-aos="fade-left">Industry Expertise at VidyaGxP</h3>
                             <p className="mb-4" data-aos="fade-left">
-                                At VidhyaGxP, we understand the unique challenges and opportunities faced by the global pharmaceutical industry. We are a dedicated GxP software provider with a deep understanding of industry regulations, workflows, and best practices.
+                                At VidyaGxP, we understand the unique challenges and opportunities faced by the global pharmaceutical industry. We are a dedicated GxP software provider with a deep understanding of industry regulations, workflows, and best practices.
                             </p>
                             <div className="mb-4" data-aos="fade-left"><b>Our industry expertise extends across various GxP domains, including:</b>
                             </div>
@@ -173,7 +173,7 @@ function Industries() {
                             </div>{" "}
                         </div>
                         <div className="ms-3">
-                            <h4 className="text-center">Partner with VidhyaGxP and leverage our industry expertise to achieve your GxP compliance goals and drive operational excellence.</h4>
+                            <h4 className="text-center">Partner with VidyaGxP and leverage our industry expertise to achieve your GxP compliance goals and drive operational excellence.</h4>
                         </div>
                     </div>
                 </div>

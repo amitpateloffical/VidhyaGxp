@@ -32,7 +32,7 @@ function Home() {
           <div className="row g-5 pt-5">
             <div className="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
               <div className="btn btn-sm border rounded-pill text-light px-3 mb-3 animated slideInRight">
-                VidhyaGxP
+                VidyaGxP
               </div>
               <h5 className="display-4 text-light mb-4 animated slideInRight">
                 Artificial Intelligence for Your Business
@@ -56,7 +56,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="container-fluid pt-5 section2  mb-1 mt-4">
+      <div className="container-fluid pt-5 section  mb-1 mt-4">
         <div className="container">
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s" data-aos="fade-right">
@@ -76,7 +76,7 @@ function Home() {
                 We Make Your Business Smarter with Artificial Intelligence
               </h1>
               <p className="mb-2">
-                Transforming Possibilities into Reality: At VidhyaGxP,
+                Transforming Possibilities into Reality: At VidyaGxP,
                 we specialize in making your business smarter through
                 cutting-edge Artificial Intelligence.{" "}
               </p>
@@ -174,7 +174,7 @@ function Home() {
                         <h5 className="mb-3">Robotic Automation</h5>
                         <p>
                           Revolutionize Efficiency with Robotic Automation at
-                          VidhyaGxP. Streamlined processes for enhanced
+                          VidyaGxP. Streamlined processes for enhanced
                           productivity and a future-focused approach to work.
                         </p>
                         <a className="btn px-3 mt-auto mx-auto" href="">
@@ -340,10 +340,10 @@ function Home() {
           </div>
         </div>
       </div>
+      </div>
     </>
   );
 }
 
 export default Home;
-
 
