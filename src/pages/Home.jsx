@@ -27,7 +27,34 @@ function Home() {
   return (
     <>
       <div className="slider-container">
-        <MySlider />
+      <div className="container-fluid pt-5  hero-header mb-5">
+        <div className="container pt-4">
+          <div className="row g-5 pt-5">
+            <div className="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+              <div className="btn btn-sm border rounded-pill text-light px-3 mb-3 animated slideInRight">
+                VidhyaGxP
+              </div>
+              <h5 className="display-4 text-light mb-4 animated slideInRight">
+                Artificial Intelligence for Your Business
+              </h5>
+              <p className="text-light mb-4  animated slideInRight ">
+                Empowering Your Business with Intelligent Solutions: Harness the Power of Artificial Intelligence to
+                Optimize, Innovate, and Excel in the Digital Era.
+              </p>
+              <div className="pt-4">
+              <a href="" className="btn btn-light  py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight text-dark fw-bold">
+                Read More
+              </a>
+              <a href="" className="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight fw-bold">
+                Contact Us
+              </a>
+              </div>
+            </div>
+            <div className="col-lg-6 align-self-end text-center text-lg-end">
+              <img className="img-head " src="/" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
       <div className="container-fluid pt-5 section2  mb-1 mt-4">
         <div className="container">
@@ -42,7 +69,7 @@ function Home() {
               className="col-lg-6 wow fadeIn"
               data-wow-delay="0.5s"
             >
-              <div className="btn btn-sm border rounded-pill text-white px-3 mb-3">
+              <div className="btn btn-sm border-warning rounded-pill text-warning  mb-4">
                 About Us
               </div>
               <h1 className="mb-4">
@@ -80,20 +107,20 @@ function Home() {
                   </h6>
                 </div>
               </div>
-              <div className="d-flex align-items-center mt-4">
-                <a className="btn btn-dark rounded-pill px-4 me-3" href="">
+              <div className="d-flex align-items-center mt-5">
+                <a className="btn btn-warning text-light rounded-pill px-4 me-3" href="">
                   Read More
                 </a>
-                <a className="btn btn-outline-dark btn-square me-3" href="">
+                <a className="btn btn-outline-warning  btn-square me-3" href="">
                   <FontAwesomeIcon icon={faFacebookF} />
                 </a>
-                <a className="btn btn-outline-dark btn-square me-3" href="">
+                <a className="btn btn-outline-warning  btn-square me-3" href="">
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
-                <a className="btn btn-outline-dark btn-square me-3" href="">
+                <a className="btn btn-outline-warning  btn-square me-3" href="">
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
-                <a className="btn btn-outline-dark btn-square" href="">
+                <a className="btn btn-outline-warning  btn-square" href="">
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </a>
               </div>
@@ -102,7 +129,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="container-fluid bg-light mt-5 py-5 ">
+      <div className="container-fluid bg-warning mt-5 py-5 ">
         <div className="container py-5">
           <div className="row g-5 align-items-center">
             <div
@@ -110,10 +137,10 @@ function Home() {
               data-wow-delay="0.1s"
               data-aos="fade-right"
             >
-              <div className="btn btn-sm border rounded-pill text-primary px-3 mb-3">
+              <div className="btn btn-sm border rounded-pill text-light px-3 mb-4">
                 Our Services
               </div>
-              <h1 className="mb-4">
+              <h1 className="mb-4 ">
                 Our Excellent AI Solutions for Your Business
               </h1>
               <p className="mb-4">
@@ -125,9 +152,11 @@ function Home() {
                 ensures your business stays at the forefront of technological
                 advancement.
               </p>
-              <a className="btn btn-primary rounded-pill px-4" href="">
+              <div className="pt-2">
+              <a className="btn btn-light rounded-pill px-4" href="">
                 Read More
               </a>
+              </div>
             </div>
             <div className="col-lg-7" data-aos="fade-left">
               <div className="row g-4">

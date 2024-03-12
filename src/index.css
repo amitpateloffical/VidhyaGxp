@@ -3,11 +3,12 @@
   --dark: #14183e;
   --light: #f4f7fe;
   --secondary: #15ace1;
-  --themeColor: #020202;
+  --themeColor:  #ffc107;
 }
 
 body {
   overflow-x: hidden;
+  font-family: "Montserrat", sans-serif
 }
 
 .bg-themeColor {
@@ -91,6 +92,7 @@ h6,
   align-items: center;
   color: black;
   font-weight: 500;
+  font-size: 18px;
 }
 
 .navbar .navbar-nav .nav-link:hover,
@@ -381,8 +383,7 @@ h6,
 }
 
 /*** Testimonials ***/
-.testimonial-item {
-}
+
 
 /*** Footer ***/
 .footer {
@@ -537,7 +538,7 @@ h6,
 
 .card:hover {
   transform: translateY(-5px) scale(1.005) translateZ(0);
-  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px rgba(255, 215, 97, 0.48);
+  /* box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px rgba(255, 215, 97, 0.48); */
 }
 
 .card:hover .overlay {

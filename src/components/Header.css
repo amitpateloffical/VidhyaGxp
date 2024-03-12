@@ -91,6 +91,7 @@
 
 .header-item-flex {
   display: grid;
+  gap: 11rem;
   grid-template-columns: 1fr 1fr;
 }
  /* Navbar */
@@ -169,3 +170,4 @@
     /* Adjust padding as needed */
   }
 }
+
