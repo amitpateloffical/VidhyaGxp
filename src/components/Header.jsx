@@ -71,7 +71,7 @@ function Header() {
                 <NavLink to="/" className="nav-item nav-link">
                   Home
                 </NavLink>
-                <NavLink to="/about" className="nav-item nav-link">
+                <NavLink to="/about" className="nav-item nav-link ">
                   About
                 </NavLink>
                 <NavLink
@@ -84,7 +84,7 @@ function Header() {
                   }}
                 >
                   <div className="dropdown">
-                    <div>
+                    <div >
                       Service &nbsp;
                       <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -93,7 +93,7 @@ function Header() {
                         />
                       </svg>
                     </div>
-                    <div className="dropdown-content">
+                    <div className="dropdown-content ">
                       <ul>
                         <li onClick={() => navigate("/ebmr")}>e-BMR</li>
                         <li onClick={() => navigate("/elogbook")}>e-LogBook</li>
@@ -190,13 +190,13 @@ function Header() {
 
                                         </div>
                                     </div> */}
-                <NavLink to="/industries" className="nav-item nav-link">
+                <NavLink to="/industries" className="nav-item nav-link ">
                   Industries
                 </NavLink>
-                <NavLink to="/features" className="nav-item nav-link">
+                <NavLink to="/features" className="nav-item nav-link ">
                   Features
                 </NavLink>
-                <NavLink to="/contact" className="nav-item nav-link">
+                <NavLink to="/contact" className="nav-item nav-link ">
                   Contact Us
                 </NavLink>
                 {/* {sidebar ? '' : (

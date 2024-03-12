@@ -43,7 +43,7 @@ const MySlider = () => {
     <Slider {...settings}>
       {/* First Slide */}
       <div className="container-fluid pt-5  hero-header mb-5">
-        <div className="container pt-5">
+        <div className="container pt-4">
           <div className="row g-5 pt-5">
             <div className="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
               <div className="btn btn-sm border rounded-pill text-dark px-3 mb-3 animated slideInRight">
@@ -52,10 +52,10 @@ const MySlider = () => {
               <h1 className="display-4 text-dark mb-4 animated slideInRight">
                 Artificial Intelligence for Your Business
               </h1>
-              <p className="text-dark mb-4 animated slideInRight">
+              <h5 className="text-dark mb-4 animated slideInRight ">
                 Empowering Your Business with Intelligent Solutions: Harness the Power of Artificial Intelligence to
                 Optimize, Innovate, and Excel in the Digital Era.
-              </p>
+              </h5>
               <a href="" className="btn btn-dark py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">
                 Read More
               </a>
