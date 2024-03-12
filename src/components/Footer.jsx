@@ -139,7 +139,7 @@ function Footer() {
           <div className="copyright">
             <div className="row">
               <div className="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                &copy; VidhyaGxP, All Right Reserved.
+                &copy; VidyaGxP, All Right Reserved.
               </div>
               <div className="col-md-6 text-center text-md-end">
                 <div className="footer-menu">
