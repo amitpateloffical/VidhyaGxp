@@ -132,16 +132,12 @@ h6,
 }
 
 /*** Hero Header ***/
-.hero-header {
-  /* background-color: burlywood; */
-  /* margin-top: -75px; */
-  /* background-size: cover; */
-  background: url(https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1646106148/image_1646106148.jpg?io=getty-c-w1280
-  );
-  background-repeat: no-repeat;
+/* .hero-header {
+  background-color: burlywood;
+  margin-top: -75px;
   background-size: cover;
-  height: 585px;
-}
+  background: url(../bg-hero.png) center center no-repeat;
+} */
 
 .hero-header .breadcrumb-item + .breadcrumb-item::before {
   color: var(--light);
@@ -220,7 +216,7 @@ h6,
 }
 
 .service-item:hover {
-  background: var(--themeColor);
+  background: rgb(236, 167, 63);
 }
 
 .service-item .service-icon {
@@ -387,8 +383,7 @@ h6,
 }
 
 /*** Testimonials ***/
-.testimonial-item {
-}
+
 
 /*** Footer ***/
 .footer {
@@ -587,7 +582,7 @@ h6,
  
 }
 .section2 {
-  background: linear-gradient(#80ffdb, #5390d9);
+  background: linear-gradient(rgb(238, 196, 133), rgb(253, 152, 10));
 }
 #contact-form-border {
   border-bottom: 2px solid;

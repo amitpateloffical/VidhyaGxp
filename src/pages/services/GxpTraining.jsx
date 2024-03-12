@@ -209,7 +209,7 @@ export default function GxpTrainig() {
             </div>
             <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-left">
-                <img className="img-fluid" src="/lab.jpg" />
+                <img className="img-fluid" src="https://tse1.mm.bing.net/th/id/OIG4.3x4RwjMid43Rn16jEXbp?pid=ImgGn" />
               </div>
             </div>
           </div>
@@ -220,7 +220,7 @@ export default function GxpTrainig() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
-                <img className="img-fluid" src="/Doctor.jpeg" />
+                <img className="img-fluid" src="https://tse3.mm.bing.net/th/id/OIG3.BYPS_gPFz.O9sRmXTI_H?pid=ImgGn" />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">

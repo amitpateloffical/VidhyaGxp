@@ -42,9 +42,9 @@ const MySlider = () => {
   return (
     <Slider {...settings}>
       {/* First Slide */}
-      <div className="container-fluid pt-5  hero-header mb-5">
-        <div className="container pt-4">
-          <div className="row g-5 pt-5">
+      <div className="container-fluid    mb-2">
+        <div className="container ">
+          <div className="row g-5 ">
             <div className="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
               <div className="btn btn-sm border rounded-pill text-dark px-3 mb-3 animated slideInRight">
                 VidhyaGxP
@@ -59,12 +59,12 @@ const MySlider = () => {
               <a href="" className="btn btn-dark py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">
                 Read More
               </a>
-              <a href="" className="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">
+              <a href="/contact" className="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">
                 Contact Us
               </a>
             </div>
             <div className="col-lg-6 align-self-end text-center text-lg-end">
-              <img className="img-head " src="/3dd.png" alt="" />
+              <img width={"600px"} className="img-head " src="https://media.istockphoto.com/id/1295786990/vector/artificial-intelligence-cyborg-technological-brain-on-white-background-computer-circuit.jpg?s=612x612&w=0&k=20&c=JawjYu6toP0BJqwvCxxWwc84e903faIhwRr74bO16H4=" alt="" />
             </div>
           </div>
         </div>
@@ -72,9 +72,9 @@ const MySlider = () => {
       {/* Second Slide */}
 
       {/* Third Slide */}
-      <div className="container-fluid pt-5  hero-header mb-5">
-        <div className="container pt-5">
-          <div className="row g-5 pt-5">
+      <div className="container-fluid    mb-2">
+        <div className="container ">
+          <div className="row g-5 ">
             <div className="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
               <div className="btn btn-sm border rounded-pill text-dark px-3 mb-3 animated slideInRight">
                 VidhyaGxP
@@ -89,12 +89,12 @@ const MySlider = () => {
               <a href="" className="btn btn-dark py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">
                 Read More
               </a>
-              <a href="" className="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">
+              <a href="/contact" className="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">
                 Contact Us
               </a>
             </div>
             <div className="col-lg-6 align-self-end text-center text-lg-end">
-              <img className="img-head " src="/3dd.png" alt="" />
+              <img width={"600px"} className="img-head " src="https://img.freepik.com/premium-vector/human-face-made-by-digital-circuit_1302-13285.jpg?w=826" alt="" />
             </div>
           </div>
         </div>

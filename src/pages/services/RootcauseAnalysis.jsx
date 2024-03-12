@@ -56,7 +56,7 @@ export default function RootcauseAnalysis() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
-                <img className="img-fluid" src="/IMG9.jpg" />
+                <img className="img-fluid" src="https://img.freepik.com/free-vector/medical-design-poster-with-original-medicinal-capsule-consisting-red-white-parts-different-medical-objects_1284-53615.jpg?t=st=1710138012~exp=1710141612~hmac=c7331e476961ce00768c3d58a3ea1e32399baaa14b615c800974dba4d842edcd&w=740" />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
