@@ -128,7 +128,7 @@ function Footer() {
               </p>
               <p>
                 <FontAwesomeIcon icon={faEnvelopeOpenText} className="me-3" />
-                info@VidhyaGxP.com
+                info@VidyaGxP.com
               </p>
               
             </div>
