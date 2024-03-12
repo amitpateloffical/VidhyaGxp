@@ -81,7 +81,7 @@ function About() {
               data-wow-delay="0.1s"
             >
               <div className="abouts">
-                <img className="img-fluid" src="/abouts.jpg" />
+                <img className="img-fluid" src="https://img.freepik.com/free-photo/experiment-biotechnology-with-chemistry-science_23-2150365029.jpg?t=st=1710156080~exp=1710159680~hmac=11ca702812fc9f88d524ded12de5a152926a34f2620ebe8372db4c8176048067&w=360" />
               </div>
             </div>
             <div
@@ -189,7 +189,7 @@ function About() {
               data-wow-delay="0.1s"
             >
               <div className="abouts">
-                <img className="img-fluid" src="/about4.jpg" />
+                <img className="img-fluid" src="heart.jpg"/>
               </div>
             </div>
           </div>
@@ -206,7 +206,7 @@ function About() {
               data-wow-delay="0.1s"
             >
               <div className="aboutsimg">
-                <img className="img-fluid" src="/about5.jpg" />
+                <img className="img-fluid" src="" />
               </div>
             </div>
 
