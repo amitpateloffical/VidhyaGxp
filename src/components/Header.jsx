@@ -78,7 +78,7 @@ function Header() {
                 <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Services
                 </Link>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div className="dropdown-menu" aria-labelledby="navbarDropdown" >
                   <Link className="dropdown-item" to="/ebmr">e-BMR</Link>
                   <Link className="dropdown-item" to="/elogbook">e-LogBook</Link>
                   <Link className="dropdown-item" to="/lms">LMS</Link>
@@ -98,8 +98,6 @@ function Header() {
                   <Link className="dropdown-item" to="/intelligent-pharma"> Intelligent Pharma Manufacturing Factory</Link>
                   <Link className="dropdown-item" to="/gxp-training">GxP Training</Link>
                   <Link className="dropdown-item" to="/rpa">Robotic Process Automation (RPA) </Link>
-
-
                   <div className="dropdown-divider"></div>
 
                 </div>
