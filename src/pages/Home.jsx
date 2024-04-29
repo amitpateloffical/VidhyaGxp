@@ -119,7 +119,7 @@ function Home() {
                   <a
                     className="btn btn-outline-warning  btn-square me-3"
                     href="https://www.linkedin.com/company/vidyagxp/"
-                      >
+                  >
                     <FontAwesomeIcon icon={faFacebookF} />
                   </a>
                   <a
@@ -146,7 +146,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="container-fluid bg-warning mt-5 py-5 ">
+        <div className="container-fluid section2 mt-5 py-5 ">
           <div className="container py-5">
             <div className="row g-5 align-items-center">
               <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s" data-aos="fade-right">
@@ -156,7 +156,7 @@ function Home() {
                 <h1 className="mb-4 ">Our Excellent AI Solutions for Your Business</h1>
                 <p className="mb-4">
                   Tailored AI Services to Elevate Your Business Unlock the full potential of
-                  Artificial Intelligence with our tailored solutions at [Your Business Name]. We
+                  Artificial Intelligence with our tailored solutions at VidyaGxP. We
                   offer dynamic and innovative services, seamlessly integrating AI into your
                   operations. From intelligent automation to data-driven insights, our expertise
                   ensures your business stays at the forefront of technological advancement.

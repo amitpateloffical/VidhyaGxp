@@ -3,12 +3,12 @@
   --dark: #14183e;
   --light: #f4f7fe;
   --secondary: #15ace1;
-  --themeColor:  #ffc107;
+  --themeColor: #ffc107;
 }
 
 body {
   overflow-x: hidden;
-  font-family: "Montserrat", sans-serif
+  font-family: "Montserrat", sans-serif;
 }
 
 .bg-themeColor {
@@ -133,8 +133,7 @@ h6,
 
 /*** Hero Header ***/
 .hero-header {
-  background: url(https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1646106148/image_1646106148.jpg?io=getty-c-w1280
-  );
+  background: url(https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1646106148/image_1646106148.jpg?io=getty-c-w1280);
   background-repeat: no-repeat;
   background-size: cover;
   height: 585px;
@@ -385,7 +384,6 @@ h6,
 
 /*** Testimonials ***/
 
-
 /*** Footer ***/
 .footer {
   /* height: 35rem; */
@@ -570,20 +568,18 @@ h6,
   height: 550px;
   width: 550px;
   box-shadow: -5px -5px 9px rgba(204, 203, 203, 0.45), 5px 5px 9px rgba(85, 94, 109, 0.3);
-  
 }
 
-.aboutsimg img{
+.aboutsimg img {
   box-shadow: -5px -5px 9px rgba(204, 203, 203, 0.45), 5px 5px 9px rgba(85, 94, 109, 0.3);
   border-radius: 15px 50px;
-
 }
-.about-images img{
+.about-images img {
   height: 490px;
- 
 }
 .section2 {
-  background: linear-gradient(rgb(238, 196, 133), rgb(253, 152, 10));
+  background: linear-gradient(60deg, rgb(244, 193, 117), rgb(224, 156, 61));
+  /* background-color: darkseagreen; */
 }
 #contact-form-border {
   border-bottom: 2px solid;
@@ -621,7 +617,6 @@ h6,
   right: 10px;
 }
 
-
 /* list slide */
 
 /* Define animation */
@@ -634,9 +629,7 @@ h6,
 .list-group.visible {
   max-width: 100%; /* Change this value according to your desired width */
   background-color: black;
-
 }
-.footer-section{
-padding-left: 80px;
-
+.footer-section {
+  padding-left: 80px;
 }
