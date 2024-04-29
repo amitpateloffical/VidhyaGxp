@@ -21,7 +21,7 @@ import {
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import MySlider from "../components/MySlider";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -51,19 +51,18 @@ function Home() {
                   Artificial Intelligence to Optimize, Innovate, and Excel in the Digital Era.
                 </p>
                 <div className="pt-4">
-                  <a
-                    href=""
+                  <Link
+                    to="/features"
                     className="btn btn-light  py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight text-dark fw-bold"
                   >
                     Read More
-                  </a>
-                  <a
-                    href=""
-                    onClick={navigate("/contact")}
+                  </Link>
+                  <Link
+                    to="/contact"
                     className="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight fw-bold"
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-lg-6 align-self-end text-center text-lg-end">
@@ -114,19 +113,31 @@ function Home() {
                   </div>
                 </div>
                 <div className="d-flex align-items-center mt-5">
-                  <a className="btn btn-warning text-light rounded-pill px-4 me-3" href="">
+                  <Link className="btn btn-warning text-light rounded-pill px-4 me-3" to="about">
                     Read More
-                  </a>
-                  <a className="btn btn-outline-warning  btn-square me-3" href="">
+                  </Link>
+                  <a
+                    className="btn btn-outline-warning  btn-square me-3"
+                    href="https://www.linkedin.com/company/vidyagxp/"
+                      >
                     <FontAwesomeIcon icon={faFacebookF} />
                   </a>
-                  <a className="btn btn-outline-warning  btn-square me-3" href="">
+                  <a
+                    className="btn btn-outline-warning  btn-square me-3"
+                    href="https://www.linkedin.com/company/vidyagxp/"
+                  >
                     <FontAwesomeIcon icon={faTwitter} />
                   </a>
-                  <a className="btn btn-outline-warning  btn-square me-3" href="">
+                  <a
+                    className="btn btn-outline-warning  btn-square me-3"
+                    href="https://www.linkedin.com/company/vidyagxp/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a className="btn btn-outline-warning  btn-square" href="">
+                  <a
+                    className="btn btn-outline-warning  btn-square"
+                    href="https://www.linkedin.com/company/vidyagxp/"
+                  >
                     <FontAwesomeIcon icon={faLinkedinIn} />
                   </a>
                 </div>

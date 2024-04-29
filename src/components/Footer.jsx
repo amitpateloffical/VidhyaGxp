@@ -37,13 +37,22 @@ function Footer() {
                 Intelligence to Optimize, Innovate, and Excel in the Digital Era.
               </p>
               <div className="d-flex pt-4">
-                <a className="btn btn-outline-light btn-social" href="">
+                <a
+                  className="btn btn-outline-light btn-social"
+                  href="https://www.linkedin.com/company/vidyagxp/"
+                >
                   <FontAwesomeIcon icon={faFacebookF} />
                 </a>
-                <a className="btn btn-outline-light btn-social" href="">
+                <a
+                  className="btn btn-outline-light btn-social"
+                  href="https://www.linkedin.com/company/vidyagxp/"
+                >
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
-                <a className="btn btn-outline-light btn-social" href="">
+                <a
+                  className="btn btn-outline-light btn-social"
+                  href="https://www.linkedin.com/company/vidyagxp/"
+                >
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
                 <a
