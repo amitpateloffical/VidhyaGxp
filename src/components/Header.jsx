@@ -38,8 +38,8 @@ function Header() {
               <div className="d-flex flex-row-reverse justify-end pt-2">
                 <div>
                   <FontAwesomeIcon icon={faEnvelopeOpenText} className="me-3 text-white " />
-                  <span className="text-white fw-bolder">info@VidyaGxP.com</span>
-                </div>{" "}
+                  <span className="text-white fw-bolder">info@vidyagxp.com</span>
+                </div>
                 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
                 <div>
                   <FontAwesomeIcon icon={faPhone} className="me-3 text-white" />
