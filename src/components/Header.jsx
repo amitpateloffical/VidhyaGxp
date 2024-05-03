@@ -35,7 +35,10 @@ function Header() {
           {/* <div className="container"> */}
           <div className="row">
             <div className="top-nav">
-              <div className="d-flex flex-row-reverse justify-end pt-2">
+              <div
+                className="d-flex flex-column flex-sm-row-reverse align-items-center  justify-end pt-2"
+                style={{}}
+              >
                 <div>
                   <FontAwesomeIcon icon={faEnvelopeOpenText} className="me-3 text-white " />
                   <span className="text-white fw-bolder">info@vidyagxp.com</span>

@@ -36,7 +36,7 @@ function Home() {
   return (
     <>
       <div className="slider-container">
-        <div className="container-fluid pt-5  hero-header mb-5">
+        <div className="container-fluid   hero-header">
           <div className="container pt-4">
             <div className="row g-5 pt-5">
               <div className="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
