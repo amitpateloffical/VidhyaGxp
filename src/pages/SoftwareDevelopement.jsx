@@ -9,7 +9,7 @@ function SoftwareDevelopement() {
                 {/* software n development section start */}
                 <div className="container-fluid pt-5 bg-themeColor hero-header ">
                     <div className="container pt-5">
-                        <div className="row g-5 pt-5">
+                        <div className="row g-5 pt-5 row-xm">
                             <div className="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
                                 <h4 className="display-6 text-white mb-4 animated slideInRight">Software Design / Development</h4>
                                 <p className="text-white mb-4 animated slideInRight">Elevate your digital presence with our expert software development and design services. We blend innovation, precision, and creativity to deliver tailored solutions for your unique needs.</p>
@@ -26,7 +26,7 @@ function SoftwareDevelopement() {
                 {/* section two  start */}
                 <div className="container-fluid  pt-5 bg-dark" style={{ backgroundImage: 'url("./texture.png")' }}>
                     <div>
-                        <div className="row g-5 pt-5">
+                        <div className="row g-5 pt-5 row-xm">
                             <div className="col-lg-6 align-items-center text-left text-lg-left mb-lg-5 ps-5">
                                 <h4 className="display-5 text-light mb-4 animated slideInRight">Navigating Success: A Comprehensive Guide to Software Project Lifecycle Excellence</h4>
                             </div>
@@ -41,7 +41,7 @@ function SoftwareDevelopement() {
                 {/* section three dynamic data show start */}
                 <div className="container-fluid dynamicCard py-5 bg-light" style={{ 'height': '100vh', 'overflow-x': 'hidden' }}>{/* style={{backgroundImage:'url("./shapes-lines-only.svg")',backgroundRepeat:'no-repeat'}} */}
                     <div className="container pt-5" >
-                        <div className="row g-5">
+                        <div className="row g-5 row-xm">
                             <div className="col-lg-6 align-items-center text-start text-lg-start mb-lg-5">
                                 <div onClick={() => setCard("Software Development")} className={`row mb-2   p-4 rounded-end ${card === "Software Development" ? 'border-start border-4 border-primary shadow-lg ' : 'shadow-lg'} `}>
                                     <h6 className="">Software Development</h6>
@@ -53,7 +53,7 @@ function SoftwareDevelopement() {
                                     <h6 className="">Custom Software</h6>
                                 </div>
                             </div>
-                            <div className="animatedSidecard position-relative  col-lg-6 align-items-center text-center text-lg-center ">
+                            <div className="animatedSidecard position-relative  col-lg-6 align-items-center text-center text-lg-center">
                                 {/* {card === "Software Development" ? ( */}
 
                                 <div className="rounded p-5 shadow-lg card-style" style={card === 'Software Development' ? { 'transform': 'translate(-150%, 0)' } : { 'transform': 'translate(150%, 0)' }}
@@ -103,8 +103,8 @@ function SoftwareDevelopement() {
                 {/* blue section bg card start */}
                 <div className="container-fluid py-sm-5 py-lg-4 bg-themeColor">
                     <div className="container">
-                        <h4 className="display-6  text-center text-white">Empowering Solutions: Our Software Development and Design Services</h4>
-                        <div className="row pt-5 g-5">
+                        <h4 className="display-6 text-center text-white p-swd">Empowering Solutions: Our Software Development and Design Services</h4>
+                        <div className="row pt-5 g-5 row-swd">
                             <div className="col-md-4">
                                 <div className="card text-center mb-3 py-5 px-5">
                                     <div className="card-body">
@@ -133,7 +133,7 @@ function SoftwareDevelopement() {
                                 </div>
                             </div>
                         </div>
-                        <div className="row pt-5 g-5">
+                        <div className="row pt-5 g-5 row-swd">
                             <div className="col-md-4">
                                 <div className="card text-center mb-3 py-5 px-5">
                                     <div className="card-body">

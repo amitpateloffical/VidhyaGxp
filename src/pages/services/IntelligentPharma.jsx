@@ -37,28 +37,29 @@ export default function IntelligentPharma() {
     });
   }, []);
   return (
-    <div className="top_container m-5">
-      <div className="service_headingr" data-aos="fade-down">
-        <h1 className="heading">Intelligent Pharma Manufacturing Factory </h1>
-      </div>
+    <>
+      <div className="top_container m-4">
+        <div className="service_headingr" data-aos="fade-down">
+          <h1 className="heading service-head-text">Intelligent Pharma Manufacturing Factory </h1>
+        </div>
 
-      <div className="paragraph_container">
-        <p className="paragraph" data-aos="fade-down">
-          Imagine a pharma culture where quality isn't just a slogan, it's a living, breathing entity, empowered by
-          the magic of AI. Dive into a world where intelligent machines work hand-in-hand with your team, brewing a
-          culture of continuous improvement, proactive risk management, and unparalleled quality assurance.
-        </p>
+        <div className="paragraph_container">
+          <p className="paragraph" data-aos="fade-down">
+            Imagine a pharma culture where quality isn't just a slogan, it's a living, breathing entity, empowered by
+            the magic of AI. Dive into a world where intelligent machines work hand-in-hand with your team, brewing a
+            culture of continuous improvement, proactive risk management, and unparalleled quality assurance.
+          </p>
+        </div>
       </div>
-
       <div className="container-fluid section2 py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
                 <img className="img-fluid" src="https://tse4.mm.bing.net/th/id/OIG3.ljZyG5ouEWagYeIaGszZ?pid=ImgGn  " />
               </div>
             </div>
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line">Key Features:</h4>
               <div className="content_container">
                 <ul>
@@ -96,8 +97,8 @@ export default function IntelligentPharma() {
 
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line mt-5" data-aos="fade-right">Benefits:</h4>
               <div className="content_container">
                 <ul>
@@ -124,7 +125,7 @@ export default function IntelligentPharma() {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <div className="col-lg-5 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-left">
                 <img className="img-fluid" src="/lab.jpg" />
               </div>
@@ -135,13 +136,13 @@ export default function IntelligentPharma() {
 
       <div className="container-fluid section2 py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
                 <img className="img-fluid" src="/Doctor.jpeg" />
               </div>
             </div>
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line" data-aos="fade-left">Challenges:</h4>
               <div className="content_container">
                 <ul>
@@ -172,7 +173,7 @@ export default function IntelligentPharma() {
       </div>
 
 
-      <div className="ps_paragraph_container mt-5 bg">
+      <div className="ps_paragraph_container m-3">
         <h5 className="ps_paragraph" data-aos="zoom-in">
           Overall, AI-Assisted Smart Pharma Digital Manufacturing Plants represent the future of the pharmaceutical
           industry. By leveraging AI and other digital technologies, these plants can achieve greater efficiency,
@@ -180,7 +181,7 @@ export default function IntelligentPharma() {
         </h5>
       </div>
 
-      <div className="ps_paragraph_container mt-5 ">
+      <div className="ps_paragraph_container m-3">
         <h5 className="ps_paragraph" data-aos="zoom-in">
           <b>
             It's important to note that this is a developing field, and the specific implementations of AI in pharma
@@ -188,6 +189,6 @@ export default function IntelligentPharma() {
           </b>
         </h5>
       </div>
-    </div>
+    </>
   );
 }

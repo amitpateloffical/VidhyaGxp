@@ -37,30 +37,28 @@ export default function GxpTrainig() {
     });
   }, []);
   return (
-    <div className="top_container m-5">
-      <div className="service_headingr">
-        <h1 className="heading" data-aos="fade-down">GxP Training </h1>
-      </div>
-
-      <div className="bottom_line_container">
-        <h5 className="bottom_line" data-aos="zoom-in">GxP Compliance Training for Regulated Pharma Companies: A Detailed Summary</h5>
-      </div>
-      <div className="paragraph_container">
-        <p className="paragraph" data-aos="fade-down">
-          This training program is designed for employees in all levels and departments of regulated pharmaceutical
-          companies who need to understand and comply with GxP (Good practice) regulations.
-        </p>
+    <>
+      <div className="top_container m-4">
+        <div className="service_headingr">
+          <h1 className="heading service-head-text" data-aos="fade-down">GxP Training </h1>
+        </div>
+        <div className="paragraph_container">
+          <p className="paragraph" data-aos="fade-down">
+            This training program is designed for employees in all levels and departments of regulated pharmaceutical
+            companies who need to understand and comply with GxP (Good practice) regulations.
+          </p>
+        </div>
       </div>
 
       <div className="container-fluid section2 py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
                 <img className="img-fluid" src="/IMG18.jpg" />
               </div>
             </div>
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line" data-aos="fade-left">Objectives:</h4>
               <div className="content_container">
 
@@ -85,8 +83,8 @@ export default function GxpTrainig() {
 
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line" data-aos="fade-right">Course Modules:</h4>
               <div className="content_container">
                 <ul>
@@ -139,7 +137,7 @@ export default function GxpTrainig() {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <div className="col-lg-5 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-left">
                 <img className="img-fluid" src="/lab.jpg" />
               </div>
@@ -150,16 +148,15 @@ export default function GxpTrainig() {
 
       <div className="container-fluid section2 py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
                 <img className="img-fluid" src="/Doctor.jpeg" />
               </div>
             </div>
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line" data-aos="fade-left">Benefits:</h4>
               <div className="content_container">
-
                 <ul className="list-group">
                   <li className="list-group-item" data-aos="fade-left">
                     <b>Reduced risk of non-compliance: </b>
@@ -187,8 +184,8 @@ export default function GxpTrainig() {
 
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line" data-aos="fade-right">Additional Considerations:</h4>
               <div className="content_container">
                 <ul className="list-group">
@@ -207,7 +204,7 @@ export default function GxpTrainig() {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <div className="col-lg-5 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-left">
                 <img className="img-fluid" src="https://tse1.mm.bing.net/th/id/OIG4.3x4RwjMid43Rn16jEXbp?pid=ImgGn" />
               </div>
@@ -217,13 +214,13 @@ export default function GxpTrainig() {
       </div>
       <div className="container-fluid section2 py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
                 <img className="img-fluid" src="https://tse3.mm.bing.net/th/id/OIG3.BYPS_gPFz.O9sRmXTI_H?pid=ImgGn" />
               </div>
             </div>
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line" data-aos="fade-left">The EQMS elixir:</h4>
               <div className="content_container">
                 <ul className="list-group">
@@ -245,9 +242,7 @@ export default function GxpTrainig() {
           </div>
         </div>
       </div>
-
-
-      <div className="ps_paragraph_container mt-5 ">
+      <div className="ps_paragraph_container m-5 ">
         <h5 className="ps_paragraph" data-aos="zoom-in">
           <b>
             By investing in GxP compliance training, regulated pharma companies can ensure they are operating according
@@ -255,6 +250,9 @@ export default function GxpTrainig() {
           </b>
         </h5>
       </div>
-    </div>
+      <div className="bottom_line_container m-5">
+        <h5 className="bottom_line" data-aos="zoom-in">GxP Compliance Training for Regulated Pharma Companies: A Detailed Summary</h5>
+      </div>
+    </>
   );
 }

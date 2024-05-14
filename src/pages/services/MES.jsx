@@ -38,9 +38,10 @@ export default function MES() {
   }, []);
 
   return (
+    <>
     <div className="top_container m-3">
       <div className="service_headingr" data-aos="fade-down">
-        <h1>MES</h1>
+        <h1 className="service-head-text">MES</h1>
       </div>
       <div className="paragraph_container" data-aos="fade-down">
         <p>
@@ -50,16 +51,17 @@ export default function MES() {
           from scheduling and recipe management to quality control and data analysis.
         </p>
       </div>
-
-      <div className="container-fluid section2 py-5">
+      </div>
+      <div className="section2">
+      <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
                 <img className="img-fluid" src="https://cdn.pixabay.com/photo/2013/11/24/11/10/lab-217043_1280.jpg" />
               </div>
             </div>
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line">Here's how MES helps your pharma biz brew up success:</h4>
               <div className="content_container">
                 <ul>
@@ -93,9 +95,9 @@ export default function MES() {
           </div>
         </div>
       </div>
+      </div>
      
-
-      <div className="middle_line_container">
+      <div className="middle_line_container m-3">
         <h6 className="middle_line" data-aos="zoom-in">
           <b>The bottom line:</b>
           MES is not just software; it's a strategic investment in the efficiency, quality, and compliance of your pharma
@@ -104,7 +106,7 @@ export default function MES() {
         </h6>
       </div>
 
-      <div className="ps_paragraph_container">
+      <div className="ps_paragraph_container m-3">
         <h5 className="ps_paragraph" data-aos="zoom-in">
           <b> P.S.</b>
           Curious about the different LMS options available, their specific benefits for various pharma roles, or the
@@ -112,9 +114,9 @@ export default function MES() {
         </h5>
       </div>
 
-      <div className="bottom_line_container">
+      <div className="bottom_line_container m-3">
         <h5 className='bottom_line' data-aos="zoom-in">Ready to start conducting your pharma symphony?</h5>
       </div>
-    </div>
+    </>
   );
 }

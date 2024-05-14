@@ -38,35 +38,33 @@ export default function Rpa() {
   }, []);
 
   return (
-    <div className="top_container m-5">
-      <div className="service_headingr" data-aos="fade-down">
-        <h1 className="heading">RPA </h1>
-      </div>
-
-      <div className="bottom_line_container">
-        <h5 className="bottom_line" data-aos="zoom-in">Robotic Process Automation (RPA) in Pharma Companies: A Detailed Summary</h5>
-      </div>
-      <div className="paragraph_container">
-        <p className="paragraph">
-          <div className="paragraph_container">
-            <p className="paragraph" data-aos="fade-down">
-              RPA utilizes software "robots" to automate repetitive, rule-based tasks traditionally performed by humans.
-              These robots interact with applications and systems like humans do, mimicking clicks, keystrokes, and data
-              entry, but with increased speed, accuracy, and tireless operation.
-            </p>
-          </div>
-        </p>
+    <>
+      <div className="top_container m-5">
+        <div className="service_headingr" data-aos="fade-down">
+          <h1 className="heading service-head-text">RPA </h1>
+        </div>
+        <div className="paragraph_container">
+          <p className="paragraph">
+            <div className="paragraph_container">
+              <p className="paragraph" data-aos="fade-down">
+                RPA utilizes software "robots" to automate repetitive, rule-based tasks traditionally performed by humans.
+                These robots interact with applications and systems like humans do, mimicking clicks, keystrokes, and data
+                entry, but with increased speed, accuracy, and tireless operation.
+              </p>
+            </div>
+          </p>
+        </div>
       </div>
 
       <div className="container-fluid section2 py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
                 <img className="img-fluid" src="/IMG19.jpg" />
               </div>
             </div>
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line" data-aos="fade-left">Why Use RPA in Pharma?</h4>
               <div className="content_container">
                 <ul>
@@ -111,8 +109,8 @@ export default function Rpa() {
 
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line" data-aos="fade-right">Key Applications of RPA in Pharma:</h4>
               <div className="content_container">
                 <ul>
@@ -134,7 +132,7 @@ export default function Rpa() {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <div className="col-lg-5 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-left">
                 <img className="img-fluid" src="/IMG20.jpg" />
               </div>
@@ -145,13 +143,13 @@ export default function Rpa() {
 
       <div className="container-fluid section2 py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
                 <img className="img-fluid" src="/IMG22.jpg" />
               </div>
             </div>
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line" data-aos="fade-left">Benefits of RPA:</h4>
               <div className="content_container">
                 <ul>
@@ -179,8 +177,8 @@ export default function Rpa() {
 
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line" data-aos="fade-right">Challenges of RPA:</h4>
               <div className="content_container">
                 <ul>
@@ -199,7 +197,7 @@ export default function Rpa() {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <div className="col-lg-5 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-left">
                 <img className="img-fluid" src="IMG21.jpg" />
               </div>
@@ -207,28 +205,16 @@ export default function Rpa() {
           </div>
         </div>
       </div>
-
-
-      <div className="ps_paragraph_container m-3 ">
-        <h5 className="ps_paragraph" data-aos="zoom-in">
-          <b>
-            Overall, RPA offers significant potential for pharma companies to optimize processes, improve efficiency,
-            and enhance compliance. However, careful planning, implementation, and change management are crucial for
-            success.
-          </b>
-        </h5>
-      </div>
-
       <div className="container-fluid section2 py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+          <div className="row g-5 align-items-center row-xm">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
                 <img className="img-fluid" src="/IMG23.jpg" />
               </div>
             </div>
 
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
               <h4 className="why_line" data-aos="fade-left">Additional Notes:</h4>
               <div className="content_container">
                 <ul>
@@ -251,6 +237,18 @@ export default function Rpa() {
           </div>
         </div>
       </div>
-    </div>
+      <div className="ps_paragraph_container m-3 ">
+        <h5 className="ps_paragraph" data-aos="zoom-in">
+          <b>
+            Overall, RPA offers significant potential for pharma companies to optimize processes, improve efficiency,
+            and enhance compliance. However, careful planning, implementation, and change management are crucial for
+            success.
+          </b>
+        </h5>
+      </div>
+      <div className="bottom_line_container m-4">
+        <h5 className="bottom_line" data-aos="zoom-in">Robotic Process Automation (RPA) in Pharma Companies: A Detailed Summary</h5>
+      </div>
+    </>
   );
 }

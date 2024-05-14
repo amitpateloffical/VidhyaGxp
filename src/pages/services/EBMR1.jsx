@@ -37,22 +37,23 @@ export default function EBMR1() {
     });
   }, []);
   return (
-    <div className="top_container m-3">
-      <div className="service_headingr">
-        <h1 className="heading" data-aos="fade-down">eBMR</h1>
+    <>
+      <div className="top_container m-3">
+        <div className="service_headingr">
+          <h1 className="heading service-head-text" data-aos="fade-down">eBMR</h1>
+        </div>
+        <div className="paragraph_container">
+          <p className="paragraph" data-aos="fade-down">
+            At VidyaGxP, we're redefining the landscape of manufacturing intelligence with our pioneering e-BMR
+            solutions. Stepping into the future, we offer more than just software; we provide a gateway to excellence in
+            manufacturing processes. Our e-BMR service is at the heart of this transformation, designed to elevate your
+            operations to new heights of efficiency, compliance, and quality.
+          </p>
+        </div>
       </div>
-      <div className="paragraph_container">
-        <p className="paragraph" data-aos="fade-down">
-          At VidyaGxP, we're redefining the landscape of manufacturing intelligence with our pioneering e-BMR
-          solutions. Stepping into the future, we offer more than just software; we provide a gateway to excellence in
-          manufacturing processes. Our e-BMR service is at the heart of this transformation, designed to elevate your
-          operations to new heights of efficiency, compliance, and quality.
-        </p>
-      </div>
-
       <div className="container-fluid section2 py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
                 <img className="img-fluid" src="https://images.pexels.com/photos/5726693/pexels-photo-5726693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
@@ -96,7 +97,7 @@ export default function EBMR1() {
         </div>
       </div>
 
-      <div className="middle_line_container" data-aos="zoom-in">
+      <div className="middle_line_container m-3" data-aos="zoom-in">
         <h4 className="middle_line">Join the VidhaGxP Revolution</h4>
         <p>
           Embrace the future with VidyaGxP and transform your electronic batch manufacturing records into a
@@ -111,7 +112,6 @@ export default function EBMR1() {
           "Discover the Lifelink difference. Elevate your manufacturing process now."
         </h5>
       </div >
-    </div>
-
+    </>
   );
 }

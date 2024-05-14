@@ -2,7 +2,7 @@ import { useEffect, useRef, } from "react";
 import BreadCrumb from "../components/BreadCrumb";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import "./Home.css";
 
 function About() {
   const listRefs = useRef([]);
@@ -49,7 +49,7 @@ function About() {
 
       {/* <!-- About Start --> */}
 
-      <div className="container-fluid   py-3">
+      <div className="container-fluid py-3">
         <div className="container py-4">
           <div className="row g-2 align-items-center">
             <div className="col-lg-12 wow fadeIn" data-wow-delay="0.5s">
@@ -74,9 +74,9 @@ function About() {
       
       <div className="container-fluid section2  py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div
-              className="col-lg-6 wow fadeIn"
+              className="col-lg-6 wow fadeIn px-0"
               data-aos="fade-right"
               data-wow-delay="0.1s"
             >
@@ -85,7 +85,7 @@ function About() {
               </div>
             </div>
             <div
-              className="col-lg-6 wow fadeIn"
+              className="col-lg-6 wow fadeIn px-0"
               // data-aos="fade-left"
               data-wow-delay="0.5s"
             >
@@ -137,7 +137,7 @@ function About() {
 
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
               <h3 className="mb-4" data-aos="fade-right">
                 By partnering with VidyaGxP, you can:
@@ -199,7 +199,7 @@ function About() {
       {/* <!-- About End --> */}
       <div className="container-fluid section2 py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div
               className="col-lg-6 wow fadeIn "
               data-aos="fade-right"
@@ -271,7 +271,7 @@ function About() {
 
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
               {/* <div className="btn btn-sm border rounded-pill text-primary px-3 mb-3">About Us</div> */}
               <h3 className="mb-4" data-aos="fade-right">
@@ -337,7 +337,7 @@ function About() {
 
       <div className="container-fluid section2 py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div
               className="col-lg-6 wow fadeIn"
               data-aos="fade-right"
@@ -402,7 +402,7 @@ function About() {
 
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div
               className="col-lg-6 wow fadeIn"
               data-wow-delay="0.5s"
@@ -457,7 +457,7 @@ function About() {
 
       <div className="container-fluid section2 py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div
               className="col-lg-6 wow fadeIn"
               data-aos="fade-right"

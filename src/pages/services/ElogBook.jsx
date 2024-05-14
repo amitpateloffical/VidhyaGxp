@@ -2,6 +2,7 @@ import { useEffect, useRef, } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./services.css"; // Corrected CSS import
+import "../Home.css"
 
 export default function ElogBook() {
   const listRefs = useRef([]);
@@ -39,9 +40,9 @@ export default function ElogBook() {
   }, []);
   return (
     <>
-      <div className=" top_container m-3 ">
+      <div className=" top_container">
         <div className="service_headingr">
-          <h1 className="heading" data-aos="fade-down">eLogBook</h1>
+          <h1 className="heading service-head-text" data-aos="fade-down">eLogBook</h1>
         </div>
         <div className="paragraph_container">
           <p className="paragraph" data-aos="fade-down">
@@ -50,16 +51,18 @@ export default function ElogBook() {
             you record and track crucial data.
           </p>
         </div>
+      </div>
 
-        <div className="container-fluid section2 py-5">
+      <div className="section2">
+        <div className="container-fluid py-5">
           <div className="container">
-            <div className="row g-5 align-items-center">
-              <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+            <div className="row g-5 align-items-center row-xm">
+              <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
                 <div className="abouts" data-aos="fade-right">
                   <img className="img-fluid" src="https://cdn.pixabay.com/photo/2017/05/15/23/47/stethoscope-icon-2316460_1280.png" />
                 </div>
               </div>
-              <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
                 <h4 className="why_line" data-aos="fade-left">Imagine this:-</h4>
                 <div className="content_container">
                   <ul>
@@ -94,22 +97,22 @@ export default function ElogBook() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="middle_line_container">
-          <h6 className="middle_line" data-aos="zoom-in">
-            <b>The bottom line:</b> e-Logbooks aren't just about going digital; they're about unlocking a new level of data
-            management, collaboration, and efficiency in the pharma industry. So, ditch the pen and paper and embrace the
-            future of record-keeping. It's time to brew up a more efficient, compliant, and data-driven future for your
-            pharma operations!
-          </h6>
-        </div>
+      <div className="middle_line_container m-3">
+        <h6 className="middle_line" data-aos="zoom-in">
+          <b>The bottom line:</b> e-Logbooks aren't just about going digital; they're about unlocking a new level of data
+          management, collaboration, and efficiency in the pharma industry. So, ditch the pen and paper and embrace the
+          future of record-keeping. It's time to brew up a more efficient, compliant, and data-driven future for your
+          pharma operations!
+        </h6>
+      </div>
 
-        <div className="ps_paragraph_container">
-          <h5 className="ps_paragraph" data-aos="zoom-in">
-            <b> P.S.</b> Want to know more about the different e-Logbook options, their specific benefits for areas like R&D or
-            manufacturing, and the implementation process? I'm your brewing buddy – Just Schedule a demo!
-          </h5>
-        </div>
+      <div className="ps_paragraph_container m-3">
+        <h5 className="ps_paragraph" data-aos="zoom-in">
+          <b> P.S.</b> Want to know more about the different e-Logbook options, their specific benefits for areas like R&D or
+          manufacturing, and the implementation process? I'm your brewing buddy – Just Schedule a demo!
+        </h5>
       </div>
     </>
   );

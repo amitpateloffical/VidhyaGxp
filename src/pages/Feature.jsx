@@ -2,6 +2,7 @@ import BreadCrumb from "../components/BreadCrumb";
 import { useEffect, useRef, } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./Home.css"
 
 export default function GxpTrainig() {
   const listRefs = useRef([]);
@@ -43,7 +44,7 @@ export default function GxpTrainig() {
 
       <div className="container-fluid section2  py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right" >
                 <img className="img-fluid" src="/Doctor.jpeg" />
@@ -84,7 +85,7 @@ export default function GxpTrainig() {
       {/* ----------2nd Part---------- */}
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
               <h3 className="mb-4" data-aos="fade-right">Benefits of AI-Assisted Digital Solutions:</h3>
               <div className="content_container">
@@ -182,7 +183,7 @@ export default function GxpTrainig() {
       {/* ----------3nd Part---------- */}
       <div className="container-fluid section2  py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right" >
                 <img className="img-fluid" src="/Benfit.jpeg" />
@@ -220,7 +221,7 @@ export default function GxpTrainig() {
         </div>
       </div>
       {/* ----------3rd Part END---------- */}
-      <div className="ps_paragraph_container mt-3 ">
+      <div className="ps_paragraph_container m-3 ">
         <h5 className="ps_paragraph" data-aos="zoom-in" >
           <b>
             By adopting AI-assisted digital solutions, pharma companies can overcome the limitations of paper-based
@@ -233,7 +234,7 @@ export default function GxpTrainig() {
       {/* ----------4th Part---------- */}
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
               <h3 className="mb-4" data-aos="fade-right" >Enhanced Data Management and Compliance:</h3>
               <div className="content_container">
@@ -272,7 +273,7 @@ export default function GxpTrainig() {
       {/* ----------5th Part---------- */}
       <div className="container-fluid section2  py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
                 <img className="img-fluid" src="/StreamLine.jpeg" />
@@ -306,7 +307,7 @@ export default function GxpTrainig() {
       {/* ----------6th Part---------- */}
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
               <h3 className="mb-4" data-aos="fade-right">Optimized Quality Control and Risk Management:</h3>
               <div className="content_container">
@@ -340,7 +341,7 @@ export default function GxpTrainig() {
       {/* ----------7th Part---------- */}
       <div className="container-fluid section2  py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="abouts" data-aos="fade-right">
                 <img className="img-fluid" src="/AdvancedAnalytics.jpeg" />
@@ -374,7 +375,7 @@ export default function GxpTrainig() {
       {/* ----------8th Part---------- */}
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row g-5 align-items-center">
+          <div className="row g-5 align-items-center row-xm">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
               <h3 className="mb-4"data-aos="fade-right">Additional Benefits:</h3>
               <div className="content_container">

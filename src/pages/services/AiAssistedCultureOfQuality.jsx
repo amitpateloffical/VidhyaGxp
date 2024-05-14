@@ -40,7 +40,7 @@ export default function AiAssistedCultureOfQuality() {
     <>
       <div className="top_container m-5">
         <div className="service_headingr">
-          <h1 className="heading" data-aos="fade-down">AI-Assisted Culture of Quality</h1>
+          <h1 className="heading service-head-text" data-aos="fade-down">AI-Assisted Culture of Quality</h1>
         </div>
         <div className="paragraph_container">
           <p className="paragraph" data-aos="fade-down">
@@ -49,16 +49,17 @@ export default function AiAssistedCultureOfQuality() {
             culture of continuous improvement, proactive risk management, and unparalleled quality assurance.
           </p>
         </div>
-
-        <div className="container-fluid section2 py-5">
+      </div>
+      <div className="section2">
+        <div className="container-fluid py-5">
           <div className="container">
-            <div className="row g-5 align-items-center">
-              <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+            <div className="row g-5 align-items-center row-xm">
+              <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
                 <div className="abouts" data-aos="fade-right">
                   <img className="img-fluid" src="/IMG15.jpg" />
                 </div>
               </div>
-              <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
                 <h4 className="why_line" data-aos="fade-left">The AI-Assisted Quality Culture Potion:</h4>
                 <div className="content_container">
                   <ul>
@@ -104,28 +105,26 @@ export default function AiAssistedCultureOfQuality() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="middle_line_container m-3">
+        <h6 className="middle_line" data-aos="zoom-in">
+          <b>The bottom line:</b>AI-Assisted Culture of Quality is not just about technology; it's about transforming
+          your organization's mindset and approach to quality. By brewing intelligence into your quality systems, you
+          can create a culture of continuous improvement, innovation, and unparalleled quality that sets your pharma
+          business apart.
+        </h6>
+      </div>
 
+      <div className="ps_paragraph_container m-3">
+        <h5 className="ps_paragraph" data-aos="zoom-in">
+          <b> P.S.</b>P.S. Want to know more about specific AI applications in pharma, the challenges and ethical
+          considerations, or the impact on different areas like R&D or supply chain? I'm your AI-powered guru –Just
+          Schedule a demo!
+        </h5>
+      </div>
 
-        <div className="middle_line_container">
-          <h6 className="middle_line" data-aos="zoom-in">
-            <b>The bottom line:</b>AI-Assisted Culture of Quality is not just about technology; it's about transforming
-            your organization's mindset and approach to quality. By brewing intelligence into your quality systems, you
-            can create a culture of continuous improvement, innovation, and unparalleled quality that sets your pharma
-            business apart.
-          </h6>
-        </div>
-
-        <div className="ps_paragraph_container">
-          <h5 className="ps_paragraph" data-aos="zoom-in">
-            <b> P.S.</b>P.S. Want to know more about specific AI applications in pharma, the challenges and ethical
-            considerations, or the impact on different areas like R&D or supply chain? I'm your AI-powered guru –Just
-            Schedule a demo!
-          </h5>
-        </div>
-
-        <div className="bottom_line_container">
-          <h5 className="bottom_line" data-aos="zoom-in">Ready to start your AI-powered quality journey?</h5>
-        </div>
+      <div className="bottom_line_container m-3">
+        <h5 className="bottom_line" data-aos="zoom-in">Ready to start your AI-powered quality journey?</h5>
       </div>
     </>
   );

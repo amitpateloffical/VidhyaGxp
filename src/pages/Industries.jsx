@@ -41,13 +41,13 @@ function Industries() {
             {/* <!-- About Start --> */}
             <div className="container-fluid section2  py-5">
                 <div className="container">
-                    <div className="row g-5 align-items-center">
-                        <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div className="row g-5 align-items-center row-xm">
+                        <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
                             <div className="abouts" data-aos="fade-right">
                                 <img className="img-fluid" src="/lab.jpg" />
                             </div>
                         </div>
-                        <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
                             <h3 className="mb-4" data-aos="fade-left">Industry Expertise at VidyaGxP</h3>
                             <p className="mb-4" data-aos="fade-left">
                                 At VidyaGxP, we understand the unique challenges and opportunities faced by the global pharmaceutical industry. We are a dedicated GxP software provider with a deep understanding of industry regulations, workflows, and best practices.
@@ -80,8 +80,8 @@ function Industries() {
             {/* -----------2nd Part----------- */}
             <div className="container-fluid py-5">
                 <div className="container">
-                    <div className="row g-5 align-items-center">
-                        <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div className="row g-5 align-items-center row-xm">
+                        <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
                             <h3 className="mb-4" data-aos="fade-right"> Here`s how our industry knowledge benefits your organization:</h3>
                             <div className="content_container">
                                 <ul className="list-group"
@@ -107,7 +107,7 @@ function Industries() {
                             </div>
                         </div>
 
-                        <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
                             <div className="abouts" data-aos="fade-left">
                                 <img className="img-fluid" src="/Industries.jpg" />
                             </div>
@@ -117,65 +117,63 @@ function Industries() {
             </div>
             {/* -----------3rd Part----------- */}
             <div className="card-section container-fluid pt-5 pb-5">
-                <div className="container pt-5 pb-5">
-                    <div className="row g-5">
-                        <div className="ms-3">
-                            <h2 className="text-center">Beyond expertise, we offer:</h2>
-                        </div>
-                        <div className="expertise-cards">
-                            <div className="card-expertise" data-aos="fade-right">
-                                <div className="img-card">
-                                    <img
-                                        src="https://cdn3d.iconscout.com/3d/premium/thumb/web-development-5374063-4496032.png?f=webp"
-                                        alt=""
-                                        className="card-img"
-                                    />
-                                </div>
-                                <div className="card-pera">
-                                    <div className="software p-1">Industry-specific resources</div>
-                                    <div className="software-pera">
-                                        {" "}
-                                        We provide white papers, webinars, and case studies to keep you informed about the latest industry trends and regulations.
-                                    </div>
+                <div className="container pb-5">
+                    <div className="ms-3">
+                        <h2 className="text-center">Beyond expertise, we offer:</h2>
+                    </div>
+                    <div className="row g-4 expertise-cards pt-5 row-xm">
+                        <div className="col-lg-4 card-expertise" data-aos="fade-right">
+                            <div className="img-card">
+                                <img
+                                    src="https://cdn3d.iconscout.com/3d/premium/thumb/web-development-5374063-4496032.png?f=webp"
+                                    alt=""
+                                    className="card-img"
+                                />
+                            </div>
+                            <div className="card-pera">
+                                <div className="software p-1">Industry-specific resources</div>
+                                <div className="software-pera">
+                                    {" "}
+                                    We provide white papers, webinars, and case studies to keep you informed about the latest industry trends and regulations.
                                 </div>
                             </div>
-                            <div className="card-expertise">
-                                <div className="img-card">
-                                    <img
-                                        src="https://cdn3d.iconscout.com/3d/premium/thumb/web-security-5617614-4674325.png?f=webp"
-                                        alt=""
-                                        className="card-img"
-                                    />
-                                </div>
-                                <div className="card-pera">
-                                    <div className="software">Dedicated support</div>
-                                    <div className=" software-pera">
-                                        {" "}
-                                        Our team of experienced professionals is always available to answer your questions and provide technical assistance.
-                                    </div>
-                                </div>
-                            </div>{" "}
-                            <div className="card-expertise" data-aos="fade-left">
-                                <div className="img-card">
-                                    <img
-                                        src="https://cdn3d.iconscout.com/3d/premium/thumb/online-pharmacy-9711183-7909752.png"
-                                        alt=""
-                                        className="card-img"
-                                    />
-                                </div>
-                                <div className="card-pera">
-                                    <div className="software">Ongoing innovation</div>
-                                    <div className="software-pera">
-                                        {" "}
-                                        We continuously invest in research and development to ensure our solutions remain at the forefront of the industry.
-                                    </div>
-                                </div>
-                            </div>{" "}
                         </div>
-                        <div className="ms-3">
-                            <h4 className="text-center">Partner with VidyaGxP and leverage our industry expertise to achieve your GxP compliance goals and drive operational excellence.</h4>
+                        <div className="col-lg-4 card-expertise">
+                            <div className="img-card">
+                                <img
+                                    src="https://cdn3d.iconscout.com/3d/premium/thumb/web-security-5617614-4674325.png?f=webp"
+                                    alt=""
+                                    className="card-img"
+                                />
+                            </div>
+                            <div className="card-pera">
+                                <div className="software">Dedicated support</div>
+                                <div className=" software-pera">
+                                    {" "}
+                                    Our team of experienced professionals is always available to answer your questions and provide technical assistance.
+                                </div>
+                            </div>
+                        </div>{" "}
+                        <div className="col-lg-4 card-expertise" data-aos="fade-left">
+                            <div className="img-card">
+                                <img
+                                    src="https://cdn3d.iconscout.com/3d/premium/thumb/online-pharmacy-9711183-7909752.png"
+                                    alt=""
+                                    className="card-img"
+                                />
+                            </div>
+                            <div className="card-pera">
+                                <div className="software">Ongoing innovation</div>
+                                <div className="software-pera">
+                                    {" "}
+                                    We continuously invest in research and development to ensure our solutions remain at the forefront of the industry.
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div className="ms-3">
+                    <h4 className="text-center">Partner with VidyaGxP and leverage our industry expertise to achieve your GxP compliance goals and drive operational excellence.</h4>
                 </div>
             </div>
             {/* <!-- About End --> */}

@@ -40,7 +40,7 @@ export default function EQMS() {
     <>
       <div className="top_container m-3">
         <div className="service_headingr" data-aos="fade-down">
-          <h1>EQMS</h1>
+          <h1 className="service-head-text">EQMS</h1>
         </div>
         <div className="paragraph_container">
           <p className="paragraph" data-aos="fade-down">
@@ -50,56 +50,58 @@ export default function EQMS() {
             empowers your team to brew up consistently excellent products.
           </p>
         </div>
-
-        <div className="container-fluid section2 py-5">
+      </div >
+      <div className="section2">
+        <div className="container-fluid py-5">
           <div className="container">
-            <div className="row g-5 align-items-center">
-              <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+            <div className="row g-5 align-items-center row-xm">
+              <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
                 <div className="abouts" data-aos="fade-right">
                   <img className="img-fluid" src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
                 </div>
               </div>
-              <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
                 <h4 className="why_line" data-aos="fade-left">The EQMS elixir:</h4>
                 <div className="content_container">
 
                   <ul>
-                      <li data-aos="fade-left">
-                        <b>What is it?</b>
-                        An EQMS is a software system that centralizes and manages all your quality-related activities. Think of it as
-                        a digital quality control lab that's always open and accessible.
-                      </li>
-                      <li data-aos="fade-left">
-                        <b>Why is it the secret ingredient?</b> Because it offers a powerful blend of benefits:
-                      </li>
-                      <li data-aos="fade-left">
-                        <b>Compliance champion:</b>
-                        Ensures adherence to regulatory requirements like cGMP and QMS, reducing risks and simplifying audits.
-                      </li>
-                      <li data-aos="fade-left">
-                        <b>Document management mastery:</b>
-                        Store, track, and manage all your quality documentation in one secure, centralized location.
-                      </li>
-                      <li data-aos="fade-left">
-                        <b>Non-conformance control:</b>
-                        Identify, track, and resolve deviations and complaints efficiently, minimizing their impact.
-                      </li>
-                      <li data-aos="fade-left">
-                        <b>Risk management magic: </b>
-                        Proactively identify and mitigate quality risks before they become problems.{" "}
-                      </li>
-                      <li data-aos="fade-left">
-                        <b>Continuous improvement catalyst: </b> Analyze quality data to identify trends and opportunities for
-                        improvement..
-                      </li>
+                    <li data-aos="fade-left">
+                      <b>What is it?</b>
+                      An EQMS is a software system that centralizes and manages all your quality-related activities. Think of it as
+                      a digital quality control lab that's always open and accessible.
+                    </li>
+                    <li data-aos="fade-left">
+                      <b>Why is it the secret ingredient?</b> Because it offers a powerful blend of benefits:
+                    </li>
+                    <li data-aos="fade-left">
+                      <b>Compliance champion:</b>
+                      Ensures adherence to regulatory requirements like cGMP and QMS, reducing risks and simplifying audits.
+                    </li>
+                    <li data-aos="fade-left">
+                      <b>Document management mastery:</b>
+                      Store, track, and manage all your quality documentation in one secure, centralized location.
+                    </li>
+                    <li data-aos="fade-left">
+                      <b>Non-conformance control:</b>
+                      Identify, track, and resolve deviations and complaints efficiently, minimizing their impact.
+                    </li>
+                    <li data-aos="fade-left">
+                      <b>Risk management magic: </b>
+                      Proactively identify and mitigate quality risks before they become problems.{" "}
+                    </li>
+                    <li data-aos="fade-left">
+                      <b>Continuous improvement catalyst: </b> Analyze quality data to identify trends and opportunities for
+                      improvement..
+                    </li>
                   </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div >
+        </div >
+      </div>
 
-      <div className="middle_line_container">
+      <div className="middle_line_container m-3">
         <h6 className="middle_line" data-aos="zoom-in">
           <b>The bottom line:</b>
           EQMS is not just software; it's a cultural shift towards a proactive and data-driven approach to quality. By
@@ -107,12 +109,12 @@ export default function EQMS() {
           trust with regulators and customers.
         </h6>
 
-        <h6 className="middle_line" data-aos="zoom-in">
+        <h6 className="middle_line m-3" data-aos="zoom-in">
           <b>Ready to concoct your quality magic?</b>
         </h6>
       </div>
 
-      <div className="ps_paragraph_container  ">
+      <div className="ps_paragraph_container m-3">
         <h5 className="ps_paragraph" data-aos="zoom-in">
           <b> P.S.</b>
           Want to know more about specific EQMS solutions, their implementation process, and the benefits for
@@ -120,7 +122,6 @@ export default function EQMS() {
         </h5>
       </div>
       {/* <h5 className="bottom_line">Ready to start conducting your pharma symphony?</h5> */}
-    </div >
     </>
   );
 }

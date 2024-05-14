@@ -38,70 +38,73 @@ export default function WarehouseMS() {
   }, []);
 
   return (
-    <div className="top_container m-3">
-      <div className="service_headingr">
-        <h1 className="heading" data-aos="fade-down">Warehouse management system(WMS)</h1>
+    <>
+      <div className="top_container m-3">
+        <div className="service_headingr">
+          <h1 className="heading service-head-text" data-aos="fade-down">Warehouse management system(WMS)</h1>
+        </div>
+        <div className="paragraph_container">
+          <p className="paragraph" data-aos="fade-down">
+            In the fast-paced world of pharma, inventory management isn't just about stocking shelves - it's about ensuring
+            patient well-being. That's where Warehouse Management Systems (WMS) step in, acting as the magical potion for
+            optimizing your pharma warehouse operations. Imagine a system that tracks every pill, vial, and syringe with
+            precision, ensuring accurate inventory, streamlined processes, and regulatory compliance.
+          </p>
+        </div>
       </div>
-      <div className="paragraph_container">
-        <p className="paragraph" data-aos="fade-down">
-          In the fast-paced world of pharma, inventory management isn't just about stocking shelves - it's about ensuring
-          patient well-being. That's where Warehouse Management Systems (WMS) step in, acting as the magical potion for
-          optimizing your pharma warehouse operations. Imagine a system that tracks every pill, vial, and syringe with
-          precision, ensuring accurate inventory, streamlined processes, and regulatory compliance.
-        </p>
-      </div>
-
-      <div className="container-fluid section2 py-5">
-        <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-              <div className="abouts" data-aos="fade-right">
-                <img className="img-fluid" src="https://img.freepik.com/free-photo/warehouse-pharmacy_1161-231.jpg?t=st=1710138426~exp=1710142026~hmac=5632054354ecff5d9ec2eb934e32a13b4a485f15f5545e9a8bd3b16a6392bd43&w=740" />
+      <div className="section2">
+        <div className="container-fluid py-5">
+          <div className="container">
+            <div className="row g-5 align-items-center row-xm">
+              <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
+                <div className="abouts" data-aos="fade-right">
+                  <img className="img-fluid" src="https://img.freepik.com/free-photo/warehouse-pharmacy_1161-231.jpg?t=st=1710138426~exp=1710142026~hmac=5632054354ecff5d9ec2eb934e32a13b4a485f15f5545e9a8bd3b16a6392bd43&w=740" />
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-              <h4 className="why_line" data-aos="fade-left">The WMS Elixir:</h4>
-              <div className="content_container">
-                <ul>
-                  <li data-aos="fade-left">
-                    <b>What is it?</b>
-                    EDMS are software systems that manage all your electronic documents in one secure, central location. Think of
-                    it as a digital filing cabinet on steroids.
-                  </li>
-                  <li data-aos="fade-left">
-                    <b>Why is it essential?</b> Because it brings a potpourri of benefits:
-                  </li>
-                  <li data-aos="fade-left">
-                    <b>Compliance magic:</b>
-                    Say goodbye to frantic document searches! EDMS ensures easy access, audit-ready trails, and streamlined
-                    compliance with regulations like 21 CFR Part 11.
-                  </li>
-                  <li data-aos="fade-left">
-                    <b>Collaboration boost:</b>
-                    Share documents seamlessly across teams and departments, fostering better communication and faster
-                    decision-making.
-                  </li>
-                  <li data-aos="fade-left">
-                    <b>Version control made easy:</b>
-                    No more confusion about "the latest version." EDMS tracks every change, ensuring you're always using the
-                    correct document.
-                  </li>
-                  <li data-aos="fade-left">
-                    <b>Security fortress:</b>
-                    Protect your sensitive data with robust security features like access controls and encryption.
-                  </li>
-                  <li data-aos="fade-left">
-                    <b>Space-saving superhero:</b>: Ditch the physical clutter and free up valuable workspace for what matters
-                    most.
-                  </li>
-                </ul>
+              <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
+                <h4 className="why_line" data-aos="fade-left">The WMS Elixir:</h4>
+                <div className="content_container">
+                  <ul>
+                    <li data-aos="fade-left">
+                      <b>What is it?</b>
+                      EDMS are software systems that manage all your electronic documents in one secure, central location. Think of
+                      it as a digital filing cabinet on steroids.
+                    </li>
+                    <li data-aos="fade-left">
+                      <b>Why is it essential?</b> Because it brings a potpourri of benefits:
+                    </li>
+                    <li data-aos="fade-left">
+                      <b>Compliance magic:</b>
+                      Say goodbye to frantic document searches! EDMS ensures easy access, audit-ready trails, and streamlined
+                      compliance with regulations like 21 CFR Part 11.
+                    </li>
+                    <li data-aos="fade-left">
+                      <b>Collaboration boost:</b>
+                      Share documents seamlessly across teams and departments, fostering better communication and faster
+                      decision-making.
+                    </li>
+                    <li data-aos="fade-left">
+                      <b>Version control made easy:</b>
+                      No more confusion about "the latest version." EDMS tracks every change, ensuring you're always using the
+                      correct document.
+                    </li>
+                    <li data-aos="fade-left">
+                      <b>Security fortress:</b>
+                      Protect your sensitive data with robust security features like access controls and encryption.
+                    </li>
+                    <li data-aos="fade-left">
+                      <b>Space-saving superhero:</b>: Ditch the physical clutter and free up valuable workspace for what matters
+                      most.
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="middle_line_container">
+      <div className="middle_line_container m-3">
         <h6 className="middle_line" data-aos="zoom-in">
           <b>The bottom line:</b>
           WMS is not just software; it's a strategic investment in the efficiency, compliance, and patient safety of your
@@ -110,7 +113,7 @@ export default function WarehouseMS() {
         </h6>
       </div>
 
-      <div className="ps_paragraph_container">
+      <div className="ps_paragraph_container m-3">
         <h5 className="ps_paragraph" data-aos="zoom-in">
           <b> P.S.</b>
           Curious about specific WMS solutions, their implementation process, or the benefits for different areas like
@@ -118,9 +121,9 @@ export default function WarehouseMS() {
           demo!
         </h5>
       </div>
-      <div className="bottom_line_container">
+      <div className="bottom_line_container m-3">
         <h5 className="bottom_line" data-aos="zoom-in">Ready to unleash the power of WMS in your pharma warehouse?</h5>
       </div>
-    </div>
+    </>
   );
 }

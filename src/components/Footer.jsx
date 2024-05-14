@@ -1,3 +1,4 @@
+import "./Header.css"
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -26,13 +27,13 @@ function Footer() {
       <div className="container-fluid bg-dark text-white-50 footer py-3">
         <div className="footer-section pt-5">
           <div className="row g-5">
-            <div className="col-md-6 col-lg-3 wow fadeIn " data-wow-delay="0.1s">
+            <div className="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
               <a href="index.html" className="d-inline-block mb-3">
                 <h1 className="text-white">
                   VidyaGxP<span className="text-primary"></span>
                 </h1>
               </a>
-              <p className="mb-0 style={{ fontSize: '14px' }}>">
+              <p className="mb-0">
                 Empowering Your Business with Intelligent Solutions: Harness the Power of Artificial
                 Intelligence to Optimize, Innovate, and Excel in the Digital Era.
               </p>
