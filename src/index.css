@@ -216,7 +216,7 @@ h6,
 }
 
 .service-item:hover {
-  background: rgb(236, 167, 63);
+  background: lightslategrey;
 }
 
 .service-item .service-icon {
@@ -225,7 +225,7 @@ h6,
   transition: 0.5s;
   font-size: 2rem;
   background: var(--light);
-  color: var(--themeColor);
+  /* color: var(--themeColor); */
   margin: 0 auto 20px auto;
 }
 
@@ -248,7 +248,7 @@ h6,
   display: flex;
   transition: 0.5s;
   position: relative;
-  color: var(--themeColor);
+  /* color: var(--themeColor); */
 }
 
 .service-item:hover a.btn {
@@ -633,4 +633,3 @@ h6,
 .footer-section {
   padding-left: 80px;
 }
-
