@@ -89,11 +89,11 @@ function Home() {
 
         <div className="container-fluid section2 mt-5 py-5">
           <div className="row d-flex flex-row">
-            <div className="col-md-3 mt-4 p-4">
-              <Card className="p-4 mb-4 shadow-sm">
+            <div className="col-md-4 mt-4 p-4">
+              <Card className="p-5 mb-4  shadow-md">
                 <h2 className="text-primary">Our Services</h2>
                 <div className="services-list mt-4">
-                  <div className="mb-1">
+                  <div className="mb-2">
                     <DropdownButton 
                       id="dropdown-basic-button1"
                       title={
@@ -117,7 +117,7 @@ function Home() {
                       <Dropdown.Item href="#/action-9">Commision and Qualification</Dropdown.Item>
                     </DropdownButton>
                   </div>
-                  <div className="mb-1">
+                  <div className="mb-2">
                     <DropdownButton
                       id="dropdown-basic-button2"
                       title={
@@ -140,7 +140,7 @@ function Home() {
                       </Dropdown.Item>
                     </DropdownButton>
                   </div>
-                  <div className="mb-1">
+                  <div className="mb-2">
                     <DropdownButton
                       id="dropdown-basic-button3"
                       title={
@@ -174,7 +174,7 @@ function Home() {
                       </Dropdown.Item>
                     </DropdownButton>
                   </div>
-                  <div className="mb-1">
+                  <div className="mb-2">
                     <DropdownButton
                       id="dropdown-basic-button4"
                       title={
@@ -207,8 +207,8 @@ function Home() {
                 </div>
               </Card>
             </div>
-            <div className="col-md-9 mt-4 p-4">
-              <Card className="p-4 mb-4 shadow-sm">
+            <div className="col-md-8 mt-4 p-4">
+              <Card className="p-5 mb-4 shadow-md">
                 <h2 className="text-primary">Who We Are</h2>
                 <p>
                   At VidyaGxP, our focus on building long-term client relationships has helped us
