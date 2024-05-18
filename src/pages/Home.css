@@ -3,63 +3,113 @@
     height: 300px;
 } */
 
-
 /* .swiper .swiper-button-prev {
     background-image: url("./angle-left_.png") !important;
     background-repeat: no-repeat !important;
     height: 50px;
 } */
 
-
-
-
 /* .swiper .swiper-button-next {
 } */
 
 .software .dynamicCard .animatedSidecard {
-
-    transform: translate(150%, 0);
-    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translate(150%, 0);
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .service-item {
-    box-shadow: inset -5px -5px 9px rgba(226, 226, 226, 0.45), inset 5px 5px 9px rgba(170, 183, 203, 0.3);
+  box-shadow: inset -5px -5px 9px rgba(226, 226, 226, 0.45),
+    inset 5px 5px 9px rgba(170, 183, 203, 0.3);
 }
 
 @media screen and (max-width: 576px) {
-    .row-xm {
-        margin: -70px 0px 0px !important;
-    }
-    
-    .row-xxm {
-        padding: 0px !important;
-        margin: 45px 25px 0px !important;
-    }
+  .row-xm {
+    margin: -70px 0px 0px !important;
+  }
 
-    .row-service {
-        margin: 20px 0px 0px !important;
-        padding: 0px !important;
-    }
+  .row-xxm {
+    padding: 0px !important;
+    margin: 45px 25px 0px !important;
+  }
 
-    .row-contact {
-        margin: 0px 10px 0px !important;
-    }
+  .row-service {
+    margin: 20px 0px 0px !important;
+    padding: 0px !important;
+  }
 
-    .p-side {
-        padding: 0px !important;
-    }
+  .row-contact {
+    margin: 0px 10px 0px !important;
+  }
 
-    .row-swd {
-        margin: -40px 0px 0px !important;
-        padding: 0px !important;
-    }
+  .p-side {
+    padding: 0px !important;
+  }
 
-    .p-swd {
-        padding-top: 20px;
-    }
+  .row-swd {
+    margin: -40px 0px 0px !important;
+    padding: 0px !important;
+  }
 
-    .service-head-text {
-        font-size: 35px !important;
-    }
-    
+  .p-swd {
+    padding-top: 20px;
+  }
+
+  .service-head-text {
+    font-size: 35px !important;
+  }
+}
+
+.custom-dropdown {
+  width: 10px;
+  text-align: left;
+}
+
+.custom-dropdown .dropdown-toggle::after {
+  right: 16px !important;
+}
+.services-list {
+  /* background-color: #0d6efd; */
+}
+.dropdown-toggle::after {
+  margin-left: 2rem;
+}
+
+/* Who we are */
+.who-we-are {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.who-we-are h2 {
+  color: #1a237e;
+}
+
+.who-we-are p {
+  color: #424242;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.stat-number {
+  font-size: 20px;
+  color: #1a237e;
+}
+
+.stat-label {
+  color: #424242;
 }
