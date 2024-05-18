@@ -90,11 +90,11 @@ function Home() {
         <div className="container-fluid section2 mt-5 py-5">
           <div className="row d-flex flex-row">
             <div className="col-md-4 mt-4 p-4">
-              <Card className="p-5 mb-4  shadow-md">
+              <Card className="p-1 p-md-5 mb-4 shadow-md" data-aos="fade-up">
                 <h2 className="text-primary">Our Services</h2>
                 <div className="services-list mt-4">
                   <div className="mb-2">
-                    <DropdownButton 
+                    <DropdownButton
                       id="dropdown-basic-button1"
                       title={
                         <span>
@@ -102,7 +102,7 @@ function Home() {
                           GreenField Project
                         </span>
                       }
-                      style={{ width: "100%", textAlign: "left", color: "red"  }}
+                      style={{ width: "100%", textAlign: "left", color: "red" }}
                     >
                       <Dropdown.Item href="#/action-1">Feasibility Studies</Dropdown.Item>
                       <Dropdown.Item href="#/action-2">Site Selection</Dropdown.Item>
@@ -126,7 +126,7 @@ function Home() {
                           Brownfield Enhancement
                         </span>
                       }
-                      className="custom-dropdown"
+                      style={{ width: "100%", textAlign: "left", color: "red" }}
                     >
                       <Dropdown.Item href="#/action-1">Design Risk Assessment</Dropdown.Item>
                       <Dropdown.Item href="#/action-2">Detailed Engineering Design</Dropdown.Item>
@@ -149,7 +149,7 @@ function Home() {
                           Global Regulatory Compliances
                         </span>
                       }
-                      className="custom-dropdown"
+                      style={{ width: "100%", textAlign: "left", color: "red" }}
                     >
                       <Dropdown.Item href="#/action-1">
                         Submission to Regulatory Authorities
@@ -183,7 +183,7 @@ function Home() {
                           Audits and Supplier Qualification
                         </span>
                       }
-                      className="custom-dropdown"
+                      style={{ width: "100%", textAlign: "left", color: "red" }}
                     >
                       <Dropdown.Item href="#/action-1">
                         Pre and Post Inspection Audits
@@ -208,7 +208,7 @@ function Home() {
               </Card>
             </div>
             <div className="col-md-8 mt-4 p-4">
-              <Card className="p-5 mb-4 shadow-md">
+              <Card className="p-5 mb-4 shadow-md" data-aos="fade-left">
                 <h2 className="text-primary">Who We Are</h2>
                 <p>
                   At VidyaGxP, our focus on building long-term client relationships has helped us
@@ -218,7 +218,7 @@ function Home() {
                 </p>
                 <Row className="text-center mt-4">
                   <Col>
-                    <div className="stat-item">
+                    <div className="stat-item" data-aos="zoom-in">
                       <FaClipboardCheck
                         size={40}
                         className="mb-2 text-secondary"
@@ -229,7 +229,7 @@ function Home() {
                     </div>
                   </Col>
                   <Col>
-                    <div className="stat-item">
+                    <div className="stat-item" data-aos="zoom-in">
                       <FaCalendarAlt
                         size={40}
                         className="mb-2 text-secondary"
@@ -240,7 +240,7 @@ function Home() {
                     </div>
                   </Col>
                   <Col>
-                    <div className="stat-item">
+                    <div className="stat-item" data-aos="zoom-in">
                       <FaStar size={40} className="mb-2 text-secondary" />
                       <div className="stat-number text-primary">100%</div>
                       <div className="stat-label text-muted">Customer Satisfaction</div>

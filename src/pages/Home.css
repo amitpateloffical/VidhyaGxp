@@ -113,3 +113,6 @@
 .stat-label {
   color: #424242;
 }
+.dropdown-toggle{
+width: 100% !important;
+}
