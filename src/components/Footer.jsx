@@ -163,7 +163,7 @@ function Footer() {
               </p>
               <p>
                 <FontAwesomeIcon icon={faSignsPost} className="me-3" />
-                APAC Office: 87 Jalan Molek 3/1 Taman Molek, Johor Bahru, Johor, 81100, Malaysia
+                Building Plot No 8, Swastik Urbane, 2st Floor, PU 4, In front of Chai Kaapi, Near Medanta Hospital, Scheme 54 PU4, Indore, Madhya Pradesh 452010
               </p>
               <p>
                 <FontAwesomeIcon icon={faPhone} className="me-3" />
