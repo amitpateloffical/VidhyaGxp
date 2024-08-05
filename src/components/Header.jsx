@@ -15,17 +15,13 @@ import {
   faPhone,
   faSignsPost,
 } from "@fortawesome/free-solid-svg-icons";
+import MultilevelDropdown from 'react-multilevel-dropdown';
 
 function Header() {
   const [isButtonClicked, setIsButtonClicked] = useState(false);
 
   const handleButtonClick = () => {
-    console.log("setIsButtonClicked clicked");
-    if (isButtonClicked) {
-      setIsButtonClicked(false);
-    } else {
-      setIsButtonClicked(true);
-    }
+    setIsButtonClicked(!isButtonClicked);
   };
 
   return (
@@ -53,21 +49,21 @@ function Header() {
           <div className="nav-item">
             <div className="m-0">
               <Link className="responsive-item px-4" to="/">
-                Home{" "}
+                Home
               </Link>
-              <Link className="responsive-item  px-4" to="/about">
-                About{" "}
+              <Link className="responsive-item px-4" to="/about">
+                About
               </Link>
-              <Link className="responsive-item  px-4" to="/services">
+              <Link className="responsive-item px-4" to="/services">
                 Services
               </Link>
-              <Link className="responsive-item  px-4" to="/industries">
+              <Link className="responsive-item px-4" to="/industries">
                 Industries
               </Link>
-              <Link className="responsive-item  px-4" to="/features">
+              <Link className="responsive-item px-4" to="/features">
                 Features
               </Link>
-              <Link className="responsive-item  px-4" to="/contact">
+              <Link className="responsive-item px-4" to="/contact">
                 Contact Us
               </Link>
             </div>
@@ -88,7 +84,7 @@ function Header() {
             </Link>
           </div>
           <div
-            className="collapse navbar-collapse pt-3 "
+            className="collapse navbar-collapse pt-3"
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav mr-auto">
@@ -97,7 +93,6 @@ function Header() {
                   Home <span className="sr-only">(current)</span>
                 </NavLink>
               </li>
-
               <li className="nav-item">
                 <NavLink
                   to="/about"
@@ -109,216 +104,174 @@ function Header() {
                   About
                 </NavLink>
               </li>
-
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  to="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
+              <li className="nav-item" style={{ padding: "0px" }}>
+                <MultilevelDropdown
+                  title="Services"
+                  menuClassName="dropdown-menu"
+                  buttonClassName="nav-link dropdown-toggle"
+                  arrowClassName="caret"
                 >
-                  Services
-                </Link>
-
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <div>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/ebmr">
                       e-BMR
                     </Link>
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/elogbook">
                       e-LogBook
                     </Link>
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/lms">
                       LMS
                     </Link>
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/mes">
                       MES
                     </Link>
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/edms">
                       EDMS
                     </Link>
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/eqms">
                       EQMS
                     </Link>
-                    <Link
-                      className="dropdown-item"
-                      to="/quality-risk-management"
-                    >
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                    <Link className="dropdown-item" to="/quality-risk-management">
                       Quality Risk Management
                     </Link>
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/pharma-audit">
                       Pharma Audit & Remediation
                     </Link>
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/root-cause-analysis">
                       Automated Root Cause Analysis
                     </Link>
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/warehouse-management">
                       Warehouse management system
                     </Link>
-                    <Link
-                      className="dropdown-item"
-                      to="/connected-and-integrated-gxp-systems"
-                    >
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                    <Link className="dropdown-item" to="/connected-and-integrated-gxp-systems">
                       Connected & Integrated GXP Systems
                     </Link>
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/ai-assited-pharma">
                       AI-Assisted Pharma 4.0
                     </Link>
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/intelligent-pharma">
                       Intelligent Pharma Manufacturing Factory
                     </Link>
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/gxp-training">
                       GxP Training
                     </Link>
+                  </MultilevelDropdown.Item>
+                  <MultilevelDropdown.Item style={{ padding: "0px" }}>
                     <Link className="dropdown-item" to="/rpa">
-                      Robotic Process Automation (RPA){" "}
+                      Robotic Process Automation (RPA)
                     </Link>
-                    <div className="dropdown-submenu">
-                      <Link
-                        className="dropdown-item dropdown-toggle"
-                        to="#"
-                        id="engineeringDropdown"
-                        role="button"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        Engineering
-                      </Link>
-
-                      <div
-                        className="dropdown-menu"
-                        aria-labelledby="engineeringDropdown"
-                      >
-                        <Link
-                          className="dropdown-item "
-                          to="/qualification-validation"
-                        >
+                  </MultilevelDropdown.Item >
+                  <MultilevelDropdown.Item style={{ padding: "0px" }} title="Engineering">
+                    <Link className="dropdown-item" to="#">
+                      Engineering
+                    </Link>
+                    <MultilevelDropdown.Submenu className="dropdown-submenu">
+                    <MultilevelDropdown.Item style={{ padding: "0px" , top: "0px" }}>
+                        <Link className="dropdown-item" to="/feasibility-studies">
                           Feasibility Studies
                         </Link>
-                        <Link
-                          className="dropdown-item"
-                          to="/qms-implementation"
-                        >
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/site-selection">
                           Site Selection
                         </Link>
-                        <Link
-                          className="dropdown-item"
-                          to="/technology-transfer"
-                        >
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/facility-design">
                           Facility Design and Layout
                         </Link>
-                        <Link
-                          className="dropdown-item"
-                          to="/regulatory-submissions"
-                        >
-                          Design Risk Assessment+
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/design-risk-assessment">
+                          Design Risk Assessment
                         </Link>
-                        <Link
-                          className="dropdown-item"
-                          to="/engineering-consulting"
-                        >
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/detailed-engineering-design">
                           Detailed Engineering Design
                         </Link>
-                        <Link
-                          className="dropdown-item"
-                          to="/process-optimization"
-                        >
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/regulatory-compliance">
                           Regulatory Compliance
                         </Link>
-                        <Link
-                          className="dropdown-item"
-                          to="/system-integration"
-                        >
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/project-management">
                           Project Management
                         </Link>
-                        <Link
-                          className="dropdown-item"
-                          to="/maintenance-support"
-                        >
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/technology-equipment-selection">
                           Technology and Equipment Selection
                         </Link>
-                        <Link
-                          className="dropdown-item"
-                          to="/maintenance-support"
-                        >
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/commissioning">
                           Commissioning and Qualification
-                        </Link>{" "}
-                        <Link
-                          className="dropdown-item"
-                          to="/maintenance-support"
-                        >
+                        </Link>
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/quality-assurance">
                           Quality Assurance and Control
-                        </Link>{" "}
-                        <Link
-                          className="dropdown-item"
-                          to="/maintenance-support"
-                        >
+                        </Link>
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/training-capacity-building">
                           Training and Capacity Building
-                        </Link>{" "}
-                        <Link
-                          className="dropdown-item"
-                          to="/maintenance-support"
-                        >
+                        </Link>
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/contractual-closeout">
                           Contractual Closeout
-                        </Link>{" "}
-                        <Link
-                          className="dropdown-item"
-                          to="/maintenance-support"
-                        >
+                        </Link>
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/post-project-review">
                           Post Project Review
-                        </Link>{" "}
-                        <Link
-                          className="dropdown-item"
-                          to="/maintenance-support"
-                        >
+                        </Link>
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/supply-chain-management">
                           Supply Chain Management
                         </Link>
-                        <Link
-                          className="dropdown-item"
-                          to="/maintenance-support"
-                        >
+                      </MultilevelDropdown.Item>
+                      <MultilevelDropdown.Item style={{ padding: "0px" }}>
+                        <Link className="dropdown-item" to="/financial-analysis">
                           Financial Analysis and Business Planning
                         </Link>
-                      </div>
-                    </div>
-                    <Link className="dropdown-item" to="/rpa">
-                      Qualification & Validation
-                    </Link>{" "}
-                    <Link className="dropdown-item" to="/rpa">
-                      QMS Implementation
-                    </Link>{" "}
-                    <Link className="dropdown-item" to="/rpa">
-                      Technology Transfer and Product Development Support
-                    </Link>{" "}
-                    <Link className="dropdown-item" to="/rpa">
-                      Regulatory Submissions
-                    </Link>{" "}
-                    <Link className="dropdown-item" to="/rpa">
-                      GMP Certification Services
-                    </Link>{" "}
-                    <Link className="dropdown-item" to="/rpa">
-                      Audit
-                    </Link>{" "}
-                    <Link className="dropdown-item" to="/rpa">
-                      Regulated Market Access
-                    </Link>
-                    <Link className="dropdown-item" to="/rpa">
-                      QMS Consulting
-                    </Link>
-                    <Link className="dropdown-item" to="/rpa">
-                      Training
-                    </Link>
-                  </div>
-
-                  {/* <div className="dropdown-divider"></div> */}
-                </div>
+                      </MultilevelDropdown.Item>
+                    </MultilevelDropdown.Submenu>
+                  </MultilevelDropdown.Item>
+                </MultilevelDropdown>
               </li>
 
-              <li className="nav-item">
+              <li className="nav-item" >
                 <NavLink
                   className="nav-link"
                   to="/industries"
