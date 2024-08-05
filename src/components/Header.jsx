@@ -176,10 +176,115 @@ function Header() {
                     <Link className="dropdown-item" to="/rpa">
                       Robotic Process Automation (RPA){" "}
                     </Link>
-                    <Link className="dropdown-item" to="/rpa"></Link>
-                    <Link className="dropdown-item" to="/rpa">
-                      Engineering
-                    </Link>{" "}
+                    <div className="dropdown-submenu">
+                      <Link
+                        className="dropdown-item dropdown-toggle"
+                        to="#"
+                        id="engineeringDropdown"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        Engineering
+                      </Link>
+
+                      <div
+                        className="dropdown-menu"
+                        aria-labelledby="engineeringDropdown"
+                      >
+                        <Link
+                          className="dropdown-item "
+                          to="/qualification-validation"
+                        >
+                          Feasibility Studies
+                        </Link>
+                        <Link
+                          className="dropdown-item"
+                          to="/qms-implementation"
+                        >
+                          Site Selection
+                        </Link>
+                        <Link
+                          className="dropdown-item"
+                          to="/technology-transfer"
+                        >
+                          Facility Design and Layout
+                        </Link>
+                        <Link
+                          className="dropdown-item"
+                          to="/regulatory-submissions"
+                        >
+                          Design Risk Assessment+
+                        </Link>
+                        <Link
+                          className="dropdown-item"
+                          to="/engineering-consulting"
+                        >
+                          Detailed Engineering Design
+                        </Link>
+                        <Link
+                          className="dropdown-item"
+                          to="/process-optimization"
+                        >
+                          Regulatory Compliance
+                        </Link>
+                        <Link
+                          className="dropdown-item"
+                          to="/system-integration"
+                        >
+                          Project Management
+                        </Link>
+                        <Link
+                          className="dropdown-item"
+                          to="/maintenance-support"
+                        >
+                          Technology and Equipment Selection
+                        </Link>
+                        <Link
+                          className="dropdown-item"
+                          to="/maintenance-support"
+                        >
+                          Commissioning and Qualification
+                        </Link>{" "}
+                        <Link
+                          className="dropdown-item"
+                          to="/maintenance-support"
+                        >
+                          Quality Assurance and Control
+                        </Link>{" "}
+                        <Link
+                          className="dropdown-item"
+                          to="/maintenance-support"
+                        >
+                          Training and Capacity Building
+                        </Link>{" "}
+                        <Link
+                          className="dropdown-item"
+                          to="/maintenance-support"
+                        >
+                          Contractual Closeout
+                        </Link>{" "}
+                        <Link
+                          className="dropdown-item"
+                          to="/maintenance-support"
+                        >
+                          Post Project Review
+                        </Link>{" "}
+                        <Link
+                          className="dropdown-item"
+                          to="/maintenance-support"
+                        >
+                          Supply Chain Management
+                        </Link>
+                        <Link
+                          className="dropdown-item"
+                          to="/maintenance-support"
+                        >
+                          Financial Analysis and Business Planning
+                        </Link>
+                      </div>
+                    </div>
                     <Link className="dropdown-item" to="/rpa">
                       Qualification & Validation
                     </Link>{" "}
