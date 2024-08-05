@@ -34,7 +34,10 @@ function Header() {
         <div className="container-fluid">
           <div className="top-nav d-flex pt-2 justify-content-end">
             <div>
-              <FontAwesomeIcon icon={faEnvelopeOpenText} className="me-3 text-white" />
+              <FontAwesomeIcon
+                icon={faEnvelopeOpenText}
+                className="me-3 text-white"
+              />
               <span className="text-white fw-bolder">info@vidyagxp.com</span>
             </div>
             <div className="ms-5">
@@ -75,10 +78,19 @@ function Header() {
         <div className="header-item-flex">
           <div className="brand-adjust">
             <Link className="navbar-brand" to="/">
-              <img src="vidyaGxp_logo.png" height="65px" width="250px" className="" alt="" />
+              <img
+                src="vidyaGxp_logo.png"
+                height="65px"
+                width="250px"
+                className=""
+                alt=""
+              />
             </Link>
           </div>
-          <div className="collapse navbar-collapse pt-3 " id="navbarSupportedContent">
+          <div
+            className="collapse navbar-collapse pt-3 "
+            id="navbarSupportedContent"
+          >
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
                 <NavLink className="nav-link" to="/" activeClassName="active">
@@ -131,7 +143,10 @@ function Header() {
                     <Link className="dropdown-item" to="/eqms">
                       EQMS
                     </Link>
-                    <Link className="dropdown-item" to="/quality-risk-management">
+                    <Link
+                      className="dropdown-item"
+                      to="/quality-risk-management"
+                    >
                       Quality Risk Management
                     </Link>
                     <Link className="dropdown-item" to="/pharma-audit">
@@ -143,7 +158,10 @@ function Header() {
                     <Link className="dropdown-item" to="/warehouse-management">
                       Warehouse management system
                     </Link>
-                    <Link className="dropdown-item" to="/connected-and-integrated-gxp-systems">
+                    <Link
+                      className="dropdown-item"
+                      to="/connected-and-integrated-gxp-systems"
+                    >
                       Connected & Integrated GXP Systems
                     </Link>
                     <Link className="dropdown-item" to="/ai-assited-pharma">
@@ -158,9 +176,39 @@ function Header() {
                     <Link className="dropdown-item" to="/rpa">
                       Robotic Process Automation (RPA){" "}
                     </Link>
+                    <Link className="dropdown-item" to="/rpa"></Link>
+                    <Link className="dropdown-item" to="/rpa">
+                      Engineering
+                    </Link>{" "}
+                    <Link className="dropdown-item" to="/rpa">
+                      Qualification & Validation
+                    </Link>{" "}
+                    <Link className="dropdown-item" to="/rpa">
+                      QMS Implementation
+                    </Link>{" "}
+                    <Link className="dropdown-item" to="/rpa">
+                      Technology Transfer and Product Development Support
+                    </Link>{" "}
+                    <Link className="dropdown-item" to="/rpa">
+                      Regulatory Submissions
+                    </Link>{" "}
+                    <Link className="dropdown-item" to="/rpa">
+                      GMP Certification Services
+                    </Link>{" "}
+                    <Link className="dropdown-item" to="/rpa">
+                      Audit
+                    </Link>{" "}
+                    <Link className="dropdown-item" to="/rpa">
+                      Regulated Market Access
+                    </Link>
+                    <Link className="dropdown-item" to="/rpa">
+                      QMS Consulting
+                    </Link>
+                    <Link className="dropdown-item" to="/rpa">
+                      Training
+                    </Link>
                   </div>
 
-         
                   {/* <div className="dropdown-divider"></div> */}
                 </div>
               </li>
