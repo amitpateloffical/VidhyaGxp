@@ -321,10 +321,16 @@ function Contact() {
                     <div className="wow fadeIn" data-wow-delay="0.3s">
                       <form>
                         <div className="row g-3 row-contact">
-                          <div className="col-md-6">
-                            <input type="text" className="form-control" id="contact-form-border" placeholder="Your Name" />
+                          <div className="col-md-4">
+                            <input type="text" className="form-control" id="contact-form-border" placeholder="First Name" />
                           </div>
-                          <div className="col-md-6">
+                          <div className="col-md-4">
+                            <input type="text" className="form-control" id="contact-form-border" placeholder="Middle Name" />
+                          </div>
+                          <div className="col-md-4">
+                            <input type="text" className="form-control" id="contact-form-border" placeholder="Last Name" />
+                          </div>
+                          <div className="">
                             <input type="email" id="contact-form-border" className="form-control" placeholder="Your Email" />
                           </div>
                           <div className="col-12">
