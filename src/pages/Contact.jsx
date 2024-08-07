@@ -3,10 +3,25 @@ import { useEffect, useRef, useState, } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Home.css"
+import axios from "axios";
+import { toast } from "react-toastify";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
   const listRefs = useRef([]);
   const [contactValue, setContactValue] = useState("")
+  const [feedbackData, setFeedbackData] = useState([{
+    firstName: "",
+    lastName: "",
+    middleName: "",
+    email: "",
+    mobileNumber: "",
+    lookingFor: "",
+    subject: "",
+    countryCode: '', 
+    message: ""
+  }])
   useEffect(() => {
     AOS.init({ duration: 1400 });
     // AOS.refresh();
@@ -39,7 +54,7 @@ function Contact() {
     });
   }, []);
 
-  
+
   const countryCodes = [
     { name: "Afghanistan", code: "+93" },
     { name: "Åland Islands", code: "+358" },
@@ -285,7 +300,7 @@ function Contact() {
     { name: "Zambia", code: "+260" },
     { name: "Zimbabwe", code: "+263" }
   ];
-  
+
   // Function to handle changes in the contact value input
   const handleContactChange = (e) => {
     setContactValue(e.target.value);
@@ -294,14 +309,58 @@ function Contact() {
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can handle form submission logic here
-    console.log("Submitted:", contactValue);
+    const data = JSON.stringify(
+      {
+        firstName: feedbackData.firstName,
+        middleName: feedbackData.middleName,
+        lastName: feedbackData.lastName,
+        email: feedbackData.email,
+        mobileNumber: feedbackData.mobileNumber,
+        lookingFor: feedbackData.lookingFor,
+        subject: feedbackData.subject,
+        message: feedbackData.message
+      }
+    );
+  
+    const config = {
+      method: 'post',
+      url: 'https://elogbookapi.vidyagxp.com/feedback/send-feedback',
+      headers: { 'Content-Type': 'application/json' },
+      data: data
+    };
+  
+    axios(config)
+      .then(function (response) {
+        setFeedbackData({
+          firstName: "",
+          middleName: "",
+          lastName: "",
+          email: "",
+          mobileNumber: "",
+          lookingFor: "",
+          subject: "",
+          message: ""
+        });
+        toast.success("Thanks for your feedback!");
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  };
+  
+
+  const handleCountryCodeChange = (e) => {
+    setFeedbackData({ ...feedbackData, countryCode: e.target.value });
+  };
+
+  const handleMobileNumberChange = (e) => {
+    setFeedbackData({ ...feedbackData, mobileNumber: e.target.value });
   };
   return (
     <>
 
       <BreadCrumb page="Contact Us" />
-
+      <ToastContainer />
       {/* <!-- Contact Start --> */}
       <div className="container-fluid section2  py-5">
         <div className="container row-service">
@@ -322,49 +381,120 @@ function Contact() {
                       <form>
                         <div className="row g-3 row-contact">
                           <div className="col-md-4">
-                            <input type="text" className="form-control" id="contact-form-border" placeholder="First Name" />
+                            <input type="text"
+                              className="form-control"
+                              id="contact-form-border"
+                              placeholder="First Name"
+                              value={feedbackData.firstName}
+                              onChange={(e) => setFeedbackData({ ...feedbackData, firstName: e.target.value })} />
                           </div>
                           <div className="col-md-4">
-                            <input type="text" className="form-control" id="contact-form-border" placeholder="Middle Name" />
+                            <input type="text"
+                              className="form-control"
+                              id="contact-form-border"
+                              placeholder="Middle Name"
+                              value={feedbackData.middleName}
+                              onChange={(e) => setFeedbackData({ ...feedbackData, middleName: e.target.value })}
+                            />
                           </div>
                           <div className="col-md-4">
-                            <input type="text" className="form-control" id="contact-form-border" placeholder="Last Name" />
+                            <input type="text"
+                              className="form-control"
+                              id="contact-form-border"
+                              placeholder="Last Name"
+                              value={feedbackData.lastName}
+                              onChange={(e) => setFeedbackData({ ...feedbackData, lastName: e.target.value })}
+                            />
                           </div>
                           <div className="">
-                            <input type="email" id="contact-form-border" className="form-control" placeholder="Your Email" />
+                            <input type="email"
+                              id="contact-form-border"
+                              className="form-control"
+                              placeholder="Your Email"
+                              value={feedbackData.email}
+                              onChange={(e) => setFeedbackData({ ...feedbackData, email: e.target.value })}
+                            />
                           </div>
                           <div className="col-12">
-        {/* Combined Country Code and Mobile Number Input */}
-        <div className="input-group">
-          <select
-            className="form-select"
-            style={{ flex: "20%" }}
-            value={contactValue.startsWith("+") ? contactValue : ""}
-            onChange={handleContactChange}
-          >
-           
-            {countryCodes.map((item)=>{
-              return <option value={item.code}>{item.code} {item.name}</option>
-            })}
-          </select>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Mobile Number"
-            style={{ flex: "80%" }}
-            value={contactValue.startsWith("+") ? "" : contactValue}
-            onChange={handleContactChange}
-          />
-        </div>
+      {/* Combined Country Code and Mobile Number Input */}
+      <div className="input-group">
+        <select
+          className="form-select"
+          style={{ flex: "20%" }}
+          value={feedbackData.countryCode}
+          onChange={handleCountryCodeChange}
+        >
+          <option value="">Select Country Code</option>
+          {countryCodes.map((item, index) => (
+            <option key={index} value={item.code}>{item.code} {item.name}</option>
+          ))}
+        </select>
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Mobile Number"
+          style={{ flex: "70%" }}
+          value={feedbackData.mobileNumber}
+          onChange={handleMobileNumberChange}
+        />
       </div>
+    </div>
                           <div className="col-12">
-                            <input type="text" className="form-control" id="contact-form-border" placeholder="Subject" />
+                            <input type="text"
+                              className="form-control"
+                              id="contact-form-border"
+                              placeholder="Subject"
+                              value={feedbackData.subject}
+                              onChange={(e) => setFeedbackData({ ...feedbackData, subject: e.target.value })}
+                            />
+                          </div>
+                          <div className="col-12 " >
+                            <select name="options"
+                              id="options"
+                              style={{ border: "none", borderRadius: "5px", padding: "10px 0px" }}
+                              value={feedbackData.lookingFor}
+                              onChange={(e) => setFeedbackData({ ...feedbackData, lookingFor: e.target.value })}
+                            >
+                              <option value="">Please select</option>
+                              <option value="e-BMR">e-BMR</option>
+                              <option value="e-LogBook">e-LogBook</option>
+                              <option value="LMS">LMS</option>
+                              <option value="MES">MES</option>
+                              <option value="EDMS">EDMS</option>
+                              <option value="EQMS">EQMS</option>
+                              <option value="Quality Risk Management">Quality Risk Management</option>
+                              <option value="Pharma Audit & Remediation">Pharma Audit & Remediation</option>
+                              <option value="Automated Root Cause Analysis">Automated Root Cause Analysis</option>
+                              <option value="Warehouse management system">Warehouse management system</option>
+                              <option value="Connected & Integrated GXP Systems">Connected & Integrated GXP Systems</option>
+                              <option value="AI-Assisted Pharma 4.0">AI-Assisted Pharma 4.0</option>
+                              <option value="Intelligent Pharma Manufacturing Factory">Intelligent Pharma Manufacturing Factory</option>
+                              <option value="GxP Training">GxP Training</option>
+                              <option value="Robotic Process Automation (RPA)">Robotic Process Automation (RPA)</option>
+                              <option value="Engineering">Engineering</option>
+                              <option value="Qualification & Validation">Qualification & Validation</option>
+                              <option value="QMS Implementation">QMS Implementation</option>
+                              <option value="Technology Transfer and Product Development Support">Technology Transfer and Product Development Support</option>
+                              <option value="Regulatory Submissions">Regulatory Submissions</option>
+                              <option value="GMP Certification Services">GMP Certification Services</option>
+                              <option value="Audit">Audit</option>
+                              <option value="Regulated Market Access">Regulated Market Access</option>
+                              <option value="QMS Consulting">QMS Consulting</option>
+                              <option value="Training">Training</option>
+                            </select>
                           </div>
                           <div className="col-12">
-                            <textarea className="form-control" placeholder="Leave a message here" id="contact-form-border" style={{ 'height': '100px' }}></textarea>
+                            <textarea
+                              className="form-control"
+                              placeholder="Leave a message here"
+                              id="contact-form-border"
+                              style={{ 'height': '100px' }}
+                              value={feedbackData.message}
+                              onChange={(e) => setFeedbackData({ ...feedbackData, message: e.target.value })}
+                            ></textarea>
                           </div>
                           <div className="col-12">
-                            <button id="btn-theme" className="btn btn-primary w-100 py-2" type="submit">Send Message</button>
+                            <button id="btn-theme" className="btn btn-primary w-100 py-2" type="submit" onClick={handleSubmit}>Send Message</button>
                           </div>
                         </div>
                       </form>
