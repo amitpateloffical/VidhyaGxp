@@ -1,8 +1,8 @@
-import BreadCrumb from "../components/BreadCrumb"
-import { useEffect, useRef, useState, } from "react";
+import BreadCrumb from "../components/BreadCrumb";
+import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./Home.css"
+import "./Home.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { ToastContainer } from 'react-toastify';
@@ -10,8 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
   const listRefs = useRef([]);
-  const [contactValue, setContactValue] = useState("")
-  const [feedbackData, setFeedbackData] = useState([{
+  const [contactValue, setContactValue] = useState("");
+  const [feedbackData, setFeedbackData] = useState({
     firstName: "",
     lastName: "",
     middleName: "",
@@ -19,12 +19,14 @@ function Contact() {
     mobileNumber: "",
     lookingFor: "",
     subject: "",
-    countryCode: '', 
+    countryCode: "", 
     message: ""
-  }])
+  });
+
+  const [errors, setErrors] = useState({});
+
   useEffect(() => {
     AOS.init({ duration: 1400 });
-    // AOS.refresh();
   }, []);
 
   useEffect(() => {
@@ -53,7 +55,6 @@ function Contact() {
       observers.push(observer);
     });
   }, []);
-
 
   const countryCodes = [
     { name: "Afghanistan", code: "+93" },
@@ -301,16 +302,53 @@ function Contact() {
     { name: "Zimbabwe", code: "+263" }
   ];
 
-  // Function to handle changes in the contact value input
   const handleContactChange = (e) => {
     setContactValue(e.target.value);
   };
 
-  // Function to handle form submission
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!feedbackData.firstName) {
+      newErrors.firstName = 'First name is required';
+    }
+
+    if (!feedbackData.lastName) {
+      newErrors.lastName = 'Last name is required';
+    }
+
+    if (!feedbackData.email) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(feedbackData.email)) {
+      newErrors.email = 'Email is invalid';
+    }
+
+    if (!feedbackData.mobileNumber) {
+      newErrors.mobileNumber = 'Mobile number is required';
+    } else if (!/^\d+$/.test(feedbackData.mobileNumber)) {
+      newErrors.mobileNumber = 'Mobile number must be numeric';
+    }
+
+    if (!feedbackData.lookingFor) {
+      newErrors.lookingFor = 'Looking for is required';
+    }
+
+    if (!feedbackData.subject) {
+      newErrors.subject = 'Subject is required';
+    }
+
+    if (!feedbackData.message) {
+      newErrors.message = 'Message is required';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = JSON.stringify(
-      {
+    if (validateForm()) {
+      const data = JSON.stringify({
         firstName: feedbackData.firstName,
         middleName: feedbackData.middleName,
         lastName: feedbackData.lastName,
@@ -319,35 +357,35 @@ function Contact() {
         lookingFor: feedbackData.lookingFor,
         subject: feedbackData.subject,
         message: feedbackData.message
-      }
-    );
-  
-    const config = {
-      method: 'post',
-      url: 'https://elogbookapi.vidyagxp.com/feedback/send-feedback',
-      headers: { 'Content-Type': 'application/json' },
-      data: data
-    };
-  
-    axios(config)
-      .then(function (response) {
-        setFeedbackData({
-          firstName: "",
-          middleName: "",
-          lastName: "",
-          email: "",
-          mobileNumber: "",
-          lookingFor: "",
-          subject: "",
-          message: ""
-        });
-        toast.success("Thanks for your feedback!");
-      })
-      .catch(function (error) {
-        console.error(error);
       });
+
+      const config = {
+        method: 'post',
+        url: 'https://elogbookapi.vidyagxp.com/feedback/send-feedback',
+        headers: { 'Content-Type': 'application/json' },
+        data: data
+      };
+
+      axios(config)
+        .then(function (response) {
+          setFeedbackData({
+            firstName: "",
+            middleName: "",
+            lastName: "",
+            email: "",
+            mobileNumber: "",
+            lookingFor: "",
+            subject: "",
+            message: ""
+          });
+          toast.success("Thanks for your feedback!");
+        })
+        .catch(function (error) {
+          toast.error("Something went wrong. Please try again later.");
+          console.error(error);
+        });
+    }
   };
-  
 
   const handleCountryCodeChange = (e) => {
     setFeedbackData({ ...feedbackData, countryCode: e.target.value });
@@ -356,13 +394,12 @@ function Contact() {
   const handleMobileNumberChange = (e) => {
     setFeedbackData({ ...feedbackData, mobileNumber: e.target.value });
   };
+
   return (
     <>
-
       <BreadCrumb page="Contact Us" />
       <ToastContainer />
-      {/* <!-- Contact Start --> */}
-      <div className="container-fluid section2  py-5">
+      <div className="container-fluid section2 py-5">
         <div className="container row-service">
           <div className="row g-5 align-items-center d-flex row-xm">
             <div className="col-lg-5 wow fadeIn" data-wow-delay="0.2s">
@@ -387,6 +424,7 @@ function Contact() {
                               placeholder="First Name"
                               value={feedbackData.firstName}
                               onChange={(e) => setFeedbackData({ ...feedbackData, firstName: e.target.value })} />
+                            {errors.firstName && <p style={{ color: 'red' }}>{errors.firstName}</p>}
                           </div>
                           <div className="col-md-4">
                             <input type="text"
@@ -405,6 +443,7 @@ function Contact() {
                               value={feedbackData.lastName}
                               onChange={(e) => setFeedbackData({ ...feedbackData, lastName: e.target.value })}
                             />
+                            {errors.lastName && <p style={{ color: 'red' }}>{errors.lastName}</p>}
                           </div>
                           <div className="">
                             <input type="email"
@@ -414,31 +453,32 @@ function Contact() {
                               value={feedbackData.email}
                               onChange={(e) => setFeedbackData({ ...feedbackData, email: e.target.value })}
                             />
+                            {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
                           </div>
                           <div className="col-12">
-      {/* Combined Country Code and Mobile Number Input */}
-      <div className="input-group">
-        <select
-          className="form-select"
-          style={{ flex: "20%" }}
-          value={feedbackData.countryCode}
-          onChange={handleCountryCodeChange}
-        >
-          <option value="">Select Country Code</option>
-          {countryCodes.map((item, index) => (
-            <option key={index} value={item.code}>{item.code} {item.name}</option>
-          ))}
-        </select>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Mobile Number"
-          style={{ flex: "70%" }}
-          value={feedbackData.mobileNumber}
-          onChange={handleMobileNumberChange}
-        />
-      </div>
-    </div>
+                            <div className="input-group">
+                              <select
+                                className="form-select"
+                                style={{ flex: "20%" }}
+                                value={feedbackData.countryCode}
+                                onChange={handleCountryCodeChange}
+                              >
+                                <option value="">Select Country Code</option>
+                                {countryCodes.map((item, index) => (
+                                  <option key={index} value={item.code}>{item.code} {item.name}</option>
+                                ))}
+                              </select>
+                              <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Mobile Number"
+                                style={{ flex: "70%" }}
+                                value={feedbackData.mobileNumber}
+                                onChange={handleMobileNumberChange}
+                              />
+                            </div>
+                            {errors.mobileNumber && <p style={{ color: 'red' }}>{errors.mobileNumber}</p>}
+                          </div>
                           <div className="col-12">
                             <input type="text"
                               className="form-control"
@@ -447,8 +487,9 @@ function Contact() {
                               value={feedbackData.subject}
                               onChange={(e) => setFeedbackData({ ...feedbackData, subject: e.target.value })}
                             />
+                            {errors.subject && <p style={{ color: 'red' }}>{errors.subject}</p>}
                           </div>
-                          <div className="col-12 " >
+                          <div className="col-12">
                             <select name="options"
                               id="options"
                               style={{ border: "none", borderRadius: "5px", padding: "10px 0px" }}
@@ -482,6 +523,7 @@ function Contact() {
                               <option value="QMS Consulting">QMS Consulting</option>
                               <option value="Training">Training</option>
                             </select>
+                            {errors.lookingFor && <p style={{ color: 'red' }}>{errors.lookingFor}</p>}
                           </div>
                           <div className="col-12">
                             <textarea
@@ -492,6 +534,7 @@ function Contact() {
                               value={feedbackData.message}
                               onChange={(e) => setFeedbackData({ ...feedbackData, message: e.target.value })}
                             ></textarea>
+                            {errors.message && <p style={{ color: 'red' }}>{errors.message}</p>}
                           </div>
                           <div className="col-12">
                             <button id="btn-theme" className="btn btn-primary w-100 py-2" type="submit" onClick={handleSubmit}>Send Message</button>
@@ -510,4 +553,4 @@ function Contact() {
   );
 }
 
-export default Contact
+export default Contact;
