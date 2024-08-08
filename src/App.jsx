@@ -64,6 +64,15 @@ import QmsMonitoringMeasurement from "./pages/services/DropQM Implementation/Qms
 import AssessmentFeasibil from "./pages/services/TechnologyTransferProductDevelopmentSupport/AssessmentFeasibil";
 import ProcessOptimization from "./pages/services/TechnologyTransferProductDevelopmentSupport/ProcessOptimization";
 import RegulatoryCompliances from "./pages/services/TechnologyTransferProductDevelopmentSupport/RegulatoryCompliances";
+import DocumentationPreparation from "./pages/services/TechnologyTransferProductDevelopmentSupport/DocumentationPreparation";
+import RiskAssessmentMitigations from "./pages/services/TechnologyTransferProductDevelopmentSupport/RiskAssessmentMitigations";
+import TechnologyTransferExecution from "./pages/services/TechnologyTransferProductDevelopmentSupport/TechnologyTransferExecution";
+import ScaleUpAssistance from "./pages/services/TechnologyTransferProductDevelopmentSupport/ScaleUpAssistance";
+import AnalyticalMethodDevelopment from "./pages/services/TechnologyTransferProductDevelopmentSupport/AnalyticalMethodDevelopment";
+import QualityAssuranceCompliance from "./pages/services/TechnologyTransferProductDevelopmentSupport/QualityAssuranceCompliance";
+import ProjectManagementes from "./pages/services/TechnologyTransferProductDevelopmentSupport/ProjectManagementes";
+
+
 
 
 function App() {
@@ -144,6 +153,15 @@ function App() {
           <Route path="/technologytransferproductdevelopmentsupport/assessment-feasibil" element={<AssessmentFeasibil />} />
           <Route path="/technologytransferproductdevelopmentsupport/process-optimization" element={<ProcessOptimization />} />
           <Route path="/technologytransferproductdevelopmentsupport/regulatory-compliances" element={<RegulatoryCompliances />} />
+          <Route path="/technologytransferproductdevelopmentsupport/documentation-preparation" element={<DocumentationPreparation />} />
+          <Route path="/technologytransferproductdevelopmentsupport/risk-assessment-mitigations" element={<RiskAssessmentMitigations />} />
+          <Route path="/technologytransferproductdevelopmentsupport/technology-transfer-execution" element={<TechnologyTransferExecution />} />
+          <Route path="/technologytransferproductdevelopmentsupport/scale-up-assistance" element={<ScaleUpAssistance />} />
+          <Route path="/technologytransferproductdevelopmentsupport/analytical-method-development" element={<AnalyticalMethodDevelopment />} />
+          <Route path="/technologytransferproductdevelopmentsupport/quality-assurance-compliance" element={<QualityAssuranceCompliance />} />
+          <Route path="/technologytransferproductdevelopmentsupport/project-managementes" element={<ProjectManagementes />} />
+
+
         </Routes>
         <Footer />
       </BrowserRouter>
