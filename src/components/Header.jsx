@@ -75,7 +75,7 @@ function Header() {
           <div className="brand-adjust">
             <Link className="navbar-brand" to="/">
               <img
-                src="vidyaGxp_logo.png"
+                src="/vidyaGxp_logo.png"
                 height="65px"
                 width="250px"
                 className=""
@@ -193,77 +193,77 @@ function Header() {
                     </Link>
                     <MultilevelDropdown.Submenu className="dropdown-submenu">
                     <MultilevelDropdown.Item style={{ padding: "0px" , margin: "0px" }}>
-                        <Link className="dropdown-item" to="/feasibility-studies">
+                        <Link className="dropdown-item" to="/engineer/feasibility-studies">
                           Feasibility Studies
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/site-selection">
+                        <Link className="dropdown-item" to="/engineer/site-selection">
                           Site Selection
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/facility-design">
+                        <Link className="dropdown-item" to="/engineer/facility-design">
                           Facility Design and Layout
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/design-risk-assessment">
+                        <Link className="dropdown-item" to="/engineer/design-risk">
                           Design Risk Assessment
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/detailed-engineering-design">
+                        <Link className="dropdown-item" to="/engineer/detailed-engineering">
                           Detailed Engineering Design
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/regulatory-compliance">
+                        <Link className="dropdown-item" to="/engineer/regulatory-compliance">
                           Regulatory Compliance
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/project-management">
+                        <Link className="dropdown-item" to="/engineer/project-management">
                           Project Management
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/technology-equipment-selection">
+                        <Link className="dropdown-item" to="/engineer/technology-equipment">
                           Technology and Equipment Selection
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/commissioning">
+                        <Link className="dropdown-item" to="/engineer/commissioning-qualification">
                           Commissioning and Qualification
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/quality-assurance">
+                        <Link className="dropdown-item" to="/engineer/quality-assurance">
                           Quality Assurance and Control
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/training-capacity-building">
+                        <Link className="dropdown-item" to="/engineer/training-capacity-building">
                           Training and Capacity Building
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/contractual-closeout">
+                        <Link className="dropdown-item" to="/engineer/contractual-closeout">
                           Contractual Closeout
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/post-project-review">
+                        <Link className="dropdown-item" to="/engineer/post-project-review">
                           Post Project Review
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/supply-chain-management">
+                        <Link className="dropdown-item" to="/engineer/supply-chain-management">
                           Supply Chain Management
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/financial-analysis">
+                        <Link className="dropdown-item" to="/engineer/financial-analysis">
                           Financial Analysis and Business Planning
                         </Link>
                       </MultilevelDropdown.Item>
@@ -277,47 +277,47 @@ function Header() {
                     </Link>
                     <MultilevelDropdown.Submenu className="dropdown-submenu">
                     <MultilevelDropdown.Item style={{ padding: "0px" , margin: "0px" }}>
-                        <Link className="dropdown-item" to="/feasibility-studies">
+                        <Link className="dropdown-item" to="/qualificationvalidation/user-requirements-specification">
                           User Requirement Specification (URS)
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/site-selection">
+                        <Link className="dropdown-item" to="/qualificationvalidation/design-qualification">
                           Design Qualification And Design Reviews
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/facility-design">
+                        <Link className="dropdown-item" to="/qualificationvalidation/factory-site-acceptance">
                           FAT (Factory Acceptance tests)/ SAT (Site Acceptance Tests)
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/design-risk-assessment">
+                        <Link className="dropdown-item" to="/qualificationvalidation/installation-qualification">
                         Installation Qualification
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/detailed-engineering-design">
+                        <Link className="dropdown-item" to="/qualificationvalidation/operation-qualification">
                         Operation Qualification (OQ)
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/regulatory-compliance">
+                        <Link className="dropdown-item" to="/qualificationvalidation/standard-operating-procedure">
                         Standard Operating Procedure
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/project-management">
+                        <Link className="dropdown-item" to="/qualificationvalidation/performance-qualification">
                         Performance Qualification
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/technology-equipment-selection">
+                        <Link className="dropdown-item" to="/qualificationvalidation/process-cleaning-validation">
                         Process Validation/ Cleaning Validation
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/commissioning">
+                        <Link className="dropdown-item" to="qualificationvalidation/risk-assessment">
                         Risk Assessment
                         </Link>
                       </MultilevelDropdown.Item>
@@ -331,32 +331,32 @@ function Header() {
                     </Link>
                     <MultilevelDropdown.Submenu className="dropdown-submenu">
                     <MultilevelDropdown.Item style={{ padding: "0px" , margin: "0px" }}>
-                        <Link className="dropdown-item" to="/feasibility-studies">
+                        <Link className="dropdown-item" to="/dropqmsimplementation/developing-procedures-qms">
                         Developing QMS Policies and Procedures
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/site-selection">
+                        <Link className="dropdown-item" to="/dropqmsimplementation/training-awareness">
                         Training and Awareness
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/facility-design">
+                        <Link className="dropdown-item" to="/dropqmsimplementation/gap-analysis">
                         Gap Analysis
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/design-risk-assessment">
+                        <Link className="dropdown-item" to="/dropqmsimplementation/investigation-support">
                         Investigation Support
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/detailed-engineering-design">
+                        <Link className="dropdown-item" to="/dropqmsimplementation/root-cause-analysis">
                         Root Cause Analysis
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/regulatory-compliance">
+                        <Link className="dropdown-item" to="/dropqmsimplementation/qms-monitoring-measurement">
                         QMS Monitoring and Measurement
                         </Link>
                       </MultilevelDropdown.Item>
@@ -369,17 +369,17 @@ function Header() {
                     </Link>
                     <MultilevelDropdown.Submenu className="dropdown-submenu">
                     <MultilevelDropdown.Item style={{ padding: "0px" , margin: "0px" }}>
-                        <Link className="dropdown-item" to="/feasibility-studies">
+                        <Link className="dropdown-item" to="/technologytransferproductdevelopmentsupport/assessment-feasibil">
                         Feasibility Assessment
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/site-selection">
+                        <Link className="dropdown-item" to="/technologytransferproductdevelopmentsupport/process-optimization">
                         Process Optimization
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/facility-design">
+                        <Link className="dropdown-item" to="/technologytransferproductdevelopmentsupport/regulatory-compliances">
                         Regulatory Compliance
                         </Link>
                       </MultilevelDropdown.Item>
