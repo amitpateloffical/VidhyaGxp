@@ -428,67 +428,67 @@ function Header() {
                     </Link>
                     <MultilevelDropdown.Submenu className="dropdown-submenu">
                     <MultilevelDropdown.Item style={{ padding: "0px" , margin: "0px" }}>
-                        <Link className="dropdown-item" to="/feasibility-studies">
+                        <Link className="dropdown-item" to="/regulatorysubmission/regulatory-authorities">
                         Submissions to Regulatory Authorities
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/site-selection">
+                        <Link className="dropdown-item" to="/regulatorysubmission/document-review-elimination">
                         Document Review and Elimination of Queries/Rejection
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/facility-design">
+                        <Link className="dropdown-item" to="/regulatorysubmission/drug-master">
                         Drug Master File (DMF) Compilation
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/design-risk-assessment">
+                        <Link className="dropdown-item" to="/regulatorysubmission/response-regulatory-queries">
                         Response to Regulatory Queries
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/detailed-engineering-design">
+                        <Link className="dropdown-item" to="/regulatorysubmission/regulatory-compliance-gap">
                         Regulatory Compliance and Gap Analysis
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/regulatory-compliance">
+                        <Link className="dropdown-item" to="/regulatorysubmission/post-approval-changes-submissions">
                         Post-Approval Changes Submissions
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/project-management">
+                        <Link className="dropdown-item" to="/regulatorysubmission/guidance-anda-dmf">
                         Guidance for ANDA and DMFs Preparation
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/technology-equipment-selection">
+                        <Link className="dropdown-item" to="/technologytransferproductdevelopmentsupport/quality-assurance-compliance">
                         Quality Assurance and Compliance
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/commissioning">
+                        <Link className="dropdown-item" to="/regulatorysubmission/lifecycle-management">
                         Lifecycle Management (LCM)
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/quality-assurance">
+                        <Link className="dropdown-item" to="/regulatorysubmission/investigational-new-drug">
                         Investigational New Drug Applications (INDA) Submission
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/training-capacity-building">
+                        <Link className="dropdown-item" to="/regulatorysubmission/abbreviated-new-drug">
                         Review of Abbreviated New Drug Application (ANDA) Submissions
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/contractual-closeout">
+                        <Link className="dropdown-item" to="/regulatorysubmission/drug-master-file-submissions">
                         Review of Drug Master File (DMF) Submissions
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/post-project-review">
+                        <Link className="dropdown-item" to="/regulatorysubmission/remedial-action-plan">
                         Support for Remedial Action Plan (RAP) Post FDA Inspection  
                                               </Link>
                       </MultilevelDropdown.Item>
@@ -501,27 +501,27 @@ function Header() {
                     </Link>
                     <MultilevelDropdown.Submenu className="dropdown-submenu">
                     <MultilevelDropdown.Item style={{ padding: "0px" , margin: "0px" }}>
-                        <Link className="dropdown-item" to="/feasibility-studies">
+                        <Link className="dropdown-item" to="/gms-certification-services/pre-pos-inspection-audits">
                         Pre and Post Inspection Audits
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/site-selection">
+                        <Link className="dropdown-item" to="/gms-certification-services/audit-compliance-reports">
                         Audit Compliance Reports
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/facility-design">
+                        <Link className="dropdown-item" to="/gms-certification-services/facility-upgradation-gmp-compliance">
                         Facility Upgradation for GMP Compliance
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/design-risk-assessment">
+                        <Link className="dropdown-item" to="/gms-certification-services/mock-audits">
                         Mock Audits
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/detailed-engineering-design">
+                        <Link className="dropdown-item" to="/gms-certification-services/due-diligence-audits">
                         Due Diligence Audits
                         </Link>
                       </MultilevelDropdown.Item>
