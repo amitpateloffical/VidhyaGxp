@@ -71,9 +71,23 @@ import ScaleUpAssistance from "./pages/services/TechnologyTransferProductDevelop
 import AnalyticalMethodDevelopment from "./pages/services/TechnologyTransferProductDevelopmentSupport/AnalyticalMethodDevelopment";
 import QualityAssuranceCompliance from "./pages/services/TechnologyTransferProductDevelopmentSupport/QualityAssuranceCompliance";
 import ProjectManagementes from "./pages/services/TechnologyTransferProductDevelopmentSupport/ProjectManagementes";
-
-
-
+import RegulatoryAuthorities from "./pages/services/RegulatorySubmissions/RegulatoryAuthorities";
+import DocumentReviewElimination from "./pages/services/RegulatorySubmissions/DocumentReviewElimination";
+import DrugMaster from "./pages/services/RegulatorySubmissions/DrugMaster";
+import ResponseRegulatoryQueries from "./pages/services/RegulatorySubmissions/ResponseRegulatoryQueries";
+import RegulatoryComplianceGap  from "./pages/services/RegulatorySubmissions/RegulatoryComplianceGap";
+import PostApprovalChangesSubmissions from "./pages/services/RegulatorySubmissions/PostApprovalChangesSubmissions";
+import GuidanceAndaDmf from './pages/services/RegulatorySubmissions/GuidanceAndaDmf';
+import LifecycleManagement from "./pages/services/RegulatorySubmissions/LifecycleManagement";
+import InvestigationalNewDrug from './pages/services/RegulatorySubmissions/InvestigationalNewDrug';
+import AbbreviatedNewDrug from './pages/services/RegulatorySubmissions/AbbreviatedNewDrug';
+import DrugMasterFileSubmissions from './pages/services/RegulatorySubmissions/DrugMasterFileSubmissions';
+import RemedialActionPlan from "./pages/services/RegulatorySubmissions/RemedialActionPlan";
+import PrePosInspectionAudits from "./pages/services/GmpCertificationServices/PrePosInspectionAudits";
+import AuditComplianceReports from "./pages/services/GmpCertificationServices/AuditComplianceReports";
+import FacilityUpgradationGmpCompliance from "./pages/services/GmpCertificationServices/FacilityUpgradationGmpCompliance";
+import MockAudits from "./pages/services/GmpCertificationServices/MockAudits";
+import DueDiligenceAudits from "./pages/services/GmpCertificationServices/DueDiligenceAudits";
 
 function App() {
       // useEffect(() => {
@@ -160,13 +174,27 @@ function App() {
           <Route path="/technologytransferproductdevelopmentsupport/analytical-method-development" element={<AnalyticalMethodDevelopment />} />
           <Route path="/technologytransferproductdevelopmentsupport/quality-assurance-compliance" element={<QualityAssuranceCompliance />} />
           <Route path="/technologytransferproductdevelopmentsupport/project-managementes" element={<ProjectManagementes />} />
-
-
+          <Route path="/regulatorysubmission/regulatory-authorities" element={<RegulatoryAuthorities />} />
+          <Route path="/regulatorysubmission/document-review-elimination" element={<DocumentReviewElimination />} />
+          <Route path="/regulatorysubmission/drug-master" element={<DrugMaster />} />
+          <Route path="/regulatorysubmission/response-regulatory-queries" element={<ResponseRegulatoryQueries />} />
+          <Route path="/regulatorysubmission/regulatory-compliance-gap" element={<RegulatoryComplianceGap  />} />
+          <Route path="/regulatorysubmission/post-approval-changes-submissions" element={<PostApprovalChangesSubmissions  />} />
+          <Route path="/regulatorysubmission/guidance-anda-dmf" element={<GuidanceAndaDmf />} />
+          <Route path="/regulatorysubmission/lifecycle-management" element={<LifecycleManagement />} />
+          <Route path="/regulatorysubmission/investigational-new-drug" element={<InvestigationalNewDrug />} />
+          <Route path="/regulatorysubmission/abbreviated-new-drug" element={<AbbreviatedNewDrug />} />
+          <Route path="/regulatorysubmission/drug-master-file-submissions" element={<DrugMasterFileSubmissions />} />
+          <Route path="/regulatorysubmission/remedial-action-plan" element={<RemedialActionPlan />} />
+          <Route path="/gms-certification-services/pre-pos-inspection-audits" element={<PrePosInspectionAudits />} />
+          <Route path="/gms-certification-services/audit-compliance-reports" element={<AuditComplianceReports />} />
+          <Route path="/gms-certification-services/facility-upgradation-gmp-compliance" element={<FacilityUpgradationGmpCompliance />} />
+          <Route path="/gms-certification-services/mock-audits" element={<MockAudits />} />
+          <Route path="/gms-certification-services/due-diligence-audits" element={<DueDiligenceAudits />} />
         </Routes>
         <Footer />
       </BrowserRouter>
     </>
   );
 }
-
 export default App;

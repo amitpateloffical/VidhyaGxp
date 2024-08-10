@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function ScaleUpAssistance() {
+export default function AuditComplianceReports() {
   const listRefs = useRef([]);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function ScaleUpAssistance() {
       <div className="top_container m-3">
         <div className="service_headingr">
           <h1 className="heading service-head-text" data-aos="fade-down">
-            Scale-Up Assistance
+            Audit Compliance Reports
           </h1>
         </div>
         <div className="paragraph_container">
@@ -65,21 +65,21 @@ export default function ScaleUpAssistance() {
                   className="img-fluid"
                   //   style={{ backdropFilter: 'none', opacity: 0.5 }}
                   style={{ width: "95%" }}
-                  src="/scalingup .jpg"
+                  src="/Reports.jpg"
                 />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
               <h3 className="why_line" data-aos="fade-left">
-                Scale-Up Assistance
+                Audit Compliance Reports
               </h3>
               <div className="content_container ">
                 <ul>
                   <li data-aos="fade-left" className=" fs-5 ">
                     {/* <b>Seamless Compliance:- </b> */}
-                    We provide guidance and support during the scale-up process,
-                    ensuring smooth transitions from laboratory to commercial
-                    production.
+                    We prepare and submit audit compliance reports to regulatory
+                    agencies, such as MHRA, USFDA, TGA, MCC, MHRA, and WHO,
+                    demonstrating adherence to GMP standards.
                   </li>
                   {/* <li data-aos="fade-left">
                     <b>Unmatched Efficiency:-</b>
