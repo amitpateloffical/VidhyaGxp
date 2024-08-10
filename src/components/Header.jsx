@@ -526,22 +526,22 @@ function Header() {
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/regulatory-compliance">
+                        <Link className="dropdown-item" to="/gms-certification-services/gap-assessment-audit">
                         GAP Assessment Audit
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/project-management">
+                        <Link className="dropdown-item" to="/gms-certification-services/investigation-audit">
                         Investigation Audit
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/technology-equipment-selection">
+                        <Link className="dropdown-item" to="/gms-certification-services/surveillance-audit">
                         Surveillance Audit
                         </Link>
                       </MultilevelDropdown.Item>
                       <MultilevelDropdown.Item style={{ padding: "0px", margin: "0px" }}>
-                        <Link className="dropdown-item" to="/commissioning">
+                        <Link className="dropdown-item" to="/gms-certification-services/follow-audit-capa-review">
                         Follow-up Audit and CAPA Review
                         </Link>
                       </MultilevelDropdown.Item>

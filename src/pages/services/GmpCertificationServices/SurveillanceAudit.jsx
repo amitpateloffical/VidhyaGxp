@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function GapAssessmentAudit() {
+export default function SurveillanceAudit() {
   const listRefs = useRef([]);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function GapAssessmentAudit() {
       <div className="top_container m-3">
         <div className="service_headingr">
           <h1 className="heading service-head-text" data-aos="fade-down">
-            GAP Assessment Audit
+          Surveillance Audit
           </h1>
         </div>
         <div className="paragraph_container">
@@ -65,21 +65,21 @@ export default function GapAssessmentAudit() {
                   className="img-fluid"
                   //   style={{ backdropFilter: 'none', opacity: 0.5 }}
                   style={{ width: "95%" }}
-                  src="/follo.jpg"
+                  src="/ongo.jpg"
                 />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
               <h3 className="why_line" data-aos="fade-left">
-                GAP Assessment Audit
+              Surveillance Audit
               </h3>
               <div className="content_container ">
                 <ul>
                   <li data-aos="fade-left" className=" fs-5 ">
                     {/* <b>Seamless Compliance:- </b> */}
-                    We conduct GAP assessment audits to identify gaps in current
-                    practices and develop strategies to bridge these gaps for
-                    GMP compliance.
+                    Regular surveillance audits are conducted to monitor ongoing compliance and ensure sustained adherence to GMP standards.
+
+
                   </li>
                   {/* <li data-aos="fade-left">
                     <b>Unmatched Efficiency:-</b>
