@@ -88,7 +88,10 @@ import AuditComplianceReports from "./pages/services/GmpCertificationServices/Au
 import FacilityUpgradationGmpCompliance from "./pages/services/GmpCertificationServices/FacilityUpgradationGmpCompliance";
 import MockAudits from "./pages/services/GmpCertificationServices/MockAudits";
 import DueDiligenceAudits from "./pages/services/GmpCertificationServices/DueDiligenceAudits";
-
+import GapAssessmentAudit from "./pages/services/GmpCertificationServices/GapAssessmentAudit";
+import InvestigationAudit from "./pages/services/GmpCertificationServices/InvestigationAudit";
+import SurveillanceAudit from "./pages/services/GmpCertificationServices/SurveillanceAudit";
+import FollowAuditCapaReview from "./pages/services/GmpCertificationServices/FollowAuditCapaReview";
 function App() {
       // useEffect(() => {
       //   const preventRightClick = (e) => {
@@ -191,6 +194,10 @@ function App() {
           <Route path="/gms-certification-services/facility-upgradation-gmp-compliance" element={<FacilityUpgradationGmpCompliance />} />
           <Route path="/gms-certification-services/mock-audits" element={<MockAudits />} />
           <Route path="/gms-certification-services/due-diligence-audits" element={<DueDiligenceAudits />} />
+          <Route path="/gms-certification-services/gap-assessment-audit" element={<GapAssessmentAudit />} />
+          <Route path="/gms-certification-services/investigation-audit" element={<InvestigationAudit />} />
+          <Route path="/gms-certification-services/surveillance-audit" element={<SurveillanceAudit />} />
+          <Route path="/gms-certification-services/follow-audit-capa-review" element={<FollowAuditCapaReview />} />
         </Routes>
         <Footer />
       </BrowserRouter>
