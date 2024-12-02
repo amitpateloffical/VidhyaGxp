@@ -126,21 +126,15 @@ import SOPDocumentationTraining from "./pages/services/Training/SOPDocumentation
 import HealthHygieneTraining from "./pages/services/Training/HealthHygieneTraining";
 import ProductSpecificTraining from "./pages/services/Training/ProductSpecificTraining";
 import LeadershipSoftSkillsTraining from "./pages/services/Training/LeadershipSoftSkillsTraining";
+import ReactGA from "react-ga4";
+import Analytics from "./Analytics";
+
 function App() {
-  // useEffect(() => {
-  //   const preventRightClick = (e) => {
-  //     e.preventDefault();
-  //   };
-
-  //   document.addEventListener("contextmenu", preventRightClick);
-
-  //   return () => {
-  //     document.removeEventListener("contextmenu", preventRightClick);
-  //   };
-  // }, []);
+  ReactGA.initialize("G-4MPTDKCBVY");
   return (
     <>
       <BrowserRouter>
+      <Analytics />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
