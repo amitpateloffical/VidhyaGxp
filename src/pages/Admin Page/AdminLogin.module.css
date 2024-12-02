@@ -1,0 +1,161 @@
+/* AdminLogin.module.css */
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ebb15d;
+}
+
+.loginBox {
+  width: 100%;
+  max-width: 27rem;
+  background-color: white;
+  padding: 2rem;
+  padding-top: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  object-fit: contain;
+  margin-bottom: 1rem;
+  width: 55vh;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.inputGroup {
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.inputField {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.inputField:focus {
+  border-color: #3b82f6;
+  ring: 2px;
+  ring-color: #3b82f6;
+}
+
+.passwordGroup {
+  position: relative;
+}
+
+.togglePassword {
+  position: absolute;
+  right: 0.75rem;
+  top: 50px;
+  transform: translateY(-50%);
+  color: #6b7280;
+  cursor: pointer;
+  border: none;
+}
+
+.togglePassword:hover {
+  color: #4b5563;
+}
+
+.submitBtn {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #3b82f6;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.submitBtn:hover {
+  background-color: #2563eb;
+}
+
+.submitBtn:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: #3b82f6;
+}
+
+.blogContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.blogCard {
+  width: 300px;
+  background: #eca73f;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blogCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.blogTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blogDate {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.blogDescription {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.readMoreBtn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+}
+
+.readMoreBtn:hover {
+  background-color: #0056b3;
+}
