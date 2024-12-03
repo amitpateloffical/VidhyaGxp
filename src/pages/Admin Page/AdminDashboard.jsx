@@ -46,10 +46,15 @@ function AdminDashboard() {
   };
 
   useEffect(() => {
+    const token = localStorage.getItem("authToken");
     const fetchData = async () => {
       try {
+        const config = {
+          headers: { Authorization: `Bearer ${token}` },
+        };
         const res = await axios.get(
-          "http://localhost:1001/admin/contact-us-list"
+          "http://localhost:1001/admin/contact-us-list",
+          config
         );
         setContactUsList(res.data.data);
         console.log("Fetched data:", res.data.data);
