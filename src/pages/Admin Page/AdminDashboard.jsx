@@ -6,6 +6,7 @@ import { FiMenu } from "react-icons/fi";
 import { IoSettings } from "react-icons/io5";
 import styles from "./AdminDashboard.module.css";
 import axios from "axios";
+import Blogs from "./Blogs/Blogs";
 
 function AdminDashboard() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -200,40 +201,7 @@ function AdminDashboard() {
           )}
           {activeSection === "blogs" && (
             <div>
-              <div
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "bold",
-                  textAlign: "center",
-                  backgroundColor: "#007BFF",
-                  padding: "14px",
-                  color: "white",
-                  borderRadius: "5px",
-                  marginBottom: "20px",
-                }}
-              >
-                Blog Posts
-              </div>
-              <div className={styles.blogContainer}>
-                {blogPosts.length > 0 ? (
-                  blogPosts.map((post, index) => (
-                    <div className={styles.blogCard} key={post.id || index}>
-                      <h3 className={styles.blogTitle}>{post.title}</h3>
-                      <p className={styles.blogDate}>
-                        Published on: {new Date(post.date).toLocaleDateString()}
-                      </p>
-                      <p className={styles.blogDescription}>
-                        {post.description}
-                      </p>
-                      <button className={styles.readMoreBtn}>Read More</button>
-                    </div>
-                  ))
-                ) : (
-                  <p style={{ textAlign: "center", fontSize: "16px" }}>
-                    No blog posts available.
-                  </p>
-                )}
-              </div>
+              <Blogs />
             </div>
           )}
           {activeSection === "settings" && <div>Settings Content</div>}
