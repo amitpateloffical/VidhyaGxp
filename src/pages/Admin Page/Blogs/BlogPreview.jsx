@@ -5,8 +5,12 @@ export default function BlogPreview({ title, content }) {
   return (
     <div className={styles.preview}>
       <h3>Preview</h3>
-      <h4>{title}</h4>
-      <p>{content}</p>
+      <h4 style={{ fontSize: "20px", fontWeight: "bold" }}>{title}</h4>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: content,
+        }}
+      ></p>
     </div>
   );
 }
