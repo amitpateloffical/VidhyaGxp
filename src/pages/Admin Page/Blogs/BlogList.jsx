@@ -52,11 +52,26 @@ export default function BlogList({ onEdit, blogs, fetchBlogs }) {
             }}
           ></p>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <style>
+              {`.read-more-btn {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+                
+.read-more-btn:hover {
+  transform: translateX(10px);
+  color: #1d4ed8;
+}
+    `}
+            </style>
             <button
-              className={styles["button"]}
+              className="btn text-primary btn-sm read-more-btn"
               onClick={() => toggleDescription(blog.id)}
             >
-              {expandedBlog === blog.id ? "Read Less" : "Read More"}
+              {expandedBlog === blog.id ? "Read Less" : "...Read More"}
             </button>
             <div>
               <button className={styles.button} onClick={() => onEdit(blog)}>

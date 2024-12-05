@@ -8,6 +8,8 @@ function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [selectedBlog, setSelectedBlog] = useState(null);
   const [showFullDescription, setShowFullDescription] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const blogsPerPage = 5;
 
   useEffect(() => {
     AOS.init({ duration: 1400 });
@@ -35,6 +37,17 @@ function Blogs() {
     setShowFullDescription((prevState) => !prevState);
   };
 
+  // Pagination Logic
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
+
+  const totalPages = Math.ceil(blogs.length / blogsPerPage);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <div className="blog-page">
       <BreadCrumb page="Our Blogs" />
@@ -56,11 +69,14 @@ function Blogs() {
                 >
                   <p className="text-muted mx-2">
                     Posted on:{" "}
-                    {new Date(selectedBlog.createdAt).toLocaleDateString("en-GB", {
-                          day: "2-digit",
-                          month: "2-digit",
-                          year: "2-digit",
-                        })}
+                    {new Date(selectedBlog.createdAt).toLocaleDateString(
+                      "en-GB",
+                      {
+                        day: "2-digit",
+                        month: "2-digit",
+                        year: "2-digit",
+                      }
+                    )}
                   </p>
                   <p className="text-muted mx-3">Posted by: Rupesh Patil</p>
                 </div>
@@ -71,15 +87,30 @@ function Blogs() {
                     dangerouslySetInnerHTML={{
                       __html: showFullDescription
                         ? selectedBlog.description
-                        : selectedBlog.description.slice(0, 250) + "...",
+                        : selectedBlog.description.slice(0, 2050),
                     }}
                   ></div>
+                  <style>
+                    {`.read-more-btn {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 
+.read-more-btn:hover {
+  transform: translateX(10px);
+  color: #1d4ed8;
+}
+    `}
+                  </style>
                   <button
-                    className="btn btn-outline-primary btn-sm mt-2"
+                    className="btn text-primary btn-sm mt-2 read-more-btn"
                     onClick={toggleDescription}
+                    style={{ textAlign: "right" }}
                   >
-                    {showFullDescription ? "Read Less" : "Read More..."}
+                    {showFullDescription ? "Read Less" : "...Read More"}
                   </button>
                 </div>
               </div>
@@ -96,7 +127,7 @@ function Blogs() {
           {/* Right: Blog List */}
           <div className="col-lg-4">
             <div className="blog-list" data-aos="fade-left">
-              {blogs.map((blog) => (
+              {currentBlogs.map((blog) => (
                 <div
                   key={blog.id}
                   className={`card mb-3 shadow-sm border-0 rounded-0 ${
@@ -134,15 +165,6 @@ function Blogs() {
                         Posted by: Rupesh Patil
                       </p>
                     </div>
-                    <style>
-                      {`
-          .selected {
-            background-color: #007bff;
-            color: white;
-            border-color: #007bff;
-          }
-        `}
-                    </style>
                     <button
                       className={`btn btn-outline-primary btn-sm view-button mt-2 ${
                         selectedBlog?.id === blog.id ? "selected" : ""
@@ -154,6 +176,38 @@ function Blogs() {
                   </div>
                 </div>
               ))}
+            </div>
+            {/* Pagination Controls */}
+            <div className="pagination-controls mt-4 text-center">
+              {currentPage > 1 && (
+                <button
+                  className="btn btn-sm btn-outline-primary mx-1"
+                  onClick={() => handlePageChange(currentPage - 1)}
+                >
+                  Previous
+                </button>
+              )}
+              {[...Array(totalPages)].map((_, index) => (
+                <button
+                  key={index}
+                  className={`btn btn-sm ${
+                    currentPage === index + 1
+                      ? "btn-primary"
+                      : "btn-outline-primary"
+                  } mx-1`}
+                  onClick={() => handlePageChange(index + 1)}
+                >
+                  {index + 1}
+                </button>
+              ))}
+              {currentPage < totalPages && (
+                <button
+                  className="btn btn-sm btn-outline-primary mx-1"
+                  onClick={() => handlePageChange(currentPage + 1)}
+                >
+                  Next
+                </button>
+              )}
             </div>
           </div>
         </div>

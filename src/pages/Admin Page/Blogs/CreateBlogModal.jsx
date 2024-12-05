@@ -50,7 +50,29 @@ export default function CreateBlogModal({ onClose, fetchBlogs, onAddBlog }) {
 
   return (
     <div className={styles.modal}>
-      <h2>Create Blog</h2>
+        <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <h2>Create Blog</h2>
+        <button
+          type="button"
+          className={styles.removeFileBtn}
+          onClick={onClose}
+          style={{
+            textAlign: "end",
+            right: "17px",
+            position: "absolute",
+            top: "15px",
+            fontSize: "20px",
+          }}
+        >
+          ✖
+        </button>
+      </div>
       <input
         type="text"
         placeholder="Title"
