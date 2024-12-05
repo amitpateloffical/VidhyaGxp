@@ -581,8 +581,8 @@ h6,
   height: 490px;
 }
 .section2 {
-  /* background: linear-gradient(60deg, rgb(244, 193, 117), rgb(224, 156, 61)); */
-  background-color: white;
+  background: linear-gradient(60deg, rgb(244, 193, 117), rgb(224, 156, 61));
+  /* background-color: white; */
 }
 #contact-form-border {
   border-bottom: 2px solid;
@@ -636,4 +636,26 @@ h6,
 }
 .footer-section {
   padding-left: 80px;
+}
+
+/* scrollbar */
+
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #eca73f;
+  border-radius: 30px;
+  border: none;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #e09c3e;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+  border-radius: 30px;
 }

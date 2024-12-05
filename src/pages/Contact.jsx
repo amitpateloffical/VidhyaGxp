@@ -409,7 +409,7 @@ function Contact() {
     <>
       <BreadCrumb page="Contact Us" />
       <ToastContainer />
-      <div className="container-fluid section2 py-5">
+      <div className="container-fluid py-5">
         <div className="container row-service">
           <div className="row g-5 align-items-center d-flex row-xm">
             <div className="col-lg-5 wow fadeIn" data-wow-delay="0.2s">
