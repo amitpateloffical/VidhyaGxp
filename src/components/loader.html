@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loader">
+        <div class="icon">
+          <span class="left-symbol">&lt;</span>
+          <span class="right-symbol">&gt;</span>
+        </div>
+        <div class="text">
+          <span class="main-text">VidyaGxP</span>
+          <span class="tagline">Data informs, wisdom discerns.</span>
+        </div>
+      </div>
+      
+      <style>
+        .loader {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          background: white;
+        }
+        .icon {
+          position: relative;
+          font-size: 50px;
+          color: #FFA500; /* Matching orange color */
+          animation: rotate 2s linear infinite;
+        }
+        .left-symbol, .right-symbol {
+          display: inline-block;
+          animation: glow 1s infinite alternate;
+        }
+        .text {
+          margin-top: 20px;
+          text-align: center;
+        }
+        .main-text {
+          font-size: 24px;
+          font-weight: bold;
+          color: #FFA500;
+          animation: fadeIn 2s ease-in-out infinite;
+        }
+        .tagline {
+          font-size: 14px;
+          color: gray;
+          margin-top: 5px;
+          animation: fadeIn 3s ease-in-out infinite;
+        }
+      
+        /* Animations */
+        @keyframes rotate {
+          0% {
+            transform: rotate(0);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes glow {
+          0% {
+            color: #FFA500;
+          }
+          100% {
+            color: #FFD700;
+          }
+        }
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      </style>
+      
+</body>
+</html>

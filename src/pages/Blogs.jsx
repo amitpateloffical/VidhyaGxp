@@ -9,12 +9,14 @@ function Blogs() {
   const [selectedBlog, setSelectedBlog] = useState(null);
   const [showFullDescription, setShowFullDescription] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const blogsPerPage = 5;
+  const [loading, setLoading] = useState(true);
+  const blogsPerPage = 6;
 
   useEffect(() => {
     AOS.init({ duration: 1400 });
 
     const fetchBlogs = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(
           "http://localhost:1001/admin/blog-list"
@@ -27,6 +29,8 @@ function Blogs() {
         }
       } catch (error) {
         console.error("Error fetching blogs:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -36,6 +40,10 @@ function Blogs() {
   const toggleDescription = () => {
     setShowFullDescription((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    setShowFullDescription(false);
+  }, [selectedBlog]);
 
   // Pagination Logic
   const indexOfLastBlog = currentPage * blogsPerPage;
@@ -48,6 +56,35 @@ function Blogs() {
     setCurrentPage(pageNumber);
   };
 
+  if (loading) {
+    return (
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "100vh" }}
+      >
+        <h2 className="text-primary loading-animation">Loading...</h2>
+        <style>
+          {`
+          .loading-animation {
+            animation: pulse 1.5s infinite ease-in-out;
+          }
+    
+          @keyframes pulse {
+            0%, 100% {
+              opacity: 0.6;
+              transform: scale(1);
+            }
+            50% {
+              opacity: 1;
+              transform: scale(1.1);
+            }
+          }
+        `}
+        </style>
+      </div>
+    );
+  }
+
   return (
     <div className="blog-page">
       <BreadCrumb page="Our Blogs" />
@@ -57,12 +94,14 @@ function Blogs() {
           <div className="col-lg-8">
             {selectedBlog ? (
               <div className="selected-blog" data-aos="fade-right">
-                <h2 className="text-primary">{selectedBlog.title}</h2>
+                <h2 className="text-primary" style={{ fontSize: 28 }}>
+                  {selectedBlog.title}
+                </h2>
                 <img
                   src={selectedBlog.banner_photo}
                   alt={selectedBlog.title}
                   className="img-fluid rounded shadow-sm mb-3"
-                  style={{ width: 850, height: 270 }}
+                  style={{ width: 850, height: 350 }}
                 />
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
@@ -78,7 +117,7 @@ function Blogs() {
                       }
                     )}
                   </p>
-                  <p className="text-muted mx-3">Posted by: Rupesh Patil</p>
+                  <p className="text-muted mx-3">Posted by: Admin</p>
                 </div>
 
                 {/* Display description based on toggle */}
@@ -87,7 +126,7 @@ function Blogs() {
                     dangerouslySetInnerHTML={{
                       __html: showFullDescription
                         ? selectedBlog.description
-                        : selectedBlog.description.slice(0, 2050),
+                        : selectedBlog.description.slice(0, 1600) + "...",
                     }}
                   ></div>
                   <style>
@@ -116,10 +155,19 @@ function Blogs() {
               </div>
             ) : (
               <p
-                className="text-muted text-center"
-                style={{ display: "block", position: "relative", right: "0px" }}
+                className="text-muted"
+                style={{
+                  position: "absolute",
+                  right: "0px",
+                  textAlign: "center",
+                  justifyContent: "center",
+                  display: "flex",
+                  whiteSpace: "nowrap",
+                  margin: "auto",
+                  left: "0px",
+                }}
               >
-                No blog selected or available.
+                There was an error to fetching blogs ⚠️
               </p>
             )}
           </div>
@@ -162,15 +210,25 @@ function Blogs() {
                       </p>
 
                       <p className="card-text text-muted small">
-                        Posted by: Rupesh Patil
+                        Posted by: Admin
                       </p>
                     </div>
+                    <style>
+                      {`
+          .selected {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+          }
+        `}
+                    </style>
                     <button
                       className={`btn btn-outline-primary btn-sm view-button mt-2 ${
                         selectedBlog?.id === blog.id ? "selected" : ""
                       }`}
                       onClick={() => setSelectedBlog(blog)}
                     >
+                      {" "}
                       View
                     </button>
                   </div>
