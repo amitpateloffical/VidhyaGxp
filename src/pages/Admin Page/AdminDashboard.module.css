@@ -8,7 +8,7 @@
   width: 250px;
   /* background-color: #f3f4f6; */
   height: 100vh;
-  padding: 1rem;
+  padding: 10px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   transition: width 0.3s ease-in-out;
 }
@@ -20,13 +20,22 @@
 .sidebarItem {
   padding: 1rem;
   cursor: pointer;
-  border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
   display: flex;
   align-items: center;
+  padding-bottom: 18px;
+  margin-bottom: 15px;
+  border-radius:10px
+
+}
+.toggleIcon:hover{
+  background-color: #e5e7eb;
+  border-radius:30px
 }
 
 .sidebarItem:hover {
   background-color: #e5e7eb;
+  border-radius:10px;
 }
 
 .sidebarItemText {
@@ -39,7 +48,7 @@
 }
 
 .header {
-  height: 4.5rem;
+  height: 4.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

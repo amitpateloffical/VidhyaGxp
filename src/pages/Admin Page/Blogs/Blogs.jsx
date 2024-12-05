@@ -31,7 +31,7 @@ useEffect(() => {
 
   return (
     <div className={styles.container}>
-      <h1 style={{textAlign:"center", fontSize:"25px", backgroundColor: "#ECA73F",color:"white",padding:"14px",borderRadius:"5px",marginBottom:"0px"}}>Blogs</h1>
+      <h1 style={{textAlign:"center", fontSize:"25px", backgroundColor: "#ECA73F",color:"white",padding:"14px",borderRadius:"5px",marginBottom:"0px", marginTop:"19px"}}>Blogs</h1>
       <button className={styles.button} style={{  position: "absolute",
   right:"0px"}} onClick={() => setIsCreateModalOpen(true)}>Create Blog</button>
       <BlogList

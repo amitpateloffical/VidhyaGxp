@@ -30,7 +30,10 @@ const AdminLogin = () => {
         }
       );
       localStorage.setItem("authToken", response.data.token);
-      navigate("/admin-dashboard");
+      setTimeout(()=>{
+        navigate("/admin-dashboard");
+
+      },500);
     } catch (error) {
       toast.error(
         error.response?.data?.message || "Login failed. Please try again."

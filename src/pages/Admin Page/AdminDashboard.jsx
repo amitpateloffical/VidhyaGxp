@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CgProfile } from "react-icons/cg";
+import { MdMenuOpen, MdOutlineMenu } from "react-icons/md";
 import { BiSolidDashboard } from "react-icons/bi";
 import { LiaBlogSolid } from "react-icons/lia";
 import { FiMenu } from "react-icons/fi";
@@ -12,36 +13,11 @@ function AdminDashboard() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [activeSection, setActiveSection] = useState("dashboard");
   const [contactUsList, setContactUsList] = useState([]);
-  const [blogPosts, setBlogPosts] = useState([
-    {
-      id: 1,
-      title: "Understanding React Hooks",
-      description:
-        "Learn the basics of React Hooks and how they can simplify your functional components.",
-      date: "2024-11-30",
-    },
-    {
-      id: 2,
-      title: "Mastering Tailwind CSS",
-      description:
-        "Explore tips and tricks for using Tailwind CSS to build beautiful, responsive designs.",
-      date: "2024-11-20",
-    },
-    {
-      id: 3,
-      title: "Node.js Performance Optimization",
-      description:
-        "Discover techniques to enhance the performance of your Node.js applications.",
-      date: "2024-11-10",
-    },
-  ]);
 
-  // Toggle the sidebar state
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  // Change the active section
   const handleSectionChange = (section) => {
     setActiveSection(section);
   };
@@ -73,9 +49,31 @@ function AdminDashboard() {
       <div
         className={`${styles.sidebar} ${isCollapsed ? styles.collapsed : ""}`}
       >
-        <div className={styles.sidebarItem} onClick={toggleSidebar}>
-          <FiMenu size={24} />
-        </div>
+        {isCollapsed ? (
+          <div
+            className={styles.toggleIcon}
+            style={{ padding: "12px", textAlign: "center", marginTop: "5px" }}
+            onClick={toggleSidebar}
+          >
+            <MdOutlineMenu size={24} />
+          </div>
+        ) : (
+          <div>
+            <img
+              src="\vidyaGxp_logo.png"
+              style={{ width: "211px", objectFit: "cover" }}
+              alt="Logo"
+            />
+          </div>
+        )}
+        <hr
+          style={{
+            margin: "0px",
+            padding: "0px",
+            marginBottom: "15px",
+            marginTop: "14px",
+          }}
+        />
         <div
           className={`${styles.sidebarItem} ${
             activeSection === "dashboard" ? styles.active : ""
@@ -115,9 +113,24 @@ function AdminDashboard() {
       <div className={styles.mainContent}>
         {/* Header */}
         <div className={styles.header}>
-          <div>
-            <img src="\vidyaGxp_logo.png" className={styles.logo} alt="Logo" />
-          </div>
+          {!isCollapsed ? (
+            <div
+              className={styles.toggleIcon}
+              style={{ padding: "12px 18px 12px 18px" }}
+              onClick={toggleSidebar}
+            >
+              <MdMenuOpen size={24} />
+            </div>
+          ) : (
+            <div>
+              <img
+                src="\vidyaGxp_logo.png"
+                className={styles.logo}
+                alt="Logo"
+              />
+            </div>
+          )}
+
           <div className={styles.searchWrapper}>
             <div className={styles.searchInput}>
               <input
@@ -145,6 +158,7 @@ function AdminDashboard() {
                   color: "white",
                   borderRadius: "5px",
                   marginBottom: "20px",
+                  marginTop: "19px",
                 }}
               >
                 Contact Us List
