@@ -38,7 +38,7 @@ function Header() {
             </div>
             <div className="ms-5">
               <FontAwesomeIcon icon={faPhone} className="me-3 text-white" />
-              <span className="text-white fw-bolder">+91-8821836528</span>
+              <span className="text-white fw-bolder">+91-7879678742</span>
             </div>
           </div>
         </div>
@@ -62,6 +62,9 @@ function Header() {
               </Link>
               <Link className="responsive-item px-4" to="/features">
                 Features
+              </Link>
+              <Link className="responsive-item px-4" to="/blogs">
+                Blogs
               </Link>
               <Link className="responsive-item px-4" to="/contact">
                 Contact Us
@@ -1322,6 +1325,17 @@ function Header() {
                   activeClassName="active"
                 >
                   Features
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  to="/blogs"
+                  tabIndex="-1"
+                  aria-disabled="true"
+                  activeClassName="active"
+                >
+                  Blogs
                 </NavLink>
               </li>
               <li className="nav-item">

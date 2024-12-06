@@ -5,8 +5,8 @@ import "aos/dist/aos.css";
 import "./Home.css";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
   const listRefs = useRef([]);
@@ -19,8 +19,8 @@ function Contact() {
     mobileNumber: "",
     lookingFor: "",
     subject: "",
-    countryCode: "", 
-    message: ""
+    countryCode: "",
+    message: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -31,7 +31,7 @@ function Contact() {
 
   useEffect(() => {
     if (listRefs.current) {
-      ""
+      ("");
     }
     const observers = [];
 
@@ -288,7 +288,10 @@ function Contact() {
     { name: "Uganda", code: "+256" },
     { name: "Ukraine", code: "+380" },
     { name: "United Arab Emirates", code: "+971" },
-    { name: "United Kingdom of Great Britain and Northern Ireland", code: "+44" },
+    {
+      name: "United Kingdom of Great Britain and Northern Ireland",
+      code: "+44",
+    },
     { name: "United States of America", code: "+1" },
     { name: "Uruguay", code: "+598" },
     { name: "Uzbekistan", code: "+998" },
@@ -299,7 +302,7 @@ function Contact() {
     { name: "Western Sahara", code: "+212" },
     { name: "Yemen", code: "+967" },
     { name: "Zambia", code: "+260" },
-    { name: "Zimbabwe", code: "+263" }
+    { name: "Zimbabwe", code: "+263" },
   ];
 
   const handleContactChange = (e) => {
@@ -310,35 +313,35 @@ function Contact() {
     const newErrors = {};
 
     if (!feedbackData.firstName) {
-      newErrors.firstName = 'First name is required';
+      newErrors.firstName = "First name is required";
     }
 
     if (!feedbackData.lastName) {
-      newErrors.lastName = 'Last name is required';
+      newErrors.lastName = "Last name is required";
     }
 
     if (!feedbackData.email) {
-      newErrors.email = 'Email is required';
+      newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(feedbackData.email)) {
-      newErrors.email = 'Email is invalid';
+      newErrors.email = "Email is invalid";
     }
 
     if (!feedbackData.mobileNumber) {
-      newErrors.mobileNumber = 'Mobile number is required';
+      newErrors.mobileNumber = "Mobile number is required";
     } else if (!/^\d+$/.test(feedbackData.mobileNumber)) {
-      newErrors.mobileNumber = 'Mobile number must be numeric';
+      newErrors.mobileNumber = "Mobile number must be numeric";
     }
 
     if (!feedbackData.lookingFor) {
-      newErrors.lookingFor = 'Looking for is required';
+      newErrors.lookingFor = "Looking for is required";
     }
 
     if (!feedbackData.subject) {
-      newErrors.subject = 'Subject is required';
+      newErrors.subject = "Subject is required";
     }
 
     if (!feedbackData.message) {
-      newErrors.message = 'Message is required';
+      newErrors.message = "Message is required";
     }
 
     setErrors(newErrors);
@@ -349,25 +352,33 @@ function Contact() {
     e.preventDefault();
     if (validateForm()) {
       const data = JSON.stringify({
-        firstName: feedbackData.firstName,
+        name: feedbackData.firstName,
         middleName: feedbackData.middleName,
+        countryCode: "91",
         lastName: feedbackData.lastName,
-        email: feedbackData.email,
-        mobileNumber: feedbackData.mobileNumber,
-        lookingFor: feedbackData.lookingFor,
+        recipientEmail: feedbackData.email,
+        contact: feedbackData.mobileNumber,
+        service: feedbackData.lookingFor,
         subject: feedbackData.subject,
-        message: feedbackData.message
+        messageBody: feedbackData.message,
       });
 
       const config = {
-        method: 'post',
-        url: 'https://elogbookapi.vidyagxp.com/feedback/send-feedback',
-        headers: { 'Content-Type': 'application/json' },
-        data: data
+        method: "post",
+        url: "http://localhost:1001/admin/contact-us",
+        headers: { "Content-Type": "application/json" },
+        data: data,
       };
-
-      axios(config)
-        .then(function (response) {
+      
+      toast.promise(
+        axios(config),
+        {
+          pending: "Submitting your feedback...",
+          success: "Thanks for your feedback! 🎉",
+          error: "Something went wrong. Please try again later. 😞",
+        }
+      )
+        .then((response) => {
           setFeedbackData({
             firstName: "",
             middleName: "",
@@ -376,13 +387,12 @@ function Contact() {
             mobileNumber: "",
             lookingFor: "",
             subject: "",
-            message: ""
+            message: "",
           });
-          toast.success("Thanks for your feedback!");
+          // console.log("Response:", response.data);
         })
-        .catch(function (error) {
-          toast.error("Something went wrong. Please try again later.");
-          console.error(error);
+        .catch((error) => {
+          console.error("Error:", error);
         });
     }
   };
@@ -399,7 +409,7 @@ function Contact() {
     <>
       <BreadCrumb page="Contact Us" />
       <ToastContainer />
-      <div className="container-fluid section2 py-5">
+      <div className="container-fluid py-5">
         <div className="container row-service">
           <div className="row g-5 align-items-center d-flex row-xm">
             <div className="col-lg-5 wow fadeIn" data-wow-delay="0.2s">
@@ -409,8 +419,14 @@ function Contact() {
             </div>
             <div className="container-fluid py-5 col-lg-7">
               <div className="container py-5" data-aos="fade-left">
-                <div className="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style={{ 'max-width': '500px' }}>
-                  <h1 className="mb-4" data-aos="fade-left">If You Have Any Query, Please Contact Us</h1>
+                <div
+                  className="mx-auto text-center wow fadeIn"
+                  data-wow-delay="0.1s"
+                  style={{ "max-width": "500px" }}
+                >
+                  <h1 className="mb-4" data-aos="fade-left">
+                    If You Have Any Query, Please Contact Us
+                  </h1>
                 </div>
                 <div className="row justify-content-center">
                   <div className="col-lg-7 row-service">
@@ -418,42 +434,73 @@ function Contact() {
                       <form>
                         <div className="row g-3 row-contact">
                           <div className="col-md-4">
-                            <input type="text"
+                            <input
+                              type="text"
                               className="form-control"
                               id="contact-form-border"
                               placeholder="First Name"
                               value={feedbackData.firstName}
-                              onChange={(e) => setFeedbackData({ ...feedbackData, firstName: e.target.value })} />
-                            {errors.firstName && <p style={{ color: 'red' }}>{errors.firstName}</p>}
+                              onChange={(e) =>
+                                setFeedbackData({
+                                  ...feedbackData,
+                                  firstName: e.target.value,
+                                })
+                              }
+                            />
+                            {errors.firstName && (
+                              <p style={{ color: "red",textWrap:"nowrap" }}>{errors.firstName}</p>
+                            )}
                           </div>
                           <div className="col-md-4">
-                            <input type="text"
+                            <input
+                              type="text"
                               className="form-control"
                               id="contact-form-border"
                               placeholder="Middle Name"
                               value={feedbackData.middleName}
-                              onChange={(e) => setFeedbackData({ ...feedbackData, middleName: e.target.value })}
+                              onChange={(e) =>
+                                setFeedbackData({
+                                  ...feedbackData,
+                                  middleName: e.target.value,
+                                })
+                              }
                             />
                           </div>
                           <div className="col-md-4">
-                            <input type="text"
+                            <input
+                              type="text"
                               className="form-control"
                               id="contact-form-border"
                               placeholder="Last Name"
                               value={feedbackData.lastName}
-                              onChange={(e) => setFeedbackData({ ...feedbackData, lastName: e.target.value })}
+                              onChange={(e) =>
+                                setFeedbackData({
+                                  ...feedbackData,
+                                  lastName: e.target.value,
+                                })
+                              }
                             />
-                            {errors.lastName && <p style={{ color: 'red' }}>{errors.lastName}</p>}
+                            {errors.lastName && (
+                              <p style={{ color: "red",textWrap:"nowrap" }}>{errors.lastName}</p>
+                            )}
                           </div>
                           <div className="">
-                            <input type="email"
+                            <input
+                              type="email"
                               id="contact-form-border"
                               className="form-control"
                               placeholder="Your Email"
                               value={feedbackData.email}
-                              onChange={(e) => setFeedbackData({ ...feedbackData, email: e.target.value })}
+                              onChange={(e) =>
+                                setFeedbackData({
+                                  ...feedbackData,
+                                  email: e.target.value,
+                                })
+                              }
                             />
-                            {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
+                            {errors.email && (
+                              <p style={{ color: "red" }}>{errors.email}</p>
+                            )}
                           </div>
                           <div className="col-12">
                             <div className="input-group">
@@ -465,11 +512,14 @@ function Contact() {
                               >
                                 <option value="">Select Country Code</option>
                                 {countryCodes.map((item, index) => (
-                                  <option key={index} value={item.code}>{item.code} {item.name}</option>
+                                  <option key={index} value={item.code}>
+                                    {item.code} {item.name}
+                                  </option>
                                 ))}
                               </select>
                               <input
-                                type="text"
+                                type="number"
+                                maxLength={10}
                                 className="form-control"
                                 placeholder="Mobile Number"
                                 style={{ flex: "70%" }}
@@ -477,67 +527,138 @@ function Contact() {
                                 onChange={handleMobileNumberChange}
                               />
                             </div>
-                            {errors.mobileNumber && <p style={{ color: 'red' }}>{errors.mobileNumber}</p>}
+                            {errors.mobileNumber && (
+                              <p style={{ color: "red" }}>
+                                {errors.mobileNumber}
+                              </p>
+                            )}
                           </div>
                           <div className="col-12">
-                            <input type="text"
+                            <input
+                              type="text"
                               className="form-control"
                               id="contact-form-border"
                               placeholder="Subject"
                               value={feedbackData.subject}
-                              onChange={(e) => setFeedbackData({ ...feedbackData, subject: e.target.value })}
+                              onChange={(e) =>
+                                setFeedbackData({
+                                  ...feedbackData,
+                                  subject: e.target.value,
+                                })
+                              }
                             />
-                            {errors.subject && <p style={{ color: 'red' }}>{errors.subject}</p>}
+                            {errors.subject && (
+                              <p style={{ color: "red" }}>{errors.subject}</p>
+                            )}
                           </div>
                           <div className="col-12">
-                            <select name="options"
+                            <select
+                              name="options"
                               id="options"
-                              style={{ border: "none", borderRadius: "5px", padding: "10px 0px" }}
+                              style={{
+                                border: "none",
+                                borderRadius: "5px",
+                                padding: "10px 0px",
+                              }}
                               value={feedbackData.lookingFor}
-                              onChange={(e) => setFeedbackData({ ...feedbackData, lookingFor: e.target.value })}
+                              onChange={(e) =>
+                                setFeedbackData({
+                                  ...feedbackData,
+                                  lookingFor: e.target.value,
+                                })
+                              }
                             >
-                              <option value="">Please select</option>
+                              <option value="" style={{padding:"10px"}}>Please select</option>
                               <option value="e-BMR">e-BMR</option>
                               <option value="e-LogBook">e-LogBook</option>
                               <option value="LMS">LMS</option>
                               <option value="MES">MES</option>
                               <option value="EDMS">EDMS</option>
                               <option value="EQMS">EQMS</option>
-                              <option value="Quality Risk Management">Quality Risk Management</option>
-                              <option value="Pharma Audit & Remediation">Pharma Audit & Remediation</option>
-                              <option value="Automated Root Cause Analysis">Automated Root Cause Analysis</option>
-                              <option value="Warehouse management system">Warehouse management system</option>
-                              <option value="Connected & Integrated GXP Systems">Connected & Integrated GXP Systems</option>
-                              <option value="AI-Assisted Pharma 4.0">AI-Assisted Pharma 4.0</option>
-                              <option value="Intelligent Pharma Manufacturing Factory">Intelligent Pharma Manufacturing Factory</option>
+                              <option value="Quality Risk Management">
+                                Quality Risk Management
+                              </option>
+                              <option value="Pharma Audit & Remediation">
+                                Pharma Audit & Remediation
+                              </option>
+                              <option value="Automated Root Cause Analysis">
+                                Automated Root Cause Analysis
+                              </option>
+                              <option value="Warehouse management system">
+                                Warehouse management system
+                              </option>
+                              <option value="Connected & Integrated GXP Systems">
+                                Connected & Integrated GXP Systems
+                              </option>
+                              <option value="AI-Assisted Pharma 4.0">
+                                AI-Assisted Pharma 4.0
+                              </option>
+                              <option value="Intelligent Pharma Manufacturing Factory">
+                                Intelligent Pharma Manufacturing Factory
+                              </option>
                               <option value="GxP Training">GxP Training</option>
-                              <option value="Robotic Process Automation (RPA)">Robotic Process Automation (RPA)</option>
+                              <option value="Robotic Process Automation (RPA)">
+                                Robotic Process Automation (RPA)
+                              </option>
                               <option value="Engineering">Engineering</option>
-                              <option value="Qualification & Validation">Qualification & Validation</option>
-                              <option value="QMS Implementation">QMS Implementation</option>
-                              <option value="Technology Transfer and Product Development Support">Technology Transfer and Product Development Support</option>
-                              <option value="Regulatory Submissions">Regulatory Submissions</option>
-                              <option value="GMP Certification Services">GMP Certification Services</option>
+                              <option value="Qualification & Validation">
+                                Qualification & Validation
+                              </option>
+                              <option value="QMS Implementation">
+                                QMS Implementation
+                              </option>
+                              <option value="Technology Transfer and Product Development Support">
+                                Technology Transfer and Product Development
+                                Support
+                              </option>
+                              <option value="Regulatory Submissions">
+                                Regulatory Submissions
+                              </option>
+                              <option value="GMP Certification Services">
+                                GMP Certification Services
+                              </option>
                               <option value="Audit">Audit</option>
-                              <option value="Regulated Market Access">Regulated Market Access</option>
-                              <option value="QMS Consulting">QMS Consulting</option>
+                              <option value="Regulated Market Access">
+                                Regulated Market Access
+                              </option>
+                              <option value="QMS Consulting">
+                                QMS Consulting
+                              </option>
                               <option value="Training">Training</option>
                             </select>
-                            {errors.lookingFor && <p style={{ color: 'red' }}>{errors.lookingFor}</p>}
+                            {errors.lookingFor && (
+                              <p style={{ color: "red" }}>
+                                {errors.lookingFor}
+                              </p>
+                            )}
                           </div>
                           <div className="col-12">
                             <textarea
                               className="form-control"
                               placeholder="Leave a message here"
                               id="contact-form-border"
-                              style={{ 'height': '100px' }}
+                              style={{ height: "100px" }}
                               value={feedbackData.message}
-                              onChange={(e) => setFeedbackData({ ...feedbackData, message: e.target.value })}
+                              onChange={(e) =>
+                                setFeedbackData({
+                                  ...feedbackData,
+                                  message: e.target.value,
+                                })
+                              }
                             ></textarea>
-                            {errors.message && <p style={{ color: 'red' }}>{errors.message}</p>}
+                            {errors.message && (
+                              <p style={{ color: "red" }}>{errors.message}</p>
+                            )}
                           </div>
                           <div className="col-12">
-                            <button id="btn-theme" className="btn btn-primary w-100 py-2" type="submit" onClick={handleSubmit}>Send Message</button>
+                            <button
+                              id="btn-theme"
+                              className="btn btn-primary w-100 py-2"
+                              type="submit"
+                              onClick={handleSubmit}
+                            >
+                              Send Message
+                            </button>
                           </div>
                         </div>
                       </form>

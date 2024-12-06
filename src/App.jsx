@@ -7,7 +7,7 @@ import Services from "./pages/Services";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import PageNotFound from "./pages/PageNotFound";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import SoftwareDevelopement from "./pages/SoftwareDevelopement";
 import ElogBook from "./pages/services/ElogBook";
 import LMS from "./pages/services/LMS";
@@ -126,417 +126,436 @@ import SOPDocumentationTraining from "./pages/services/Training/SOPDocumentation
 import HealthHygieneTraining from "./pages/services/Training/HealthHygieneTraining";
 import ProductSpecificTraining from "./pages/services/Training/ProductSpecificTraining";
 import LeadershipSoftSkillsTraining from "./pages/services/Training/LeadershipSoftSkillsTraining";
-import ReactGA from "react-ga4";
-import Analytics from "./Analytics";
-
+import Blogs from "./pages/Blogs";
+import AdminLogin from "./pages/Admin Page/AdminLogin";
+import AdminDashboard from "./pages/Admin Page/AdminDashboard";
 function App() {
-  ReactGA.initialize("G-4MPTDKCBVY");
+  // useEffect(() => {
+  //   const preventRightClick = (e) => {
+  //     e.preventDefault();
+  //   };
+
+  //   document.addEventListener("contextmenu", preventRightClick);
+
+  //   return () => {
+  //     document.removeEventListener("contextmenu", preventRightClick);
+  //   };
+  // }, []);
+  const location = useLocation();
+  const noHeaderFooterRoutes = ["/admin-login","/admin-dashboard"];
+  const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);
+  const token = localStorage.getItem("authToken");
   return (
     <>
-      <BrowserRouter>
-      <Analytics />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/*" element={<PageNotFound />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/features" element={<Feature />} />
-          <Route path="/services" element={<Services />} />
-          <Route
-            path="/software-development"
-            element={<SoftwareDevelopement />}
-          />
-          <Route path="/elogbook" element={<ElogBook />} />
-          <Route path="/lms" element={<LMS />} />
-          <Route path="/mes" element={<MES />} />
-          <Route path="/ebmr" element={<EBMR1 />} />
-          <Route path="/edms" element={<EDMS />} />
-          <Route path="/eqms" element={<EQMS />} />
-          <Route path="/quality-risk-management" element={<QMS />} />
-          <Route path="/root-cause-analysis" element={<RootcauseAnalysis />} />
-          <Route path="/pharma-audit" element={<PharmaAudit />} />
-          <Route path="/warehouse-management" element={<WarehouseMS />} />
-          <Route path="/paperless-microbiology" element={<PaperlessM />} />
-          <Route path="/usfda-warning-letter-management" element={<UsfdaW />} />
-          <Route
-            path="/merger-and-acquisition"
-            element={<MergerAndAcquisition />}
-          />
-          <Route path="/ai-assited-pharma" element={<AiAssistedPharma />} />
-          <Route
-            path="/ai-assited-culture-of-quality"
-            element={<AiAssistedCultureOfQuality />}
-          />
-          <Route
-            path="/connected-and-integrated-gxp-systems"
-            element={<GxpSystems />}
-          />
-          <Route path="/intelligent-pharma" element={<IntelligentPharma />} />
-          <Route path="/gxp-training" element={<GxpTrainig />} />
-          <Route path="/rpa" element={<Rpa />} />
-          <Route path="/industries" element={<Industries />} />
-          <Route path="/parma-audit" element={<PharmaAudit />} />
-          <Route
-            path="/engineer/feasibility-studies"
-            element={<Feasibility />}
-          />
-          <Route path="/engineer/site-selection" element={<SiteSelection />} />
-          <Route
-            path="/engineer/facility-design"
-            element={<FacilityDesign />}
-          />
-          <Route path="/engineer/design-risk" element={<DesignRisk />} />
-          <Route
-            path="/engineer/detailed-engineering"
-            element={<DetailedEngineering />}
-          />
-          <Route
-            path="/engineer/regulatory-compliance"
-            element={<RegulatoryCompliance />}
-          />
-          <Route
-            path="/engineer/project-management"
-            element={<ProjectManagement />}
-          />
-          <Route
-            path="/engineer/technology-equipment"
-            element={<TechnologyEquipment />}
-          />
-          <Route
-            path="/engineer/commissioning-qualification"
-            element={<CommissioningQualification />}
-          />
-          <Route
-            path="/engineer/quality-assurance"
-            element={<QualityAssurance />}
-          />
-          <Route
-            path="/engineer/training-capacity-building"
-            element={<TrainingCapacityBuilding />}
-          />
-          <Route
-            path="/engineer/contractual-closeout"
-            element={<ContractualCloseout />}
-          />
-          <Route
-            path="/engineer/post-project-review"
-            element={<PostProjectReview />}
-          />
-          <Route
-            path="/engineer/supply-chain-management"
-            element={<SupplyChainManagement />}
-          />
-          <Route
-            path="/engineer/financial-analysis"
-            element={<FinancialAnalysis />}
-          />
-          <Route
-            path="/qualificationvalidation/user-requirements-specification"
-            element={<UserRequirementsSpecification />}
-          />
-          <Route
-            path="/qualificationvalidation/design-qualification"
-            element={<DesignQualification />}
-          />
-          <Route
-            path="/qualificationvalidation/factory-site-acceptance"
-            element={<FactorySiteAcceptance />}
-          />
-          <Route
-            path="/qualificationvalidation/installation-qualification"
-            element={<InstallationQualification />}
-          />
-          <Route
-            path="/qualificationvalidation/operation-qualification"
-            element={<OperationQualification />}
-          />
-          <Route
-            path="/qualificationvalidation/standard-operating-procedure"
-            element={<StandardOperatingProcedure />}
-          />
-          <Route
-            path="/qualificationvalidation/performance-qualification"
-            element={<PerformanceQualification />}
-          />
-          <Route
-            path="/qualificationvalidation/process-cleaning-validation"
-            element={<ProcessCleaningValidation />}
-          />
-          <Route
-            path="/qualificationvalidation/risk-assessment"
-            element={<RiskAssessment />}
-          />
-          <Route
-            path="/dropqmsimplementation/developing-procedures-qms"
-            element={<DevelopingProceduresQms />}
-          />
-          <Route
-            path="/dropqmsimplementation/training-awareness"
-            element={<TrainingAwareness />}
-          />
-          <Route
-            path="/dropqmsimplementation/gap-analysis"
-            element={<GapAnalysis />}
-          />
-          <Route
-            path="/dropqmsimplementation/investigation-support"
-            element={<InvestigationSupport />}
-          />
-          <Route
-            path="/dropqmsimplementation/root-cause-analysis"
-            element={<RootCauseAnalysis />}
-          />
-          <Route
-            path="/dropqmsimplementation/qms-monitoring-measurement"
-            element={<QmsMonitoringMeasurement />}
-          />
-          <Route
-            path="/technologytransferproductdevelopmentsupport/assessment-feasibil"
-            element={<AssessmentFeasibil />}
-          />
-          <Route
-            path="/technologytransferproductdevelopmentsupport/process-optimization"
-            element={<ProcessOptimization />}
-          />
-          <Route
-            path="/technologytransferproductdevelopmentsupport/regulatory-compliances"
-            element={<RegulatoryCompliances />}
-          />
-          <Route
-            path="/technologytransferproductdevelopmentsupport/documentation-preparation"
-            element={<DocumentationPreparation />}
-          />
-          <Route
-            path="/technologytransferproductdevelopmentsupport/risk-assessment-mitigations"
-            element={<RiskAssessmentMitigations />}
-          />
-          <Route
-            path="/technologytransferproductdevelopmentsupport/technology-transfer-execution"
-            element={<TechnologyTransferExecution />}
-          />
-          <Route
-            path="/technologytransferproductdevelopmentsupport/scale-up-assistance"
-            element={<ScaleUpAssistance />}
-          />
-          <Route
-            path="/technologytransferproductdevelopmentsupport/analytical-method-development"
-            element={<AnalyticalMethodDevelopment />}
-          />
-          <Route
-            path="/technologytransferproductdevelopmentsupport/quality-assurance-compliance"
-            element={<QualityAssuranceCompliance />}
-          />
-          <Route
-            path="/technologytransferproductdevelopmentsupport/project-managementes"
-            element={<ProjectManagementes />}
-          />
-          <Route
-            path="/regulatorysubmission/regulatory-authorities"
-            element={<RegulatoryAuthorities />}
-          />
-          <Route
-            path="/regulatorysubmission/document-review-elimination"
-            element={<DocumentReviewElimination />}
-          />
-          <Route
-            path="/regulatorysubmission/drug-master"
-            element={<DrugMaster />}
-          />
-          <Route
-            path="/regulatorysubmission/response-regulatory-queries"
-            element={<ResponseRegulatoryQueries />}
-          />
-          <Route
-            path="/regulatorysubmission/regulatory-compliance-gap"
-            element={<RegulatoryComplianceGap />}
-          />
-          <Route
-            path="/regulatorysubmission/post-approval-changes-submissions"
-            element={<PostApprovalChangesSubmissions />}
-          />
-          <Route
-            path="/regulatorysubmission/guidance-anda-dmf"
-            element={<GuidanceAndaDmf />}
-          />
-          <Route
-            path="/regulatorysubmission/lifecycle-management"
-            element={<LifecycleManagement />}
-          />
-          <Route
-            path="/regulatorysubmission/investigational-new-drug"
-            element={<InvestigationalNewDrug />}
-          />
-          <Route
-            path="/regulatorysubmission/abbreviated-new-drug"
-            element={<AbbreviatedNewDrug />}
-          />
-          <Route
-            path="/regulatorysubmission/drug-master-file-submissions"
-            element={<DrugMasterFileSubmissions />}
-          />
-          <Route
-            path="/regulatorysubmission/remedial-action-plan"
-            element={<RemedialActionPlan />}
-          />
-          <Route
-            path="/gms-certification-services/pre-pos-inspection-audits"
-            element={<PrePosInspectionAudits />}
-          />
-          <Route
-            path="/gms-certification-services/audit-compliance-reports"
-            element={<AuditComplianceReports />}
-          />
-          <Route
-            path="/gms-certification-services/facility-upgradation-gmp-compliance"
-            element={<FacilityUpgradationGmpCompliance />}
-          />
-          <Route
-            path="/gms-certification-services/mock-audits"
-            element={<MockAudits />}
-          />
-          <Route
-            path="/gms-certification-services/due-diligence-audits"
-            element={<DueDiligenceAudits />}
-          />
-          <Route
-            path="/gms-certification-services/gap-assessment-audit"
-            element={<GapAssessmentAudit />}
-          />
-          <Route
-            path="/gms-certification-services/investigation-audit"
-            element={<InvestigationAudit />}
-          />
-          <Route
-            path="/gms-certification-services/surveillance-audit"
-            element={<SurveillanceAudit />}
-          />
-          <Route
-            path="/gms-certification-services/follow-audit-capa-review"
-            element={<FollowAuditCapaReview />}
-          />
-          <Route
-            path="/audit/gmp-audits-starting-materials"
-            element={<GmpAuditsStartingMaterials />}
-          />
-          <Route
-            path="/audit/supplier-excipient-audit"
-            element={<SupplierExcipientAudits />}
-          />
-          <Route
-            path="/audit/gmp-third-party-menu"
-            element={<GmpThirdPartyMenu />}
-          />
-          <Route
-            path="/audit/packaging-material-audits"
-            element={<PackagingMaterialAudits />}
-          />
-          <Route
-            path="/audit/third-party-manufacturing-execution"
-            element={<ThirdPartyManufacturingExecution />}
-          />
-          <Route path="/audit/qm-system-audits" element={<QmSystemAudits />} />
-          <Route path="/audit/gdp-glp-audits" element={<GdpGlpAudits />} />
-          <Route
-            path="/audit/root-cause-audits"
-            element={<RootCauseAudits />}
-          />
-          <Route
-            path="/audit/cgmp-consultants-consulting"
-            element={<CgmpConsultantsConsulting />}
-          />
-          <Route
-            path="/audit/gap-analysis-mock-audits"
-            element={<GapAnalysisMockAudits />}
-          />
-          <Route
-            path="/audit/onsite-cgmp-consultants"
-            element={<OnsiteCgmpConsultants />}
-          />
-          <Route path="/audit/audit-library" element={<AuditLibrary />} />
-          <Route
-            path="/audit/upcoming-audits"
-            element={<UpcomingAuditSchedule />}
-          />
-          <Route
-            path="/regulated-market-access/market-regulatory-strategy"
-            element={<MarketRegulatoryStrategy />}
-          />
-          <Route
-            path="/regulated-market-access/regulatory-emerging-markets"
-            element={<RegulatoryEmergingMarkets />}
-          />
-          <Route
-            path="/qms-consulting/engineering-solutions"
-            element={<EngineeringSolutions />}
-          />
-          <Route
-            path="/qms-consulting/qualifications-validations"
-            element={<QualificationsValidations />}
-          />
-          <Route path="/qms-consulting/qms-support" element={<QMSSupport />} />
-          <Route
-            path="/qms-consulting/regulatory-services"
-            element={<RegulatoryServices />}
-          />
-          <Route
-            path="/qms-consulting/contractor-collaboration"
-            element={<ContractorCollaboration />}
-          />
-          <Route
-            path="/qms-consulting/training-solutions"
-            element={<TrainingSolutions />}
-          />
-          <Route path="/training/training-gmp" element={<TrainingGmp />} />
-          <Route
-            path="/training/training-quality-assurance"
-            element={<TrainingQualityAssurance />}
-          />
-          <Route
-            path="/training/training-regulatory-compliance"
-            element={<TrainingRegulatoryCompliance />}
-          />
-          <Route
-            path="/training/training-safety-environmental"
-            element={<TrainingSafetyEnvironmental />}
-          />
-          <Route path="/training/training-cgcp" element={<TrainingCGCP />} />
-          <Route
-            path="/training/data-integrity-training"
-            element={<DataIntegrityTraining />}
-          />
-          <Route
-            path="/training/Pharmacovigilance-training"
-            element={<PharmacovigilanceTraining />}
-          />
-          <Route
-            path="/training/Process-validation-training"
-            element={<ProcessValidationTraining />}
-          />
-          <Route
-            path="/training/computer-system-validation-training"
-            element={<ComputerSystemValidationTraining />}
-          />
-          <Route
-            path="/training/SOP-documentation-training"
-            element={<SOPDocumentationTraining />}
-          />
-          <Route
-            path="/training/health-hygiene-training"
-            element={<HealthHygieneTraining />}
-          />
-          <Route
-            path="/training/product-specification-training"
-            element={<ProductSpecificTraining />}
-          />
-          <Route
-            path="/training/leadership-Soft-Skills-training"
-            element={<LeadershipSoftSkillsTraining />}
-          />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      {!hideHeaderFooter && <Header />}{" "}
+      <Routes>
+        {/* Admin Pannel */}
+        <Route
+          path="/admin-login"
+          element={token ? <Navigate to="/admin-dashboard" /> : <AdminLogin />}
+        />
+        <Route
+          path="/admin-dashboard"
+          element={token ? <AdminDashboard /> : <Navigate to="/admin-login" />}
+        />
+
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/*" element={<PageNotFound />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/features" element={<Feature />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/services" element={<Services />} />
+        <Route
+          path="/software-development"
+          element={<SoftwareDevelopement />}
+        />
+        <Route path="/elogbook" element={<ElogBook />} />
+        <Route path="/lms" element={<LMS />} />
+        <Route path="/mes" element={<MES />} />
+        <Route path="/ebmr" element={<EBMR1 />} />
+        <Route path="/edms" element={<EDMS />} />
+        <Route path="/eqms" element={<EQMS />} />
+        <Route path="/quality-risk-management" element={<QMS />} />
+        <Route path="/root-cause-analysis" element={<RootcauseAnalysis />} />
+        <Route path="/pharma-audit" element={<PharmaAudit />} />
+        <Route path="/warehouse-management" element={<WarehouseMS />} />
+        <Route path="/paperless-microbiology" element={<PaperlessM />} />
+        <Route path="/usfda-warning-letter-management" element={<UsfdaW />} />
+        <Route
+          path="/merger-and-acquisition"
+          element={<MergerAndAcquisition />}
+        />
+        <Route path="/ai-assited-pharma" element={<AiAssistedPharma />} />
+        <Route
+          path="/ai-assited-culture-of-quality"
+          element={<AiAssistedCultureOfQuality />}
+        />
+        <Route
+          path="/connected-and-integrated-gxp-systems"
+          element={<GxpSystems />}
+        />
+        <Route path="/intelligent-pharma" element={<IntelligentPharma />} />
+        <Route path="/gxp-training" element={<GxpTrainig />} />
+        <Route path="/rpa" element={<Rpa />} />
+        <Route path="/industries" element={<Industries />} />
+        <Route path="/parma-audit" element={<PharmaAudit />} />
+        <Route path="/engineer/feasibility-studies" element={<Feasibility />} />
+        <Route path="/engineer/site-selection" element={<SiteSelection />} />
+        <Route path="/engineer/facility-design" element={<FacilityDesign />} />
+        <Route path="/engineer/design-risk" element={<DesignRisk />} />
+        <Route
+          path="/engineer/detailed-engineering"
+          element={<DetailedEngineering />}
+        />
+        <Route
+          path="/engineer/regulatory-compliance"
+          element={<RegulatoryCompliance />}
+        />
+        <Route
+          path="/engineer/project-management"
+          element={<ProjectManagement />}
+        />
+        <Route
+          path="/engineer/technology-equipment"
+          element={<TechnologyEquipment />}
+        />
+        <Route
+          path="/engineer/commissioning-qualification"
+          element={<CommissioningQualification />}
+        />
+        <Route
+          path="/engineer/quality-assurance"
+          element={<QualityAssurance />}
+        />
+        <Route
+          path="/engineer/training-capacity-building"
+          element={<TrainingCapacityBuilding />}
+        />
+        <Route
+          path="/engineer/contractual-closeout"
+          element={<ContractualCloseout />}
+        />
+        <Route
+          path="/engineer/post-project-review"
+          element={<PostProjectReview />}
+        />
+        <Route
+          path="/engineer/supply-chain-management"
+          element={<SupplyChainManagement />}
+        />
+        <Route
+          path="/engineer/financial-analysis"
+          element={<FinancialAnalysis />}
+        />
+        <Route
+          path="/qualificationvalidation/user-requirements-specification"
+          element={<UserRequirementsSpecification />}
+        />
+        <Route
+          path="/qualificationvalidation/design-qualification"
+          element={<DesignQualification />}
+        />
+        <Route
+          path="/qualificationvalidation/factory-site-acceptance"
+          element={<FactorySiteAcceptance />}
+        />
+        <Route
+          path="/qualificationvalidation/installation-qualification"
+          element={<InstallationQualification />}
+        />
+        <Route
+          path="/qualificationvalidation/operation-qualification"
+          element={<OperationQualification />}
+        />
+        <Route
+          path="/qualificationvalidation/standard-operating-procedure"
+          element={<StandardOperatingProcedure />}
+        />
+        <Route
+          path="/qualificationvalidation/performance-qualification"
+          element={<PerformanceQualification />}
+        />
+        <Route
+          path="/qualificationvalidation/process-cleaning-validation"
+          element={<ProcessCleaningValidation />}
+        />
+        <Route
+          path="/qualificationvalidation/risk-assessment"
+          element={<RiskAssessment />}
+        />
+        <Route
+          path="/dropqmsimplementation/developing-procedures-qms"
+          element={<DevelopingProceduresQms />}
+        />
+        <Route
+          path="/dropqmsimplementation/training-awareness"
+          element={<TrainingAwareness />}
+        />
+        <Route
+          path="/dropqmsimplementation/gap-analysis"
+          element={<GapAnalysis />}
+        />
+        <Route
+          path="/dropqmsimplementation/investigation-support"
+          element={<InvestigationSupport />}
+        />
+        <Route
+          path="/dropqmsimplementation/root-cause-analysis"
+          element={<RootCauseAnalysis />}
+        />
+        <Route
+          path="/dropqmsimplementation/qms-monitoring-measurement"
+          element={<QmsMonitoringMeasurement />}
+        />
+        <Route
+          path="/technologytransferproductdevelopmentsupport/assessment-feasibil"
+          element={<AssessmentFeasibil />}
+        />
+        <Route
+          path="/technologytransferproductdevelopmentsupport/process-optimization"
+          element={<ProcessOptimization />}
+        />
+        <Route
+          path="/technologytransferproductdevelopmentsupport/regulatory-compliances"
+          element={<RegulatoryCompliances />}
+        />
+        <Route
+          path="/technologytransferproductdevelopmentsupport/documentation-preparation"
+          element={<DocumentationPreparation />}
+        />
+        <Route
+          path="/technologytransferproductdevelopmentsupport/risk-assessment-mitigations"
+          element={<RiskAssessmentMitigations />}
+        />
+        <Route
+          path="/technologytransferproductdevelopmentsupport/technology-transfer-execution"
+          element={<TechnologyTransferExecution />}
+        />
+        <Route
+          path="/technologytransferproductdevelopmentsupport/scale-up-assistance"
+          element={<ScaleUpAssistance />}
+        />
+        <Route
+          path="/technologytransferproductdevelopmentsupport/analytical-method-development"
+          element={<AnalyticalMethodDevelopment />}
+        />
+        <Route
+          path="/technologytransferproductdevelopmentsupport/quality-assurance-compliance"
+          element={<QualityAssuranceCompliance />}
+        />
+        <Route
+          path="/technologytransferproductdevelopmentsupport/project-managementes"
+          element={<ProjectManagementes />}
+        />
+        <Route
+          path="/regulatorysubmission/regulatory-authorities"
+          element={<RegulatoryAuthorities />}
+        />
+        <Route
+          path="/regulatorysubmission/document-review-elimination"
+          element={<DocumentReviewElimination />}
+        />
+        <Route
+          path="/regulatorysubmission/drug-master"
+          element={<DrugMaster />}
+        />
+        <Route
+          path="/regulatorysubmission/response-regulatory-queries"
+          element={<ResponseRegulatoryQueries />}
+        />
+        <Route
+          path="/regulatorysubmission/regulatory-compliance-gap"
+          element={<RegulatoryComplianceGap />}
+        />
+        <Route
+          path="/regulatorysubmission/post-approval-changes-submissions"
+          element={<PostApprovalChangesSubmissions />}
+        />
+        <Route
+          path="/regulatorysubmission/guidance-anda-dmf"
+          element={<GuidanceAndaDmf />}
+        />
+        <Route
+          path="/regulatorysubmission/lifecycle-management"
+          element={<LifecycleManagement />}
+        />
+        <Route
+          path="/regulatorysubmission/investigational-new-drug"
+          element={<InvestigationalNewDrug />}
+        />
+        <Route
+          path="/regulatorysubmission/abbreviated-new-drug"
+          element={<AbbreviatedNewDrug />}
+        />
+        <Route
+          path="/regulatorysubmission/drug-master-file-submissions"
+          element={<DrugMasterFileSubmissions />}
+        />
+        <Route
+          path="/regulatorysubmission/remedial-action-plan"
+          element={<RemedialActionPlan />}
+        />
+        <Route
+          path="/gms-certification-services/pre-pos-inspection-audits"
+          element={<PrePosInspectionAudits />}
+        />
+        <Route
+          path="/gms-certification-services/audit-compliance-reports"
+          element={<AuditComplianceReports />}
+        />
+        <Route
+          path="/gms-certification-services/facility-upgradation-gmp-compliance"
+          element={<FacilityUpgradationGmpCompliance />}
+        />
+        <Route
+          path="/gms-certification-services/mock-audits"
+          element={<MockAudits />}
+        />
+        <Route
+          path="/gms-certification-services/due-diligence-audits"
+          element={<DueDiligenceAudits />}
+        />
+        <Route
+          path="/gms-certification-services/gap-assessment-audit"
+          element={<GapAssessmentAudit />}
+        />
+        <Route
+          path="/gms-certification-services/investigation-audit"
+          element={<InvestigationAudit />}
+        />
+        <Route
+          path="/gms-certification-services/surveillance-audit"
+          element={<SurveillanceAudit />}
+        />
+        <Route
+          path="/gms-certification-services/follow-audit-capa-review"
+          element={<FollowAuditCapaReview />}
+        />
+        <Route
+          path="/audit/gmp-audits-starting-materials"
+          element={<GmpAuditsStartingMaterials />}
+        />
+        <Route
+          path="/audit/supplier-excipient-audit"
+          element={<SupplierExcipientAudits />}
+        />
+        <Route
+          path="/audit/gmp-third-party-menu"
+          element={<GmpThirdPartyMenu />}
+        />
+        <Route
+          path="/audit/packaging-material-audits"
+          element={<PackagingMaterialAudits />}
+        />
+        <Route
+          path="/audit/third-party-manufacturing-execution"
+          element={<ThirdPartyManufacturingExecution />}
+        />
+        <Route path="/audit/qm-system-audits" element={<QmSystemAudits />} />
+        <Route path="/audit/gdp-glp-audits" element={<GdpGlpAudits />} />
+        <Route path="/audit/root-cause-audits" element={<RootCauseAudits />} />
+        <Route
+          path="/audit/cgmp-consultants-consulting"
+          element={<CgmpConsultantsConsulting />}
+        />
+        <Route
+          path="/audit/gap-analysis-mock-audits"
+          element={<GapAnalysisMockAudits />}
+        />
+        <Route
+          path="/audit/onsite-cgmp-consultants"
+          element={<OnsiteCgmpConsultants />}
+        />
+        <Route path="/audit/audit-library" element={<AuditLibrary />} />
+        <Route
+          path="/audit/upcoming-audits"
+          element={<UpcomingAuditSchedule />}
+        />
+        <Route
+          path="/regulated-market-access/market-regulatory-strategy"
+          element={<MarketRegulatoryStrategy />}
+        />
+        <Route
+          path="/regulated-market-access/regulatory-emerging-markets"
+          element={<RegulatoryEmergingMarkets />}
+        />
+        <Route
+          path="/qms-consulting/engineering-solutions"
+          element={<EngineeringSolutions />}
+        />
+        <Route
+          path="/qms-consulting/qualifications-validations"
+          element={<QualificationsValidations />}
+        />
+        <Route path="/qms-consulting/qms-support" element={<QMSSupport />} />
+        <Route
+          path="/qms-consulting/regulatory-services"
+          element={<RegulatoryServices />}
+        />
+        <Route
+          path="/qms-consulting/contractor-collaboration"
+          element={<ContractorCollaboration />}
+        />
+        <Route
+          path="/qms-consulting/training-solutions"
+          element={<TrainingSolutions />}
+        />
+        <Route path="/training/training-gmp" element={<TrainingGmp />} />
+        <Route
+          path="/training/training-quality-assurance"
+          element={<TrainingQualityAssurance />}
+        />
+        <Route
+          path="/training/training-regulatory-compliance"
+          element={<TrainingRegulatoryCompliance />}
+        />
+        <Route
+          path="/training/training-safety-environmental"
+          element={<TrainingSafetyEnvironmental />}
+        />
+        <Route path="/training/training-cgcp" element={<TrainingCGCP />} />
+        <Route
+          path="/training/data-integrity-training"
+          element={<DataIntegrityTraining />}
+        />
+        <Route
+          path="/training/Pharmacovigilance-training"
+          element={<PharmacovigilanceTraining />}
+        />
+        <Route
+          path="/training/Process-validation-training"
+          element={<ProcessValidationTraining />}
+        />
+        <Route
+          path="/training/computer-system-validation-training"
+          element={<ComputerSystemValidationTraining />}
+        />
+        <Route
+          path="/training/SOP-documentation-training"
+          element={<SOPDocumentationTraining />}
+        />
+        <Route
+          path="/training/health-hygiene-training"
+          element={<HealthHygieneTraining />}
+        />
+        <Route
+          path="/training/product-specification-training"
+          element={<ProductSpecificTraining />}
+        />
+        <Route
+          path="/training/leadership-Soft-Skills-training"
+          element={<LeadershipSoftSkillsTraining />}
+        />
+      </Routes>
+      {!hideHeaderFooter && <Footer />}
     </>
   );
 }
-export default App;
+export default function Root() {
+  return (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+}
