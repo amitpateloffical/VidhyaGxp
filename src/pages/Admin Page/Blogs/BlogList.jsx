@@ -11,7 +11,7 @@ export default function BlogList({ onEdit, blogs, fetchBlogs }) {
 
   const openDeleteModal = (blog) => {
     setItemToDelete(blog.id);
-    console.log(blog, "blogblog");
+    // console.log(blog, "blogblog");
     setIsDeleteModalOpen(true);
   };
 

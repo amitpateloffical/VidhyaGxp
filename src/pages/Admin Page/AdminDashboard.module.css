@@ -11,6 +11,7 @@
   padding: 10px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   transition: width 0.3s ease-in-out;
+  height: auto;
 }
 
 .sidebar.collapsed {
@@ -25,17 +26,16 @@
   align-items: center;
   padding-bottom: 18px;
   margin-bottom: 15px;
-  border-radius:10px
-
+  border-radius: 10px;
 }
-.toggleIcon:hover{
+.toggleIcon:hover {
   background-color: #e5e7eb;
-  border-radius:30px
+  border-radius: 30px;
 }
 
 .sidebarItem:hover {
   background-color: #e5e7eb;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 .sidebarItemText {
@@ -80,11 +80,68 @@
   border-color: #f1a64d;
 }
 
-.profileIconWrapper {
+/* .profileIconWrapper {
   padding: 0.5rem;
   margin-right: 0.75rem;
   margin-bottom: 4px;
   color: #eca73f;
+} */
+.profileIconWrapper {
+  position: relative;
+  cursor: pointer;
+  color: #eca73f;
+}
+
+.profileModal {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  width: 200px;
+  z-index: 10;
+}
+
+.profileModal::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.userName {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.logoutButton {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  width: 100%;
+  padding: 8px;
+  background-color: #eca73f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.logoutButton:hover {
+  background-color: #f1a64d;
+  font-weight: bold;
 }
 
 .active {

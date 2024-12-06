@@ -7,7 +7,7 @@ import Services from "./pages/Services";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import PageNotFound from "./pages/PageNotFound";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import SoftwareDevelopement from "./pages/SoftwareDevelopement";
 import ElogBook from "./pages/services/ElogBook";
 import LMS from "./pages/services/LMS";
@@ -144,13 +144,20 @@ function App() {
   const location = useLocation();
   const noHeaderFooterRoutes = ["/admin-login","/admin-dashboard"];
   const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);
+  const token = localStorage.getItem("authToken");
   return (
     <>
       {!hideHeaderFooter && <Header />}{" "}
       <Routes>
         {/* Admin Pannel */}
-        <Route path="/admin-login" element={<AdminLogin />} />
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route
+          path="/admin-login"
+          element={token ? <Navigate to="/admin-dashboard" /> : <AdminLogin />}
+        />
+        <Route
+          path="/admin-dashboard"
+          element={token ? <AdminDashboard /> : <Navigate to="/admin-login" />}
+        />
 
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

@@ -10,7 +10,7 @@ export default function Blogs() {
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false);
   const [selectedBlog, setSelectedBlog] = useState(null);
-console.log(blogs,"blogs");
+// console.log(blogs,"blogs");
 
 const fetchBlogs = async () => {
   const response = await axios.get("http://localhost:1001/admin/blog-list");

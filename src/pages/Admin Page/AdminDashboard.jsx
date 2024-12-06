@@ -8,11 +8,22 @@ import { IoSettings } from "react-icons/io5";
 import styles from "./AdminDashboard.module.css";
 import axios from "axios";
 import Blogs from "./Blogs/Blogs";
+import { useNavigate } from "react-router-dom";
+import { FaPowerOff } from "react-icons/fa";
 
 function AdminDashboard() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [activeSection, setActiveSection] = useState("dashboard");
   const [contactUsList, setContactUsList] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+
+  const navigate = useNavigate();
+  const userName = "Admin";
+  const token = localStorage.getItem("authToken");
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate("/admin-login");
+  };
 
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
@@ -34,7 +45,7 @@ function AdminDashboard() {
           config
         );
         setContactUsList(res.data.data);
-        console.log("Fetched data:", res.data.data);
+        // console.log("Fetched data:", res.data.data);
       } catch (error) {
         console.error("Error fetching contact us list:", error);
       }
@@ -58,13 +69,11 @@ function AdminDashboard() {
             <MdOutlineMenu size={24} />
           </div>
         ) : (
-          <div>
-            <img
-              src="\vidyaGxp_logo.png"
-              style={{ width: "211px", objectFit: "cover" }}
-              alt="Logo"
-            />
-          </div>
+          <img
+            src="\vidyaGxp_logo.png"
+            style={{ width: "228px", objectFit: "cover" }}
+            alt="Logo"
+          />
         )}
         <hr
           style={{
@@ -122,15 +131,11 @@ function AdminDashboard() {
               <MdMenuOpen size={24} />
             </div>
           ) : (
-            <div>
-              <img
-                src="\vidyaGxp_logo.png"
-                className={styles.logo}
-                alt="Logo"
-              />
-            </div>
+            <img src="\vidyaGxp_logo.png" className={styles.logo} alt="Logo" />
           )}
-
+          <div>
+            <h3>Welcome to VidyaGxP Admin Dashboard</h3>
+          </div>
           <div className={styles.searchWrapper}>
             <div className={styles.searchInput}>
               <input
@@ -139,9 +144,30 @@ function AdminDashboard() {
                 className={styles.searchInput}
               />
             </div>
-            <p className={styles.profileIconWrapper}>
+            <div
+              className={styles.profileIconWrapper}
+              onMouseEnter={() => setShowModal(true)}
+              onMouseLeave={() => setShowModal(false)}
+            >
               <CgProfile size={30} />
-            </p>
+
+              {showModal && (
+                <div className={styles.profileModal}>
+                  <p className={styles.userName}>
+                    <strong>{userName}</strong>
+                  </p>
+                  <button
+                    className={styles.logoutButton}
+                    onClick={handleLogout}
+                  >
+                    <p style={{ margin: "0px" }}>Logout</p>
+                    <span>
+                      <FaPowerOff size={15} />
+                    </span>
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
@@ -179,7 +205,7 @@ function AdminDashboard() {
                   <tbody>
                     {contactUsList.length > 0 ? (
                       contactUsList.map((contactUs, index) => (
-                        <tr>
+                        <tr key={index}>
                           <td style={{ width: "70px" }}>{index + 1}.</td>
                           <td>
                             {contactUs.name} {contactUs.lastName}
@@ -218,7 +244,9 @@ function AdminDashboard() {
               <Blogs />
             </div>
           )}
-          {activeSection === "settings" && <div>Settings Content</div>}
+          {activeSection === "settings" && (
+            <div className="text-center mt-5 fs-4">No Content Here!</div>
+          )}
         </div>
       </div>
     </div>
