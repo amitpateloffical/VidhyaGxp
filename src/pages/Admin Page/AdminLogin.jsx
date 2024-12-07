@@ -20,7 +20,7 @@ const AdminLogin = () => {
 
     try {
       const response = await toast.promise(
-        axios.post("http://localhost:1001/admin/login", {
+        axios.post("https://gxp-api.mydemosoftware.com/admin/login", {
           email,
           password,
         }),
@@ -30,10 +30,9 @@ const AdminLogin = () => {
         }
       );
       localStorage.setItem("authToken", response.data.token);
-      setTimeout(()=>{
+      setTimeout(() => {
         navigate("/admin-dashboard");
-
-      },500);
+      }, 500);
     } catch (error) {
       toast.error(
         error.response?.data?.message || "Login failed. Please try again."

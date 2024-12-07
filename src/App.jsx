@@ -7,7 +7,13 @@ import Services from "./pages/Services";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import PageNotFound from "./pages/PageNotFound";
-import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import SoftwareDevelopement from "./pages/SoftwareDevelopement";
 import ElogBook from "./pages/services/ElogBook";
 import LMS from "./pages/services/LMS";
@@ -129,6 +135,9 @@ import LeadershipSoftSkillsTraining from "./pages/services/Training/LeadershipSo
 import Blogs from "./pages/Blogs";
 import AdminLogin from "./pages/Admin Page/AdminLogin";
 import AdminDashboard from "./pages/Admin Page/AdminDashboard";
+import Analytics from "./Analytics";
+import ReactGA from "react-ga4";
+
 function App() {
   // useEffect(() => {
   //   const preventRightClick = (e) => {
@@ -142,7 +151,7 @@ function App() {
   //   };
   // }, []);
   const location = useLocation();
-  const noHeaderFooterRoutes = ["/admin-login","/admin-dashboard"];
+  const noHeaderFooterRoutes = ["/admin-login", "/admin-dashboard"];
   const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);
   const token = localStorage.getItem("authToken");
   return (
@@ -553,8 +562,11 @@ function App() {
   );
 }
 export default function Root() {
+  ReactGA.initialize("G-4MPTDKCBVY");
+
   return (
     <BrowserRouter>
+      <Analytics />
       <App />
     </BrowserRouter>
   );

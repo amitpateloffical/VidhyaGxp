@@ -365,19 +365,17 @@ function Contact() {
 
       const config = {
         method: "post",
-        url: "http://localhost:1001/admin/contact-us",
+        url: "https://gxp-api.mydemosoftware.com/admin/contact-us",
         headers: { "Content-Type": "application/json" },
         data: data,
       };
-      
-      toast.promise(
-        axios(config),
-        {
+
+      toast
+        .promise(axios(config), {
           pending: "Submitting your feedback...",
           success: "Thanks for your feedback! 🎉",
           error: "Something went wrong. Please try again later. 😞",
-        }
-      )
+        })
         .then((response) => {
           setFeedbackData({
             firstName: "",
@@ -448,7 +446,9 @@ function Contact() {
                               }
                             />
                             {errors.firstName && (
-                              <p style={{ color: "red",textWrap:"nowrap" }}>{errors.firstName}</p>
+                              <p style={{ color: "red", textWrap: "nowrap" }}>
+                                {errors.firstName}
+                              </p>
                             )}
                           </div>
                           <div className="col-md-4">
@@ -481,7 +481,9 @@ function Contact() {
                               }
                             />
                             {errors.lastName && (
-                              <p style={{ color: "red",textWrap:"nowrap" }}>{errors.lastName}</p>
+                              <p style={{ color: "red", textWrap: "nowrap" }}>
+                                {errors.lastName}
+                              </p>
                             )}
                           </div>
                           <div className="">
@@ -568,7 +570,9 @@ function Contact() {
                                 })
                               }
                             >
-                              <option value="" style={{padding:"10px"}}>Please select</option>
+                              <option value="" style={{ padding: "10px" }}>
+                                Please select
+                              </option>
                               <option value="e-BMR">e-BMR</option>
                               <option value="e-LogBook">e-LogBook</option>
                               <option value="LMS">LMS</option>

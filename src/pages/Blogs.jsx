@@ -19,7 +19,7 @@ function Blogs() {
       setLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:1001/admin/blog-list"
+          "https://gxp-api.mydemosoftware.com/admin/blog-list"
         );
         const fetchedBlogs = response.data.data;
         setBlogs(fetchedBlogs);
@@ -88,13 +88,23 @@ function Blogs() {
   return (
     <div className="blog-page">
       <BreadCrumb page="Our Blogs" />
-      <div className="container py-5 bg-white">
-        <div className="row g-4">
+      <div className="container py-5 bg-white ">
+        <div className="row g-4" style={{ minHeight: "50vh" }}>
           {/* Left: Display Selected Blog */}
           <div className="col-lg-8">
             {selectedBlog ? (
               <div className="selected-blog" data-aos="fade-right">
-                <h2 className="text-primary" style={{ fontSize: 28 }}>
+                <h2
+                  className=" text-primary "
+                  style={{
+                    fontSize: 30,
+                    fontWeight: "bold",
+                    fontFamily: "Arial, sans-serif",
+                    // color: "#ECA73F",
+                    marginBottom: "25px",
+                    textDecoration: "",
+                  }}
+                >
                   {selectedBlog.title}
                 </h2>
                 <img
@@ -131,17 +141,17 @@ function Blogs() {
                   ></div>
                   <style>
                     {`.read-more-btn {
-  display: inline-block;
-  position: relative;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
+                      display: inline-block;
+                      position: relative;
+                      font-weight: bold;
+                      cursor: pointer;
+                      transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+                    }
 
-.read-more-btn:hover {
-  transform: translateX(10px);
-  color: #1d4ed8;
-}
+                    .read-more-btn:hover {
+                      transform: translateX(10px);
+                      color: #1d4ed8;
+                    }
     `}
                   </style>
                   <button
@@ -165,9 +175,14 @@ function Blogs() {
                   whiteSpace: "nowrap",
                   margin: "auto",
                   left: "0px",
+                  marginTop: "100px",
                 }}
               >
-                There was an error to fetching blogs ⚠️
+                <div className="alert alert-danger" role="alert">
+                  <strong>Error: </strong> Could not fetch blogs. Please try
+                  refreshing the page or contact the administrator if the issue
+                  persists. ⚠️
+                </div>
               </p>
             )}
           </div>
