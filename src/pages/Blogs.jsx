@@ -19,7 +19,7 @@ function Blogs() {
       setLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:1001/admin/blog-list"
+          "http://localhost:4000/admin/blog-list"
         );
         const fetchedBlogs = response.data.data;
         setBlogs(fetchedBlogs);
@@ -62,26 +62,13 @@ function Blogs() {
         className="d-flex justify-content-center align-items-center"
         style={{ height: "100vh" }}
       >
-        <h2 className="text-primary loading-animation">Loading...</h2>
-        <style>
-          {`
-          .loading-animation {
-            animation: pulse 1.5s infinite ease-in-out;
-          }
-    
-          @keyframes pulse {
-            0%, 100% {
-              opacity: 0.6;
-              transform: scale(1);
-            }
-            50% {
-              opacity: 1;
-              transform: scale(1.1);
-            }
-          }
-        `}
-        </style>
+      {/* //   <h2 className="text-primary loading-animation">Loading...</h2> */}
+      <div class="spinner-border text-primary" style={{width:"60px",height:"60px"}} role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+      
       </div>
+      
     );
   }
 
@@ -131,18 +118,18 @@ function Blogs() {
                   ></div>
                   <style>
                     {`.read-more-btn {
-  display: inline-block;
-  position: relative;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+display: inline-block;
+position: relative;
+font-weight: bold;
+cursor: pointer;
+transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .read-more-btn:hover {
-  transform: translateX(10px);
-  color: #1d4ed8;
+transform: translateX(10px);
+color: #1d4ed8;
 }
-    `}
+`}
                   </style>
                   <button
                     className="btn text-primary btn-sm mt-2 read-more-btn"

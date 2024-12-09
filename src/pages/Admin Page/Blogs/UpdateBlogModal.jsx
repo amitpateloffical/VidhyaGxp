@@ -38,7 +38,7 @@ export default function UpdateBlogModal({
       const token = localStorage.getItem("authToken");
 
       const response = await axios.put(
-        `http://localhost:1001/admin/update-blog/${blog.id}`,
+        `http://localhost:4000/admin/update-blog/${blog.id}`,
         formData,
         {
           headers: {
@@ -62,7 +62,7 @@ export default function UpdateBlogModal({
   return (
     <div className={styles.modal}>
       <div className={styles.modalHeader}>
-      <h2>Update Blog</h2>
+        <h2>Update Blog</h2>
         <button
           type="button"
           className={styles.removeFileBtn}
@@ -108,18 +108,17 @@ export default function UpdateBlogModal({
                     rel="noopener noreferrer"
                     title={file.name}
                   >
-                  {file.name.split("/").pop().slice(0, 30)}
+                    {file.name.split("/").pop().slice(0, 30)}
                   </a>
                 ) : (
                   <a
-                  href={file}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={file}
-                >
-                  {file.split("/").pop().slice(0, 30)}
-                </a>
-                
+                    href={file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={file}
+                  >
+                    {file.split("/").pop().slice(0, 30)}
+                  </a>
                 )}
                 <button
                   type="button"
@@ -135,7 +134,7 @@ export default function UpdateBlogModal({
               type="button"
               onClick={() => document.getElementById("posterInput").click()}
               className={styles.selectFileBtn}
-              style={{marginBottom:"25px"}}
+              style={{ marginBottom: "25px" }}
             >
               Select File
             </button>

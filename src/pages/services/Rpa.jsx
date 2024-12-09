@@ -41,7 +41,7 @@ export default function Rpa() {
     <>
       <div className="top_container m-5">
         <div className="service_headingr" data-aos="fade-down">
-          <h1 className="heading service-head-text">RPA </h1>
+          <h1 className="heading service-head-text">Robotic Process Automation (RPA)</h1>
         </div>
         <div className="paragraph_container">
           <p className="paragraph">

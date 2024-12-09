@@ -15,7 +15,7 @@ const DeleteBlogModal = ({ isOpen, onClose, item, fetchBlogs }) => {
     setLoading(true);
     try {
       await toast.promise(
-        axios.delete(`http://localhost:1001/admin/delete-blog/${item}`, {
+        axios.delete(`http://localhost:4000/admin/delete-blog/${item}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

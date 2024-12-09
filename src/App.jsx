@@ -129,6 +129,7 @@ import LeadershipSoftSkillsTraining from "./pages/services/Training/LeadershipSo
 import Blogs from "./pages/Blogs";
 import AdminLogin from "./pages/Admin Page/AdminLogin";
 import AdminDashboard from "./pages/Admin Page/AdminDashboard";
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   // useEffect(() => {
   //   const preventRightClick = (e) => {
@@ -146,7 +147,7 @@ function App() {
   const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);
   const token = localStorage.getItem("authToken");
   return (
-    <>
+    <>  
       {!hideHeaderFooter && <Header />}{" "}
       <Routes>
         {/* Admin Pannel */}
@@ -555,7 +556,8 @@ function App() {
 export default function Root() {
   return (
     <BrowserRouter>
-      <App />
+      <App /> 
+      <ScrollToTop/>
     </BrowserRouter>
   );
 }

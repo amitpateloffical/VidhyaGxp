@@ -30,7 +30,7 @@ export default function CreateBlogModal({ onClose, fetchBlogs, onAddBlog }) {
     try {
       const token = localStorage.getItem("authToken");
       const response = await axios.post(
-        "http://localhost:1001/admin/create-blog",
+        "http://localhost:4000/admin/create-blog",
         formData,
         {
           headers: {
@@ -50,7 +50,7 @@ export default function CreateBlogModal({ onClose, fetchBlogs, onAddBlog }) {
 
   return (
     <div className={styles.modal}>
-        <div
+      <div
         style={{
           display: "flex",
           alignItems: "center",
@@ -98,7 +98,7 @@ export default function CreateBlogModal({ onClose, fetchBlogs, onAddBlog }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {file.name.slice(0,25)}
+                  {file.name.slice(0, 25)}
                 </a>
                 <button
                   type="button"
@@ -114,7 +114,7 @@ export default function CreateBlogModal({ onClose, fetchBlogs, onAddBlog }) {
               type="button"
               onClick={() => document.getElementById("posterInput").click()}
               className={styles.selectFileBtn}
-              style={{marginBottom:"25px"}}
+              style={{ marginBottom: "25px" }}
             >
               Select File
             </button>
