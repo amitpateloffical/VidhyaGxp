@@ -12,7 +12,7 @@ const Clients = () => {
       name: "Symbiotec Pharmalab Pvt Ltd.",
     },
     {
-      logo: "logo-agio (1).png",
+      logo: "newajio.png",
       name: "Agio Pharmaceuticals Limited",
     },
     {
