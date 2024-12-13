@@ -40,6 +40,7 @@ import {
   FaStar,
   FaWrench,
 } from "react-icons/fa";
+import ScrollToTop from "../components/ScrollToTop";
 // import Swiper from "../components/Swiper";
 function Home() {
   const navigate = useNavigate();
@@ -62,8 +63,9 @@ function Home() {
                   Artificial Intelligence for Your Business
                 </h5>
                 <p className="text-light mb-4  animated slideInRight ">
-                  Empowering Your Business with Intelligent Solutions: Harness the Power of
-                  Artificial Intelligence to Optimize, Innovate, and Excel in the Digital Era.
+                  Empowering Your Business with Intelligent Solutions: Harness
+                  the Power of Artificial Intelligence to Optimize, Innovate,
+                  and Excel in the Digital Era.
                 </p>
                 <div className="pt-4">
                   <Link
@@ -104,17 +106,33 @@ function Home() {
                       }
                       style={{ width: "100%", textAlign: "left", color: "red" }}
                     >
-                      <Dropdown.Item href="#/action-1">Feasibility Studies</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Site Selection</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Facility Design and Layout</Dropdown.Item>
-                      <Dropdown.Item href="#/action-4">Design Risk Assessment</Dropdown.Item>
-                      <Dropdown.Item href="#/action-5">Detailed Engineering Design</Dropdown.Item>
-                      <Dropdown.Item href="#/action-6">Regulatory Compliance</Dropdown.Item>
-                      <Dropdown.Item href="#/action-7">Project Management</Dropdown.Item>
+                      <Dropdown.Item href="#/action-1">
+                        Feasibility Studies
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">
+                        Site Selection
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">
+                        Facility Design and Layout
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-4">
+                        Design Risk Assessment
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-5">
+                        Detailed Engineering Design
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-6">
+                        Regulatory Compliance
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-7">
+                        Project Management
+                      </Dropdown.Item>
                       <Dropdown.Item href="#/action-8">
                         Technology and Equipment Selection
                       </Dropdown.Item>
-                      <Dropdown.Item href="#/action-9">Commision and Qualification</Dropdown.Item>
+                      <Dropdown.Item href="#/action-9">
+                        Commision and Qualification
+                      </Dropdown.Item>
                     </DropdownButton>
                   </div>
                   <div className="mb-2">
@@ -128,10 +146,18 @@ function Home() {
                       }
                       style={{ width: "100%", textAlign: "left", color: "red" }}
                     >
-                      <Dropdown.Item href="#/action-1">Design Risk Assessment</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Detailed Engineering Design</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Regulatory Compliance</Dropdown.Item>
-                      <Dropdown.Item href="#/action-4">Project Management</Dropdown.Item>
+                      <Dropdown.Item href="#/action-1">
+                        Design Risk Assessment
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">
+                        Detailed Engineering Design
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">
+                        Regulatory Compliance
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-4">
+                        Project Management
+                      </Dropdown.Item>
                       <Dropdown.Item href="#/action-5">
                         Technology and Equipment Selection
                       </Dropdown.Item>
@@ -188,17 +214,27 @@ function Home() {
                       <Dropdown.Item href="#/action-1">
                         Pre and Post Inspection Audits
                       </Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Audit Compliance Reports</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">
+                        Audit Compliance Reports
+                      </Dropdown.Item>
                       <Dropdown.Item href="#/action-3">
                         Facility Upgradation for GMP Compliance
                       </Dropdown.Item>
-                      <Dropdown.Item href="#/action-4">Mock Audits</Dropdown.Item>
-                      <Dropdown.Item href="#/action-5">Due Diligence Audits</Dropdown.Item>
-                      <Dropdown.Item href="#/action-6">GAP Assessment Audit</Dropdown.Item>
+                      <Dropdown.Item href="#/action-4">
+                        Mock Audits
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-5">
+                        Due Diligence Audits
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-6">
+                        GAP Assessment Audit
+                      </Dropdown.Item>
                       <Dropdown.Item href="#/action-7">
                         GMP Audits for API and Starting Materials
                       </Dropdown.Item>
-                      <Dropdown.Item href="#/action-8">Supplier and Excipient Audits</Dropdown.Item>
+                      <Dropdown.Item href="#/action-8">
+                        Supplier and Excipient Audits
+                      </Dropdown.Item>
                       <Dropdown.Item href="#/action-9">
                         GMP Audits for Third-Party Manufacturers
                       </Dropdown.Item>
@@ -211,9 +247,10 @@ function Home() {
               <Card className="p-5 mb-4 shadow-md" data-aos="fade-left">
                 <h2 className="text-primary">Who We Are</h2>
                 <p>
-                  At VidyaGxP, our focus on building long-term client relationships has helped us
-                  become one of the largest and most diverse providers of technical, professional
-                  and consultancy services, including all aspects of engineering, operations,
+                  At VidyaGxP, our focus on building long-term client
+                  relationships has helped us become one of the largest and most
+                  diverse providers of technical, professional and consultancy
+                  services, including all aspects of engineering, operations,
                   project management, validation & quality assurance.
                 </p>
                 <Row className="text-center mt-4">
@@ -243,7 +280,9 @@ function Home() {
                     <div className="stat-item" data-aos="zoom-in">
                       <FaStar size={40} className="mb-2 text-secondary" />
                       <div className="stat-number text-primary">100%</div>
-                      <div className="stat-label text-muted">Customer Satisfaction</div>
+                      <div className="stat-label text-muted">
+                        Customer Satisfaction
+                      </div>
                     </div>
                   </Col>
                 </Row>
@@ -255,24 +294,36 @@ function Home() {
         <div className="container-fluid pt-5   mb-1 mt-4">
           <div className="container">
             <div className="row g-5 align-items-center row-xm">
-              <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s" data-aos="fade-right">
+              <div
+                className="col-lg-6 wow fadeIn"
+                data-wow-delay="0.1s"
+                data-aos="fade-right"
+              >
                 <div className="about-img">
                   <img className="img-fluid" src="/about-img.jpg" />
                 </div>
               </div>
-              <div data-aos="fade-left" className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <div
+                data-aos="fade-left"
+                className="col-lg-6 wow fadeIn"
+                data-wow-delay="0.5s"
+              >
                 <div className="btn btn-sm border-warning rounded-pill text-warning  mb-4">
                   About Us
                 </div>
-                <h1 className="mb-4">We Make Your Business Smarter with Artificial Intelligence</h1>
+                <h1 className="mb-4">
+                  We Make Your Business Smarter with Artificial Intelligence
+                </h1>
                 <p className="mb-2">
-                  Transforming Possibilities into Reality: At VidyaGxP, we specialize in making your
-                  business smarter through cutting-edge Artificial Intelligence.{" "}
+                  Transforming Possibilities into Reality: At VidyaGxP, we
+                  specialize in making your business smarter through
+                  cutting-edge Artificial Intelligence.{" "}
                 </p>
                 <p className="mb-4">
-                  Our solutions seamlessly integrate with your operations, unlocking new levels of
-                  efficiency and innovation. With a commitment to excellence, we elevate your
-                  business to thrive in the ever-evolving digital landscape.
+                  Our solutions seamlessly integrate with your operations,
+                  unlocking new levels of efficiency and innovation. With a
+                  commitment to excellence, we elevate your business to thrive
+                  in the ever-evolving digital landscape.
                 </p>
                 <div className="row g-3">
                   <div className="col-sm-6">
@@ -297,7 +348,10 @@ function Home() {
                   </div>
                 </div>
                 <div className="d-flex align-items-center mt-5">
-                  <Link className="btn btn-warning text-light rounded-pill px-4 me-3" to="about">
+                  <Link
+                    className="btn btn-warning text-light rounded-pill px-4 me-3"
+                    to="about"
+                  >
                     Read More
                   </Link>
                   <a
@@ -332,17 +386,25 @@ function Home() {
         <div className="container-fluid section2 mt-5 py-5 ">
           <div className="container py-5">
             <div className="row g-5 align-items-center row-xm">
-              <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s" data-aos="fade-right">
+              <div
+                className="col-lg-5 wow fadeIn"
+                data-wow-delay="0.1s"
+                data-aos="fade-right"
+              >
                 <div className="btn btn-sm border rounded-pill text-light px-3 mb-4">
                   Our Services
                 </div>
-                <h1 className="mb-4 ">Our Excellent AI Solutions for Your Business</h1>
+                <h1 className="mb-4 ">
+                  Our Excellent AI Solutions for Your Business
+                </h1>
                 <p className="mb-4">
-                  Tailored AI Services to Elevate Your Business Unlock the full potential of
-                  Artificial Intelligence with our tailored solutions at VidyaGxP. We offer dynamic
-                  and innovative services, seamlessly integrating AI into your operations. From
-                  intelligent automation to data-driven insights, our expertise ensures your
-                  business stays at the forefront of technological advancement.
+                  Tailored AI Services to Elevate Your Business Unlock the full
+                  potential of Artificial Intelligence with our tailored
+                  solutions at VidyaGxP. We offer dynamic and innovative
+                  services, seamlessly integrating AI into your operations. From
+                  intelligent automation to data-driven insights, our expertise
+                  ensures your business stays at the forefront of technological
+                  advancement.
                 </p>
                 <div className="pt-2">
                   <a className="btn btn-light rounded-pill px-4" href="">
@@ -354,32 +416,40 @@ function Home() {
                 <div className="row g-4 ">
                   <div className="col-md-6">
                     <div className="row g-4">
-                      <div className="col-12 wow fadeIn" data-wow-delay="0.1s" data-aos="flip-up">
+                      <div
+                        className="col-12 wow fadeIn"
+                        data-wow-delay="0.1s"
+                        data-aos="flip-up"
+                      >
                         <div className="service-item d-flex flex-column justify-content-center text-center rounded">
                           <div className="service-icon btn-square">
                             <FontAwesomeIcon icon={faRobot} />
                           </div>
                           <h5 className="mb-3">Robotic Automation</h5>
                           <p>
-                            Revolutionize Efficiency with Robotic Automation at VidyaGxP.
-                            Streamlined processes for enhanced productivity and a future-focused
-                            approach to work.
+                            Revolutionize Efficiency with Robotic Automation at
+                            VidyaGxP. Streamlined processes for enhanced
+                            productivity and a future-focused approach to work.
                           </p>
                           <a className="btn px-3 mt-auto mx-auto" href="">
                             Read More
                           </a>
                         </div>
                       </div>
-                      <div className="col-12 wow fadeIn" data-aos="flip-up" data-wow-delay="0.5s">
+                      <div
+                        className="col-12 wow fadeIn"
+                        data-aos="flip-up"
+                        data-wow-delay="0.5s"
+                      >
                         <div className="service-item d-flex flex-column justify-content-center text-center rounded">
                           <div className="service-icon btn-square">
                             <FontAwesomeIcon icon={faPowerOff} />
                           </div>
                           <h5 className="mb-3">Machine learning</h5>
                           <p>
-                            Empower success with our Machine Learning solutions. From predictive
-                            analytics to intelligent insights, we unleash innovation for your
-                            business growth.
+                            Empower success with our Machine Learning solutions.
+                            From predictive analytics to intelligent insights,
+                            we unleash innovation for your business growth.
                           </p>
                           <a className="btn px-3 mt-auto mx-auto" href="">
                             Read More
@@ -390,32 +460,42 @@ function Home() {
                   </div>
                   <div className="col-md-6 pt-md-4">
                     <div className="row g-4">
-                      <div className="col-12 wow fadeIn" data-aos="flip-up" data-wow-delay="0.3s">
+                      <div
+                        className="col-12 wow fadeIn"
+                        data-aos="flip-up"
+                        data-wow-delay="0.3s"
+                      >
                         <div className="service-item d-flex flex-column justify-content-center text-center rounded">
                           <div className="service-icon btn-square">
                             <FontAwesomeIcon icon={faGraduationCap} />
                           </div>
                           <h5 className="mb-3">Education & Science</h5>
                           <p>
-                            Empowering education and advancing scientific discovery, our innovative
-                            services pave the way for transformative learning experiences and
-                            groundbreaking research. Elevate your journey in education and science
-                            with us.{" "}
+                            Empowering education and advancing scientific
+                            discovery, our innovative services pave the way for
+                            transformative learning experiences and
+                            groundbreaking research. Elevate your journey in
+                            education and science with us.{" "}
                           </p>
                           <a className="btn px-3 mt-auto mx-auto" href="">
                             Read More
                           </a>
                         </div>
                       </div>
-                      <div className="col-12 wow fadeIn" data-aos="flip-up" data-wow-delay="0.7s">
+                      <div
+                        className="col-12 wow fadeIn"
+                        data-aos="flip-up"
+                        data-wow-delay="0.7s"
+                      >
                         <div className="service-item d-flex flex-column justify-content-center text-center rounded">
                           <div className="service-icon btn-square">
                             <FontAwesomeIcon icon={faBrain} />
                           </div>
                           <h5 className="mb-3">Predictive Analysis</h5>
                           <p>
-                            Strategic Insights through Predictive Analysis. Harness the future with
-                            our solutions, providing actionable intelligence for informed
+                            Strategic Insights through Predictive Analysis.
+                            Harness the future with our solutions, providing
+                            actionable intelligence for informed
                             decision-making.
                           </p>
                           <a className="btn px-3 mt-auto mx-auto" href="">
@@ -482,7 +562,8 @@ function Home() {
                   >
                     <small>EDMS</small>
                     <h5 className="lh-base text-white mb-3">
-                      "Electronic Document Management System for organizing digital files."
+                      "Electronic Document Management System for organizing
+                      digital files."
                     </h5>
                     <span className="btn btn-square btn-primary">
                       <FontAwesomeIcon icon={faArrowRight} />
@@ -501,8 +582,8 @@ function Home() {
                   <a className="case-overlay text-decoration-none" href="">
                     <small>EQMS</small>
                     <h5 className="lh-base text-white mb-3">
-                      "Enterprise Quality Management System for process optimization and
-                      compliance."
+                      "Enterprise Quality Management System for process
+                      optimization and compliance."
                     </h5>
                     <span className="btn btn-square btn-primary">
                       <FontAwesomeIcon icon={faArrowRight} />

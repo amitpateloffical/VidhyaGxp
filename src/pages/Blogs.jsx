@@ -62,25 +62,14 @@ function Blogs() {
         className="d-flex justify-content-center align-items-center"
         style={{ height: "100vh" }}
       >
-        <h2 className="text-primary loading-animation">Loading...</h2>
-        <style>
-          {`
-          .loading-animation {
-            animation: pulse 1.5s infinite ease-in-out;
-          }
-    
-          @keyframes pulse {
-            0%, 100% {
-              opacity: 0.6;
-              transform: scale(1);
-            }
-            50% {
-              opacity: 1;
-              transform: scale(1.1);
-            }
-          }
-        `}
-        </style>
+        {/* //   <h2 className="text-primary loading-animation">Loading...</h2> */}
+        <div
+          class="spinner-border text-primary"
+          style={{ width: "60px", height: "60px" }}
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
       </div>
     );
   }

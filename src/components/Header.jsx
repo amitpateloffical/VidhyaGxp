@@ -48,25 +48,53 @@ function Header() {
         {isButtonClicked && (
           <div className="nav-item">
             <div className="m-0">
-              <Link className="responsive-item px-4" to="/">
+              <Link
+                onClick={() => setIsButtonClicked(false)}
+                className="responsive-item px-4"
+                to="/"
+              >
                 Home
               </Link>
-              <Link className="responsive-item px-4" to="/about">
+              <Link
+                onClick={() => setIsButtonClicked(false)}
+                className="responsive-item px-4"
+                to="/about"
+              >
                 About
               </Link>
-              <Link className="responsive-item px-4" to="/services">
+              <Link
+                onClick={() => setIsButtonClicked(false)}
+                className="responsive-item px-4"
+                to="/services"
+              >
                 Services
               </Link>
-              <Link className="responsive-item px-4" to="/industries">
+              <Link
+                onClick={() => setIsButtonClicked(false)}
+                className="responsive-item px-4"
+                to="/industries"
+              >
                 Industries
               </Link>
-              <Link className="responsive-item px-4" to="/features">
+              <Link
+                onClick={() => setIsButtonClicked(false)}
+                className="responsive-item px-4"
+                to="/features"
+              >
                 Features
               </Link>
-              <Link className="responsive-item px-4" to="/blogs">
+              <Link
+                onClick={() => setIsButtonClicked(false)}
+                className="responsive-item px-4"
+                to="/blogs"
+              >
                 Blogs
               </Link>
-              <Link className="responsive-item px-4" to="/contact">
+              <Link
+                onClick={() => setIsButtonClicked(false)}
+                className="responsive-item px-4"
+                to="/contact"
+              >
                 Contact Us
               </Link>
             </div>
@@ -120,7 +148,7 @@ function Header() {
                 >
                   <MultilevelDropdown.Item
                     style={{ padding: "0px", margin: "0px" }}
-                  >
+                  > 
                     <Link className="dropdown-item" to="/ebmr">
                       e-BMR
                     </Link>
@@ -1364,7 +1392,13 @@ function Header() {
           aria-label="Toggle navigation"
           onClick={handleButtonClick}
         >
-          <span className="navbar-toggler-icon"></span>
+          {!isButtonClicked ? (
+            <span className="navbar-toggler-icon"></span>
+          ) : (
+            <span className="navbar-toggler-close" style={{ fontSize: "35px" }}>
+              &times;
+            </span>
+          )}
         </button>
       </nav>
     </>

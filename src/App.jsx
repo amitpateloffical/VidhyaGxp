@@ -14,6 +14,13 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import SoftwareDevelopement from "./pages/SoftwareDevelopement";
 import ElogBook from "./pages/services/ElogBook";
 import LMS from "./pages/services/LMS";
@@ -35,7 +42,6 @@ import IntelligentPharma from "./pages/services/IntelligentPharma";
 import GxpTrainig from "./pages/services/GxpTraining";
 import Rpa from "./pages/services/Rpa";
 import Industries from "./pages/Industries";
-import { useEffect } from "react";
 import PharmaAudit from "../src/pages/services/PharmaAudit";
 import Feasibility from "./pages/services/Engineering/Feasibility";
 import SiteSelection from "./pages/services/Engineering/SiteSelection";
@@ -138,18 +144,8 @@ import AdminDashboard from "./pages/Admin Page/AdminDashboard";
 import Analytics from "./Analytics";
 import ReactGA from "react-ga4";
 
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
-  // useEffect(() => {
-  //   const preventRightClick = (e) => {
-  //     e.preventDefault();
-  //   };
-
-  //   document.addEventListener("contextmenu", preventRightClick);
-
-  //   return () => {
-  //     document.removeEventListener("contextmenu", preventRightClick);
-  //   };
-  // }, []);
   const location = useLocation();
   const noHeaderFooterRoutes = ["/admin-login", "/admin-dashboard"];
   const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);
@@ -568,6 +564,7 @@ export default function Root() {
     <BrowserRouter>
       <Analytics />
       <App />
+      <ScrollToTop />
     </BrowserRouter>
   );
 }

@@ -8,7 +8,7 @@ function About() {
   const listRefs = useRef([]);
 
   useEffect(() => {
-    AOS.init({ duration: 1400 });
+    AOS.init({ duration: 1400 }); 
     // AOS.refresh();
   }, []);
 
