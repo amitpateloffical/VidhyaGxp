@@ -30,7 +30,7 @@ export default function CreateBlogModal({ onClose, fetchBlogs, onAddBlog }) {
     try {
       const token = localStorage.getItem("authToken");
       const response = await axios.post(
-        "http://localhost:4000/admin/create-blog",
+        "https://gxp-api.mydemosoftware.com/admin/create-blog",
         formData,
         {
           headers: {

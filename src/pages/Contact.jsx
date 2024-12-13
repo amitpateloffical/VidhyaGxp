@@ -365,7 +365,7 @@ function Contact() {
 
       const config = {
         method: "post",
-        url: "http://localhost:4000/admin/contact-us",
+        url: "https://gxp-api.mydemosoftware.com/admin/contact-us",
         headers: { "Content-Type": "application/json" },
         data: data,
       };

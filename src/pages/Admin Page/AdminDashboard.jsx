@@ -41,7 +41,7 @@ function AdminDashboard() {
           headers: { Authorization: `Bearer ${token}` },
         };
         const res = await axios.get(
-          "http://localhost:4000/admin/contact-us-list",
+          "https://gxp-api.mydemosoftware.com/admin/contact-us-list",
           config
         );
         setContactUsList(res.data.data);

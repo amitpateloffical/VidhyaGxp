@@ -13,7 +13,9 @@ export default function Blogs() {
   // console.log(blogs,"blogs");
 
   const fetchBlogs = async () => {
-    const response = await axios.get("http://localhost:4000/admin/blog-list");
+    const response = await axios.get(
+      "https://gxp-api.mydemosoftware.com/admin/blog-list"
+    );
     setBlogs(response.data.data);
   };
   useEffect(() => {

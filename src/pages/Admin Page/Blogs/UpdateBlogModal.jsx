@@ -38,7 +38,7 @@ export default function UpdateBlogModal({
       const token = localStorage.getItem("authToken");
 
       const response = await axios.put(
-        `http://localhost:4000/admin/update-blog/${blog.id}`,
+        `https://gxp-api.mydemosoftware.com/admin/update-blog/${blog.id}`,
         formData,
         {
           headers: {

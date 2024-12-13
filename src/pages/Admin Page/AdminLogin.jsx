@@ -20,7 +20,7 @@ const AdminLogin = () => {
 
     try {
       const response = await toast.promise(
-        axios.post("http://localhost:4000/admin/login", {
+        axios.post("https://gxp-api.mydemosoftware.com/admin/login", {
           email,
           password,
         }),

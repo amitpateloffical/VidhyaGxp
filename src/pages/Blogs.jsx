@@ -19,7 +19,7 @@ function Blogs() {
       setLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:4000/admin/blog-list"
+          "https://gxp-api.mydemosoftware.com/admin/blog-list"
         );
         const fetchedBlogs = response.data.data;
         setBlogs(fetchedBlogs);
@@ -62,13 +62,15 @@ function Blogs() {
         className="d-flex justify-content-center align-items-center"
         style={{ height: "100vh" }}
       >
-      {/* //   <h2 className="text-primary loading-animation">Loading...</h2> */}
-      <div class="spinner-border text-primary" style={{width:"60px",height:"60px"}} role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-      
+        {/* //   <h2 className="text-primary loading-animation">Loading...</h2> */}
+        <div
+          class="spinner-border text-primary"
+          style={{ width: "60px", height: "60px" }}
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
       </div>
-      
     );
   }
 
