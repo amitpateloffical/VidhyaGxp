@@ -93,6 +93,13 @@ function Header() {
               <Link
                 onClick={() => setIsButtonClicked(false)}
                 className="responsive-item px-4"
+                to="/clients"
+              >
+                Clients
+              </Link>
+              <Link
+                onClick={() => setIsButtonClicked(false)}
+                className="responsive-item px-4"
                 to="/contact"
               >
                 Contact Us
@@ -1364,6 +1371,17 @@ function Header() {
                   activeClassName="active"
                 >
                   Blogs
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  to="/clients"
+                  tabIndex="-1"
+                  aria-disabled="true"
+                  activeClassName="active"
+                >
+                  Clients
                 </NavLink>
               </li>
               <li className="nav-item">

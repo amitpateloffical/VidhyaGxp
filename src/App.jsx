@@ -138,6 +138,7 @@ import Analytics from "./Analytics";
 import ReactGA from "react-ga4";
 
 import ScrollToTop from "./components/ScrollToTop";
+import Clients from "./pages/Clients";
 function App() {
   const location = useLocation();
   const noHeaderFooterRoutes = ["/admin-login", "/admin-dashboard"];
@@ -163,6 +164,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/features" element={<Feature />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/clients" element={<Clients />} />
         <Route path="/services" element={<Services />} />
         <Route
           path="/software-development"
