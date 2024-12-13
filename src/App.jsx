@@ -14,13 +14,6 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
 import SoftwareDevelopement from "./pages/SoftwareDevelopement";
 import ElogBook from "./pages/services/ElogBook";
 import LMS from "./pages/services/LMS";
