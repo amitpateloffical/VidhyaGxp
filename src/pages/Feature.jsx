@@ -54,7 +54,7 @@ export default function GxpTrainig() {
               <h3 className="mb-4" data-aos="fade-left">
                 Challenges of Paper-Based Systems:
               </h3>
-              <div className="content_container">
+              <div className="content_container"  data-aos="fade-left">
                 <ul
                   className="list-group"
                   ref={(ref) => listRefs.current.push(ref)}

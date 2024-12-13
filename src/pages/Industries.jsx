@@ -63,7 +63,7 @@ function Industries() {
                   including:
                 </b>
               </div>
-              <div className="content_container">
+              <div className="content_container"  data-aos="fade-left">
                 <ul
                   className="list-group"
                   ref={(ref) => listRefs.current.push(ref)}
