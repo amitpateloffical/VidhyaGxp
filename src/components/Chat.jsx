@@ -110,7 +110,10 @@ const Chat = () => {
               backgroundColor: "#FFCA00",
               color: "white",
               padding: "10px",
-              paddingBottom: "-10px",
+              // paddingBottom: "-10px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <FaComments size={34} />
@@ -149,16 +152,10 @@ const Chat = () => {
                       message.sender === "user" ? " text-end " : "  text-start "
                     }`}
                     style={{
-                      // display: "flex",
-                      // alignItems:
-                      //   message.sender === "user" ? "flex-start" : "flex-start",
                       marginLeft: message.sender === "user" ? "80px" : "0px",
                       marginRight: message.sender === "user" ? "0px" : "80px",
-                      // color: message.sender === "user" ? "white" : "black",
-
                       backgroundColor:
                         message.sender === "user" ? "#4773a6" : "#ebeced",
-                      // maxWidth: "fit-content",
                       borderRadius: "10px",
                       color: message.sender === "user" ? "white" : "black",
                     }}
@@ -188,6 +185,11 @@ const Chat = () => {
                   onChange={(e) => setNewMessage(e.target.value)}
                   placeholder="Type a message..."
                   className="form-control"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleSendMessage();
+                    }
+                  }}
                 />
                 <button
                   onClick={handleSendMessage}
@@ -202,11 +204,6 @@ const Chat = () => {
                     cursor: "pointer",
                     maxHeight: "100%",
                   }}
-                  // onKeyDown={(e) => {
-                  //   if (e.key === "Enter") {
-                  //     handleSendMessage();
-                  //   }
-                  // }}
                 >
                   Send
                   {awaitingResponse && (

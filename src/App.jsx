@@ -377,7 +377,6 @@ function App() {
           path="/regulatorysubmission/guidance-anda-dmf"
           element={<GuidanceAndaDmf />}
         />
-        <Route path="/chat" element={<Chat />} />
         <Route
           path="/regulatorysubmission/lifecycle-management"
           element={<LifecycleManagement />}

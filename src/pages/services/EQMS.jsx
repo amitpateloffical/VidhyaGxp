@@ -57,7 +57,7 @@ export default function EQMS() {
             <div className="row g-5 align-items-center row-xm">
               <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.1s">
                 <div className="abouts" data-aos="fade-right">
-                  <img className="img-fluid" src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                  <img className="img-fluid" src="/eqms.jpg" />
                 </div>
               </div>
               <div className="col-lg-6 wow fadeIn p-side" data-wow-delay="0.5s">
