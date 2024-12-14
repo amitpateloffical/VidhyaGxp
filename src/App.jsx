@@ -139,6 +139,7 @@ import ReactGA from "react-ga4";
 
 import ScrollToTop from "./components/ScrollToTop";
 import Clients from "./pages/Clients";
+import Chat from "./components/Chat";
 function App() {
   const location = useLocation();
   const noHeaderFooterRoutes = ["/admin-login", "/admin-dashboard"];
@@ -146,7 +147,7 @@ function App() {
   const token = localStorage.getItem("authToken");
   return (
     <>
-      {!hideHeaderFooter && <Header />}{" "}
+      {!hideHeaderFooter && <Header />} <Chat />
       <Routes>
         {/* Admin Pannel */}
         <Route
@@ -376,6 +377,7 @@ function App() {
           path="/regulatorysubmission/guidance-anda-dmf"
           element={<GuidanceAndaDmf />}
         />
+        <Route path="/chat" element={<Chat />} />
         <Route
           path="/regulatorysubmission/lifecycle-management"
           element={<LifecycleManagement />}
