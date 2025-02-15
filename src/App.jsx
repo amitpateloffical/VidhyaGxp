@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import PageNotFound from "./pages/PageNotFound";
+import ReactGA from "react-ga";
 import {
   BrowserRouter,
   Navigate,
@@ -548,6 +549,7 @@ function App() {
   );
 }
 export default function Root() {
+  ReactGA.initialize("G-4MPTDKCBVY")
   return (
     <BrowserRouter>
       <App />
