@@ -42,7 +42,7 @@ export default function GxpTrainig() {
     <>
       <BreadCrumb page="Feature" />
 
-      <div className="container-fluid   py-5">
+      <div className="container-fluid  py-5">
         <div className="container">
           <div className="row g-5 align-items-center row-xm">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">

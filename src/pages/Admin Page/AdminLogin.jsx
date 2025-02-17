@@ -44,7 +44,11 @@ const AdminLogin = () => {
     <div className={styles.loginContainer}>
       <div className={styles.loginBox}>
         <div>
-          <img src="\vidyaGxp_logo.png" alt="Logo" className={styles.logo} />
+          <img
+            src="\newvidyagxp.png"
+            alt="VidyaGxP"
+            className={styles.logo}
+          />
         </div>
         <h2 className={styles.title}>Admin Login</h2>
         <form>

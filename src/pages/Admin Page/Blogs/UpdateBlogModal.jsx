@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import styles from "./Blogs.module.css";
 import TinyEditor from "../../../components/TinyEditor";
+import { toast, ToastContainer } from "react-toastify";
 
 export default function UpdateBlogModal({
   blog,
@@ -21,7 +22,7 @@ export default function UpdateBlogModal({
 
   const handleSubmit = async () => {
     if (!title || !content) {
-      alert("Please fill out all fields.");
+      toast.warn("Please fill out all fields.");
       return;
     }
 
@@ -49,11 +50,12 @@ export default function UpdateBlogModal({
       );
 
       fetchBlogs();
+      toast.success("Blog updated successfully!");
       onUpdateBlog(response.data);
       onClose();
     } catch (error) {
       console.error("Error updating blog:", error);
-      alert("Failed to update the blog. Please try again.");
+      toast.error("Failed to update the blog. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -166,6 +168,7 @@ export default function UpdateBlogModal({
           Close
         </button>
       </div>
+      <ToastContainer/>
     </div>
   );
 }

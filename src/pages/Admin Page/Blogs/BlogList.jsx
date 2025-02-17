@@ -39,7 +39,7 @@ export default function BlogList({ onEdit, blogs, fetchBlogs }) {
           </div>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <p>Posted on: {new Date(blog.createdAt).toLocaleString()}</p>
-            <p>Posted By: {"Rupesh Patil"}</p>
+            <p>Posted By: {"Admin"}</p>
           </div>
 
           {/* Conditional Rendering of Description */}
@@ -87,7 +87,6 @@ export default function BlogList({ onEdit, blogs, fetchBlogs }) {
           </div>
         </div>
       ))}
-
       {isDeleteModalOpen && itemToDelete && (
         <DeleteBlogModal
           isOpen={isDeleteModalOpen}

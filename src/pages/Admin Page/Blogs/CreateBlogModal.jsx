@@ -41,9 +41,11 @@ export default function CreateBlogModal({ onClose, fetchBlogs, onAddBlog }) {
       );
 
       onAddBlog(response.data);
+      toast.success("Blog created successfully!");
       fetchBlogs();
       onClose();
     } catch (error) {
+      toast.error("Failed to create blog.");
       console.error("Error creating blog:", error);
     }
   };

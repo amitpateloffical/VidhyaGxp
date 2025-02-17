@@ -10,12 +10,17 @@ import axios from "axios";
 import Blogs from "./Blogs/Blogs";
 import { useNavigate } from "react-router-dom";
 import { FaPowerOff } from "react-icons/fa";
+import Pagination from "react-bootstrap/Pagination";
+
 
 function AdminDashboard() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [activeSection, setActiveSection] = useState("dashboard");
   const [contactUsList, setContactUsList] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [loading,setLoading]=useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
 
   const navigate = useNavigate();
   const userName = "Admin";
@@ -36,6 +41,7 @@ function AdminDashboard() {
   useEffect(() => {
     const token = localStorage.getItem("authToken");
     const fetchData = async () => {
+      setLoading(true);
       try {
         const config = {
           headers: { Authorization: `Bearer ${token}` },
@@ -45,14 +51,22 @@ function AdminDashboard() {
           config
         );
         setContactUsList(res.data.data);
-        // console.log("Fetched data:", res.data.data);
       } catch (error) {
+        setLoading(false);
         console.error("Error fetching contact us list:", error);
+      }finally {
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = contactUsList.slice(indexOfFirstItem, indexOfLastItem);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div className={styles.container}>
@@ -70,8 +84,8 @@ function AdminDashboard() {
           </div>
         ) : (
           <img
-            src="\vidyaGxp_logo.png"
-            style={{ width: "228px", objectFit: "cover" }}
+            src="\newvidyagxp.png"
+            style={{ width: "190px", objectFit: "cover" }}
             alt="Logo"
           />
         )}
@@ -131,7 +145,7 @@ function AdminDashboard() {
               <MdMenuOpen size={24} />
             </div>
           ) : (
-            <img src="\vidyaGxp_logo.png" className={styles.logo} alt="Logo" />
+            <img src="\newvidyagxp.png" className={styles.logo} alt="Logo" />
           )}
           <div>
             <h3>Welcome to VidyaGxP Admin Dashboard</h3>
@@ -189,7 +203,11 @@ function AdminDashboard() {
               >
                 Contact Us List
               </div>
-
+{loading?(
+  <div className={styles.loaderContainer}>
+    <div className={styles.loader}></div>
+  </div>
+):(
               <div className={styles.tableContainer}>
                 <table className={styles.customTable}>
                   <thead>
@@ -203,10 +221,10 @@ function AdminDashboard() {
                     </tr>
                   </thead>
                   <tbody>
-                    {contactUsList.length > 0 ? (
-                      contactUsList.map((contactUs, index) => (
+                    {currentItems.length > 0 ? (
+                      currentItems.map((contactUs, index) => (
                         <tr key={index}>
-                          <td style={{ width: "70px" }}>{index + 1}.</td>
+                          <td style={{ width: "70px" }}>{indexOfFirstItem + index + 1}.</td>
                           <td>
                             {contactUs.name} {contactUs.lastName}
                           </td>
@@ -236,7 +254,45 @@ function AdminDashboard() {
                     )}
                   </tbody>
                 </table>
-              </div>
+              </div>)}
+               {/* Bootstrap Pagination */}
+      <Pagination className="justify-content-center m-1">
+                  <Pagination.First
+                    onClick={() => paginate(1)}
+                    disabled={currentPage === 1}
+                  />
+                  <Pagination.Prev
+                    onClick={() => paginate(currentPage - 1)}
+                    disabled={currentPage === 1}
+                  />
+                  {[
+                    ...Array(Math.ceil(contactUsList.length / itemsPerPage)),
+                  ].map((_, i) => (
+                    <Pagination.Item
+                      key={i + 1}
+                      active={i + 1 === currentPage}
+                      onClick={() => paginate(i + 1)}
+                    >
+                      {i + 1}
+                    </Pagination.Item>
+                  ))}
+                  <Pagination.Next
+                    onClick={() => paginate(currentPage + 1)}
+                    disabled={
+                      currentPage ===
+                      Math.ceil(contactUsList.length / itemsPerPage)
+                    }
+                  />
+                  <Pagination.Last
+                    onClick={() =>
+                      paginate(Math.ceil(contactUsList.length / itemsPerPage))
+                    }
+                    disabled={
+                      currentPage ===
+                      Math.ceil(contactUsList.length / itemsPerPage)
+                    }
+                  />
+                </Pagination>
             </div>
           )}
           {activeSection === "blogs" && (
@@ -254,3 +310,4 @@ function AdminDashboard() {
 }
 
 export default AdminDashboard;
+

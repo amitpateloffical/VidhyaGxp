@@ -16,6 +16,7 @@ import {
   faSignsPost,
 } from "@fortawesome/free-solid-svg-icons";
 import MultilevelDropdown from "react-multilevel-dropdown";
+import { FaChevronRight } from "react-icons/fa";
 
 function Header() {
   const [isButtonClicked, setIsButtonClicked] = useState(false);
@@ -34,11 +35,18 @@ function Header() {
                 icon={faEnvelopeOpenText}
                 className="me-3 text-white"
               />
-              <span className="text-white fw-bolder">info@vidyagxp.com</span>
+              <a
+                href="mailto:info@vidyagxp.com"
+                className="text-white fw-bolder"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                info@vidyagxp.com
+              </a>
             </div>
             <div className="ms-5">
               <FontAwesomeIcon icon={faPhone} className="me-3 text-white" />
-              <span className="text-white fw-bolder">+91-7879678742</span>
+              <a href="tel:+917879678742" className="text-white fw-bolder">+91-7879678742</a>
             </div>
           </div>
         </div>
@@ -104,18 +112,21 @@ function Header() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div className="header-item-flex">
           <div className="brand-adjust">
-            <Link className="navbar-brand" to="/">
+            <Link
+              className="navbar-brand"
+              style={{ marginLeft: "18px",display:"flex",justifyContent:"start" }}
+              to="/"
+            >
               <img
-                src="/vidyaGxp_logo.png"
-                height="65px"
-                width="250px"
-                className=""
-                alt=""
+                src="/newvidyagxp.png"
+                // height="65px"
+                width="200px"
+                alt="VidyaGxP"
               />
             </Link>
           </div>
           <div
-            className="collapse navbar-collapse pt-3"
+            className="collapse navbar-collapse pt-4"
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav mr-auto">
@@ -143,11 +154,12 @@ function Header() {
                   title="Services"
                   menuClassName="dropdown-menu"
                   buttonClassName="nav-link dropdown-toggle"
-                  arrowClassName="caret"                  style={{ height: "26px", background: "none" }}
+                  arrowClassName="caret"
+                  style={{ height: "26px", background: "none" }}
                 >
                   <MultilevelDropdown.Item
                     style={{ padding: "0px", margin: "0px" }}
-                  > 
+                  >
                     <Link className="dropdown-item" to="/ebmr">
                       e-BMR
                     </Link>
@@ -261,9 +273,12 @@ function Header() {
                     title="Engineering"
                   >
                     <Link className="dropdown-item" to="#">
-                      Engineering
+                      Engineering{" "}
+                      <span style={{ float: "right" }}>
+                        <FaChevronRight />
+                      </span>
                     </Link>
-                    <MultilevelDropdown.Submenu className="dropdown-submenu">
+                    <MultilevelDropdown.Submenu className="dropdown-submenu border border-warning">
                       <MultilevelDropdown.Item
                         style={{ padding: "0px", margin: "0px" }}
                       >
@@ -422,9 +437,12 @@ function Header() {
                     title="Engineering"
                   >
                     <Link className="dropdown-item" to="#">
-                      Qalification & Validation
+                      Qalification & Validation{" "}
+                      <span style={{ float: "right" }}>
+                        <FaChevronRight />
+                      </span>
                     </Link>
-                    <MultilevelDropdown.Submenu className="dropdown-submenu">
+                    <MultilevelDropdown.Submenu className="dropdown-submenu border border-warning">
                       <MultilevelDropdown.Item
                         style={{ padding: "0px", margin: "0px" }}
                       >
@@ -524,9 +542,12 @@ function Header() {
                     title="Engineering"
                   >
                     <Link className="dropdown-item" to="#">
-                      QMS Implementation
+                      QMS Implementation{" "}
+                      <span style={{ float: "right" }}>
+                        <FaChevronRight />
+                      </span>
                     </Link>
-                    <MultilevelDropdown.Submenu className="dropdown-submenu">
+                    <MultilevelDropdown.Submenu className="dropdown-submenu border border-warning">
                       <MultilevelDropdown.Item
                         style={{ padding: "0px", margin: "0px" }}
                       >
@@ -595,9 +616,12 @@ function Header() {
                     title="Engineering"
                   >
                     <Link className="dropdown-item" to="#">
-                      Technology Transfer and Product Development Support
+                      Technology Transfer and Product Development Support{" "}
+                      <span style={{ float: "right" }}>
+                        <FaChevronRight />
+                      </span>
                     </Link>
-                    <MultilevelDropdown.Submenu className="dropdown-submenu">
+                    <MultilevelDropdown.Submenu className="dropdown-submenu border border-warning">
                       <MultilevelDropdown.Item
                         style={{ padding: "0px", margin: "0px" }}
                       >
@@ -706,9 +730,12 @@ function Header() {
                     title="Engineering"
                   >
                     <Link className="dropdown-item" to="#">
-                      Regulatory Submissions
+                      Regulatory Submissions{" "}
+                      <span style={{ float: "right" }}>
+                        <FaChevronRight />
+                      </span>
                     </Link>
-                    <MultilevelDropdown.Submenu className="dropdown-submenu">
+                    <MultilevelDropdown.Submenu className="dropdown-submenu border border-warning">
                       <MultilevelDropdown.Item
                         style={{ padding: "0px", margin: "0px" }}
                       >
@@ -850,9 +877,12 @@ function Header() {
                     title="Engineering"
                   >
                     <Link className="dropdown-item" to="#">
-                      GMP Certification Services
+                      GMP Certification Services{" "}
+                      <span style={{ float: "right" }}>
+                        <FaChevronRight />
+                      </span>
                     </Link>
-                    <MultilevelDropdown.Submenu className="dropdown-submenu">
+                    <MultilevelDropdown.Submenu className="dropdown-submenu border border-warning">
                       <MultilevelDropdown.Item
                         style={{ padding: "0px", margin: "0px" }}
                       >
@@ -951,9 +981,12 @@ function Header() {
                     title="Engineering"
                   >
                     <Link className="dropdown-item" to="#">
-                      Audit
+                      Audit{" "}
+                      <span style={{ float: "right" }}>
+                        <FaChevronRight />
+                      </span>
                     </Link>
-                    <MultilevelDropdown.Submenu className="dropdown-submenu">
+                    <MultilevelDropdown.Submenu className="dropdown-submenu border border-warning">
                       <MultilevelDropdown.Item
                         style={{ padding: "0px", margin: "0px" }}
                       >
@@ -1092,9 +1125,12 @@ function Header() {
                     title="Engineering"
                   >
                     <Link className="dropdown-item" to="#">
-                      Regulated Market Access
+                      Regulated Market Access{" "}
+                      <span style={{ float: "right" }}>
+                        <FaChevronRight />
+                      </span>
                     </Link>
-                    <MultilevelDropdown.Submenu className="dropdown-submenu">
+                    <MultilevelDropdown.Submenu className="dropdown-submenu border border-warning">
                       <MultilevelDropdown.Item
                         style={{ padding: "0px", margin: "0px" }}
                       >
@@ -1123,9 +1159,12 @@ function Header() {
                     title="Engineering"
                   >
                     <Link className="dropdown-item" to="#">
-                      QMS Consulting
+                      QMS Consulting{" "}
+                      <span style={{ float: "right" }}>
+                        <FaChevronRight />
+                      </span>
                     </Link>
-                    <MultilevelDropdown.Submenu className="dropdown-submenu">
+                    <MultilevelDropdown.Submenu className="dropdown-submenu border border-warning">
                       <MultilevelDropdown.Item
                         style={{ padding: "0px", margin: "0px" }}
                       >
@@ -1194,9 +1233,12 @@ function Header() {
                     title="Engineering"
                   >
                     <Link className="dropdown-item" to="#">
-                      Training
+                      Training{" "}
+                      <span style={{ float: "right" }}>
+                        <FaChevronRight />
+                      </span>
                     </Link>
-                    <MultilevelDropdown.Submenu className="dropdown-submenu">
+                    <MultilevelDropdown.Submenu className="dropdown-submenu border border-warning">
                       <MultilevelDropdown.Item
                         style={{ padding: "0px", margin: "0px" }}
                       >

@@ -3,6 +3,8 @@ import BreadCrumb from "../components/BreadCrumb";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 function Blogs() {
   const [blogs, setBlogs] = useState([]);
@@ -56,23 +58,31 @@ function Blogs() {
     setCurrentPage(pageNumber);
   };
 
-  if (loading) {
-    return (
-      <div
-        className="d-flex justify-content-center align-items-center"
-        style={{ height: "100vh" }}
-      >
-        {/* //   <h2 className="text-primary loading-animation">Loading...</h2> */}
-        <div
-          class="spinner-border text-primary"
-          style={{ width: "60px", height: "60px" }}
-          role="status"
-        >
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //      <div className={styles["blog-list"]}>
+  //         {[1, 2, 3, 4,5,6].map((_, index) => (
+  //           <div key={index} className="p-3 border rounded shadow-sm">
+  //             <Skeleton height={30} width="80%" className="mb-2" />
+  //             <Skeleton height={250} width="100%" className="mb-3" />
+  //             <div className="d-flex justify-content-between">
+  //               <Skeleton width="30%" />
+  //               <Skeleton width="30%" />
+  //             </div>
+  //             <Skeleton width="100%" count={3} />
+      
+  //             <div className="d-flex justify-content-between mt-3">
+  //               <Skeleton width={100} height={30} />
+  //               <div className="d-flex">
+  //                 <Skeleton width={70} height={30} className="mx-1" />
+  //                 <Skeleton width={70} height={30} />
+  //               </div>
+  //             </div>
+  //           </div>
+  //         ))}
+  //       </div>
+  //   );
+  // }
 
   return (
     <div className="blog-page">
@@ -80,9 +90,19 @@ function Blogs() {
       <div className="container py-5 bg-white">
         <div className="row g-4">
           {/* Left: Display Selected Blog */}
-          <div className="col-lg-8">
-            {selectedBlog ? (
+          <div className="col-lg-8">  
+            {loading ? (
+              // Skeleton for Blog Details
               <div className="selected-blog" data-aos="fade-right">
+                <Skeleton height={40} width="60%" />
+                <Skeleton height={350} width="100%" className="mb-3" />
+                <Skeleton width="40%" />
+                <Skeleton width="30%" />
+                <Skeleton count={6} />
+              </div>
+            ) :selectedBlog ? (
+              <div className="selected-blog">
+                <div data-aos="fade-right">
                 <h2 className="text-primary" style={{ fontSize: 28 }}>
                   {selectedBlog.title}
                 </h2>
@@ -91,7 +111,7 @@ function Blogs() {
                   alt={selectedBlog.title}
                   className="img-fluid rounded shadow-sm mb-3"
                   style={{ width: 850, height: 350 }}
-                />
+                /></div>
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
@@ -164,7 +184,17 @@ color: #1d4ed8;
           {/* Right: Blog List */}
           <div className="col-lg-4">
             <div className="blog-list" data-aos="fade-left">
-              {currentBlogs.map((blog) => (
+              {loading
+                ? // Skeleton Loader for Blog List
+                  [1, 2, 3].map((_, index) => (
+                    <div key={index} className="card mb-3 shadow-sm p-3">
+                      <Skeleton height={20} width="80%" className="mb-2" />
+                      <Skeleton width="40%" />
+                      <Skeleton width="60%" />
+                      <Skeleton width={80} height={30} className="mt-2" />
+                    </div>
+                  ))
+                :currentBlogs.map((blog) => (
                 <div
                   key={blog.id}
                   className={`card mb-3 shadow-sm border-0 rounded-0 ${
